@@ -1,5 +1,47 @@
 $().ready(function() {
 	validateRule();
+
+
+    $("#schoolId").change(function(){
+        var t = $("#schoolId").val();
+        if(t ==''){
+            return;
+        }
+        $.ajax({
+            url:'/area/code',
+            async:false,
+            type:'post',
+            data:{id:t,ranNum:Math.random()},
+            success:function(data){
+                var t2 = $("#depId").empty();
+                for ( var i = 0; i < data.length; i++) {
+                    t2.append("<option value='"+data[i].key+"'>"+ data[i].value+"</option>");
+                }
+            }
+        })
+    });
+
+    $("#depId").change(function(){
+        var t = $("#depId").val();
+        if(t ==''){
+            return;
+        }
+        $.ajax({
+            url:'/area/code',
+            async:false,
+            type:'post',
+            data:{id:t,ranNum:Math.random()},
+            success:function(data){
+                var t3 = $("#teacherId").empty();
+                for ( var i = 0; i < data.length; i++) {
+                    t3.append("<option value='"+data[i].key+"'>"+ data[i].value+"</option>");
+                }
+            }
+        })
+    });
+
+
+
 });
 
 $.validator.setDefaults({

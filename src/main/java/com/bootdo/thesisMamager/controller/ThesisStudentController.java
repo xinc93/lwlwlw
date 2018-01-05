@@ -1,9 +1,13 @@
 package com.bootdo.thesisMamager.controller;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.bootdo.common.domain.DictDO;
+import com.bootdo.common.service.DictService;
 import com.bootdo.common.utils.IdGen;
+import com.bootdo.thesisMamager.service.ThesisCollegeService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -33,9 +37,16 @@ import com.bootdo.common.utils.R;
 @Controller
 @RequestMapping("/thesisMamager/thesisStudent")
 public class ThesisStudentController {
+
 	@Autowired
 	private ThesisStudentService thesisStudentService;
-	
+	@Autowired
+	private DictService sysDictService;
+	@Autowired
+	private ThesisCollegeService thesisCollegeService;
+	@Autowired
+	private ThesisCollegeService thesisCollegeService;
+
 	@GetMapping("/thesisStudent")
 	@RequiresPermissions("thesisMamager:thesisStudent:thesisStudent")
 	String ThesisStudent(){
@@ -56,7 +67,19 @@ public class ThesisStudentController {
 	
 	@GetMapping("/add")
 	@RequiresPermissions("thesisMamager:thesisStudent:add")
-	String add(){
+	String add(Model model){
+		Map map=new HashMap();
+		//学习层次
+		map.put("type","study_type");
+		model.addAttribute("typelist",sysDictService.list(map));
+		//学习形式
+		map.put("type","study_way");
+		model.addAttribute("waylist",sysDictService.list(map));
+		//选择学校
+		Map College=new HashMap();
+		College.put("state",0);
+		thesisCollegeService.list(College);
+		model.addAttribute("mylist","11");
 	    return "thesisMamager/thesisStudent/add";
 	}
 
@@ -67,7 +90,23 @@ public class ThesisStudentController {
 		model.addAttribute("thesisStudent", thesisStudent);
 	    return "thesisMamager/thesisStudent/edit";
 	}
-	
+
+	/**
+	 * 查询院系
+	 */
+	@ResponseBody
+	@PostMapping("/faculty")
+	@RequiresPermissions("thesisMamager:thesisStudent:add")
+	public R faculty(String pid){
+
+
+		/*if(thesisStudentService.save(thesisStudent)>0){
+			return R.ok();
+		}*/
+		return R.error();
+	}
+
+
 	/**
 	 * 保存
 	 */
@@ -75,7 +114,7 @@ public class ThesisStudentController {
 	@PostMapping("/save")
 	@RequiresPermissions("thesisMamager:thesisStudent:add")
 	public R save( ThesisStudentDO thesisStudent){
-		thesisStudent.setId(IdGen.next());
+		//thesisStudent.setId(IdGen.next());
 		if(thesisStudentService.save(thesisStudent)>0){
 			return R.ok();
 		}
