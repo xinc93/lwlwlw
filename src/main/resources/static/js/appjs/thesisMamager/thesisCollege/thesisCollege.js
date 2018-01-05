@@ -6,54 +6,26 @@ $(function() {
 
 function load() {
 	$('#exampleTable')
-			.bootstrapTable(
+			.bootstrapTreeTable(
 					{
-						method : 'get', // 服务器数据的请求方式 get or post
-						url : prefix + "/list", // 服务器数据的加载地址
-					//	showRefresh : true,
-					//	showToggle : true,
-					//	showColumns : true,
-						iconSize : 'outline',
-						toolbar : '#exampleToolbar',
-						striped : true, // 设置为true会有隔行变色效果
-						dataType : "json", // 服务器返回的数据类型
-						pagination : true, // 设置为true会在底部显示分页条
-						// queryParamsType : "limit",
-						// //设置为limit则会发送符合RESTFull格式的参数
-						singleSelect : false, // 设置为true将禁止多选
-						// contentType : "application/x-www-form-urlencoded",
-						// //发送到服务器的数据编码类型
-						pageSize : 10, // 如果设置了分页，每页数据条数
-						pageNumber : 1, // 如果设置了分布，首页页码
-						//search : true, // 是否显示搜索框
-						showColumns : false, // 是否显示内容下拉框（选择显示的列）
-						sidePagination : "server", // 设置在哪里进行分页，可选值为"client" 或者 "server"
-						queryParams : function(params) {
-							return {
-								//说明：传入后台的参数包括offset开始索引，limit步长，sort排序列，order：desc或者,以及所有列的键值对
-								limit: params.limit,
-								offset:params.offset
-					           // name:$('#searchName').val(),
-					           // username:$('#searchName').val()
-							};
-						},
-						// //请求服务器数据时，你可以通过重写参数的方式添加一些额外的参数，例如 toolbar 中的参数 如果
-						// queryParamsType = 'limit' ,返回参数必须包含
-						// limit, offset, search, sort, order 否则, 需要包含:
-						// pageSize, pageNumber, searchText, sortName,
-						// sortOrder.
-						// 返回false将会终止请求
-						columns : [
+                        id : 'id',
+                        code : 'id',
+                        parentCode : 'pid',
+                        type : "GET", // 请求数据的ajax类型
+                        url : prefix + '/list', // 请求数据的ajax的url
+                        ajaxParams : {}, // 请求数据的ajax的data属性
+                        expandColumn : '1', // 在哪一列上面显示展开按钮
+                        striped : true, // 是否各行渐变色
+                        bordered : true, // 是否显示边框
+                        expandAll : false, // 是否全部展开
+                        // toolbar : '#exampleToolbar',
+                        columns : [
 								{
 									checkbox : true
 								},
 																{
 									field : 'id', 
-									title : '学校 部门ID' 
-								},
-																{
-									field : 'pid', 
-									title : '父ID   根节点父ID   默认 0' 
+									title : '院校ID'
 								},
 																{
 									field : 'level', 
@@ -61,7 +33,7 @@ function load() {
 								},
 																{
 									field : 'name', 
-									title : '名称' 
+									title : '院校名称'
 								},
 																{
 									field : 'state', 
@@ -69,7 +41,7 @@ function load() {
 								},
 																{
 									field : 'licenseKey', 
-									title : '授权码   ( 记录 ：授权码可对单独院系  也可以整个学校所有院系共用  授权码有时限限制  和前端用户使用人数限制)' 
+									title : '授权码'
 								},
 																{
 									field : 'createTm', 
