@@ -3,6 +3,7 @@ package com.bootdo.thesisMamager.controller;
 import java.util.List;
 import java.util.Map;
 
+import com.bootdo.common.utils.IdGen;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -74,6 +75,7 @@ public class ThesisStudentController {
 	@PostMapping("/save")
 	@RequiresPermissions("thesisMamager:thesisStudent:add")
 	public R save( ThesisStudentDO thesisStudent){
+		thesisStudent.setId(IdGen.next());
 		if(thesisStudentService.save(thesisStudent)>0){
 			return R.ok();
 		}
