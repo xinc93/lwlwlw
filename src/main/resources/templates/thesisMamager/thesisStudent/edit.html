@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content ">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						<form class="form-horizontal m-t" id="signupForm">
+						<input id="id" name="id" th:value="${thesisStudent.id}"  type="hidden">
+							<div class="form-group">	
+								<label class="col-sm-3 control-label">学生姓名：</label>
+								<div class="col-sm-8">
+									<input id="name" name="name" th:value="${thesisStudent.name}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">手机号：</label>
+								<div class="col-sm-8">
+									<input id="mobile" name="mobile" th:value="${thesisStudent.mobile}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">学历层次：</label>
+								<div class="col-sm-8">
+									<input id="eduClass" name="eduClass" th:value="${thesisStudent.eduClass}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">学习形式：</label>
+								<div class="col-sm-8">
+									<input id="learnClass" name="learnClass" th:value="${thesisStudent.learnClass}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">专业：</label>
+								<div class="col-sm-8">
+									<input id="major" name="major" th:value="${thesisStudent.major}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">专业方向：</label>
+								<div class="col-sm-8">
+									<input id="
+professionalDirection" name="
+professionalDirection" th:value="${thesisStudent.
+professionalDirection}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">年级：</label>
+								<div class="col-sm-8">
+									<input id="schoolGrade" name="schoolGrade" th:value="${thesisStudent.schoolGrade}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">学籍号：</label>
+								<div class="col-sm-8">
+									<input id="schoolNo" name="schoolNo" th:value="${thesisStudent.schoolNo}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">学校ID：</label>
+								<div class="col-sm-8">
+									<input id="schoolId" name="schoolId" th:value="${thesisStudent.schoolId}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">院系ID：</label>
+								<div class="col-sm-8">
+									<input id="depId" name="depId" th:value="${thesisStudent.depId}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">导师id：</label>
+								<div class="col-sm-8">
+									<input id="teacherId" name="teacherId" th:value="${thesisStudent.teacherId}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">账号类型   1 个人账号  2 学校授权账号：</label>
+								<div class="col-sm-8">
+									<input id="accountType" name="accountType" th:value="${thesisStudent.accountType}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">账号有效期：</label>
+								<div class="col-sm-8">
+									<input id="accountTm" name="accountTm" th:value="${thesisStudent.accountTm}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">chuangjianshijian ：</label>
+								<div class="col-sm-8">
+									<input id="createTm" name="createTm" th:value="${thesisStudent.createTm}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">最后一次登录时间：</label>
+								<div class="col-sm-8">
+									<input id="lastloginTm" name="lastloginTm" th:value="${thesisStudent.lastloginTm}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">头像：</label>
+								<div class="col-sm-8">
+									<input id="headImg" name="headImg" th:value="${thesisStudent.headImg}" class="form-control" type="text">
+								</div>
+							</div>
+																					<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-3">
+									<button type="submit" class="btn btn-primary">提交</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+	</div>
+	</div>
+	<div th:include="include::footer"></div>
+	<script type="text/javascript" src="/js/appjs/thesisMamager/thesisStudent/edit.js">
+	</script>
+</body>
+</html>
