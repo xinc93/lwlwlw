@@ -2,17 +2,20 @@ package com.bootdo.thesisMamager.controller;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import com.bootdo.common.domain.DictDO;
 import com.bootdo.common.service.DictService;
 import com.bootdo.common.utils.*;
 import com.bootdo.thesisMamager.service.ThesisCollegeService;
 import com.bootdo.thesisMamager.service.ThesisTeacherService;
+import com.google.common.hash.Hashing;
+import com.google.common.io.Files;
+import org.apache.commons.io.FileUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.tomcat.util.http.fileupload.FileItem;
+import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
+import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.ui.Model;
@@ -22,9 +25,11 @@ import org.springframework.web.bind.annotation.*;
 import com.bootdo.thesisMamager.domain.ThesisStudentDO;
 import com.bootdo.thesisMamager.service.ThesisStudentService;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * 
@@ -121,9 +126,38 @@ public class ThesisStudentController {
 
 	@RequestMapping(value = "/upload", method = RequestMethod.POST)
 	@ResponseBody
-	public String upload(HttpServletRequest request) {//@RequestParam("file") MultipartFile file,
-		String filePath="";
+	public Map upload(HttpServletRequest request,HttpServletResponse response) throws UnsupportedEncodingException {//@RequestParam("file") MultipartFile file,,HttpServletRequest request
+		String filePathdata="";
+		request.setCharacterEncoding("UTF-8");
 
+		Map<String, Object> json = new HashMap<String, Object>();
+		MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+
+		/** 页面控件的文件流* */
+		MultipartFile multipartFile = null;
+		Map map =multipartRequest.getFileMap();
+		for (Iterator i = map.keySet().iterator(); i.hasNext();) {
+			Object obj = i.next();
+			multipartFile=(MultipartFile) map.get(obj);
+
+		}
+		/** 获取文件的后缀* */
+		String filename = multipartFile.getOriginalFilename();
+		String filePath = uploadPath+"/imgupload/";
+		System.out.println("fileName-->" + filePath+filename);
+		try {
+			FileUtil.uploadFile(multipartFile.getBytes(), filePath, filename);
+			filePathdata="/imgupload/"+filename;
+		} catch (Exception e) {
+			e.getMessage();
+		}
+
+
+
+		json.put("message", "应用上传成功");
+		json.put("status", true);
+		json.put("filepath",filePathdata);
+		return json;
 		/*if (!file.isEmpty()) {
 			String contentType = file.getContentType();
 			String fileName = file.getOriginalFilename();
@@ -139,7 +173,6 @@ public class ThesisStudentController {
 			//返回json
 			return filePath+fileName;
 		}*/
-		return null;
 	}
 	/**
 	 * 保存
