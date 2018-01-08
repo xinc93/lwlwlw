@@ -21,8 +21,8 @@ public class ThesisStudentDO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	//学生ID
-	@JsonSerialize(using = LongJsonSerializer.class)
-	@JsonDeserialize(using = LongJsonDeserializer.class)
+	/*@JsonSerialize(using = LongJsonSerializer.class)
+	@JsonDeserialize(using = LongJsonDeserializer.class)*/
 	private Long id;
 	//学生姓名
 	private String name;

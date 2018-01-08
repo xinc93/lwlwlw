@@ -1,30 +1,30 @@
 package com.bootdo.thesisMamager.controller;
 
+import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.bootdo.common.domain.DictDO;
 import com.bootdo.common.service.DictService;
-import com.bootdo.common.utils.IdGen;
+import com.bootdo.common.utils.*;
 import com.bootdo.thesisMamager.service.ThesisCollegeService;
+import com.bootdo.thesisMamager.service.ThesisTeacherService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import com.bootdo.thesisMamager.domain.ThesisStudentDO;
 import com.bootdo.thesisMamager.service.ThesisStudentService;
-import com.bootdo.common.utils.PageUtils;
-import com.bootdo.common.utils.Query;
-import com.bootdo.common.utils.R;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * 
@@ -45,7 +45,9 @@ public class ThesisStudentController {
 	@Autowired
 	private ThesisCollegeService thesisCollegeService;
 	@Autowired
-	private ThesisCollegeService thesisCollegeService;
+	private ThesisTeacherService thesisTeacherService;
+	@Value("${bootdo.uploadPath}")
+	private String uploadPath;
 
 	@GetMapping("/thesisStudent")
 	@RequiresPermissions("thesisMamager:thesisStudent:thesisStudent")
@@ -77,9 +79,9 @@ public class ThesisStudentController {
 		model.addAttribute("waylist",sysDictService.list(map));
 		//选择学校
 		Map College=new HashMap();
-		College.put("state",0);
-		thesisCollegeService.list(College);
-		model.addAttribute("mylist","11");
+		College.put("state","0");
+		College.put("pid","0");
+		model.addAttribute("mylist",thesisCollegeService.list(College));
 	    return "thesisMamager/thesisStudent/add";
 	}
 
@@ -96,17 +98,49 @@ public class ThesisStudentController {
 	 */
 	@ResponseBody
 	@PostMapping("/faculty")
-	@RequiresPermissions("thesisMamager:thesisStudent:add")
-	public R faculty(String pid){
-
-
-		/*if(thesisStudentService.save(thesisStudent)>0){
-			return R.ok();
-		}*/
-		return R.error();
+	/*@RequiresPermissions("thesisMamager:thesisStudent:add")*/
+	public List faculty(String pid){
+		Map map=new HashMap();
+		map.put("pid",pid);
+		List li=thesisCollegeService.list(map);
+		return li;
 	}
 
+	/**
+	 * 查询老师
+	 */
+	@ResponseBody
+	@PostMapping("/teacher")
+	/*@RequiresPermissions("thesisMamager:thesisStudent:add")*/
+	public List teacher(String dep_id){
+		Map map=new HashMap();
+		map.put("dep_id",dep_id);
+		List li=thesisTeacherService.list(map);
+		return li;
+	}
 
+	@RequestMapping(value = "/upload", method = RequestMethod.POST)
+	@ResponseBody
+	public String upload(HttpServletRequest request) {//@RequestParam("file") MultipartFile file,
+		String filePath="";
+
+		/*if (!file.isEmpty()) {
+			String contentType = file.getContentType();
+			String fileName = file.getOriginalFilename();
+			System.out.println("fileName-->" + fileName);
+			System.out.println("getContentType-->" + contentType);
+			filePath = uploadPath+"/imgupload/";
+				System.out.println("fileName-->" + filePath+fileName);
+			try {
+				FileUtil.uploadFile(file.getBytes(), filePath, fileName);
+			} catch (Exception e) {
+				e.getMessage();
+			}
+			//返回json
+			return filePath+fileName;
+		}*/
+		return null;
+	}
 	/**
 	 * 保存
 	 */
@@ -114,7 +148,8 @@ public class ThesisStudentController {
 	@PostMapping("/save")
 	@RequiresPermissions("thesisMamager:thesisStudent:add")
 	public R save( ThesisStudentDO thesisStudent){
-		//thesisStudent.setId(IdGen.next());
+		SimpleDateFormat sdf=new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
+		thesisStudent.setCreateTm(sdf.format(new Date()));
 		if(thesisStudentService.save(thesisStudent)>0){
 			return R.ok();
 		}
@@ -137,7 +172,7 @@ public class ThesisStudentController {
 	@PostMapping( "/remove")
 	@ResponseBody
 	@RequiresPermissions("thesisMamager:thesisStudent:remove")
-	public R remove( Long id){
+	public R remove(Long id){
 		if(thesisStudentService.remove(id)>0){
 		return R.ok();
 		}

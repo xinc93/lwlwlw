@@ -8,14 +8,14 @@ $().ready(function() {
             return;
         }
         $.ajax({
-            url:'/area/code',
+            url:'/thesisMamager/thesisStudent/faculty',
             async:false,
             type:'post',
-            data:{id:t,ranNum:Math.random()},
+            data:{pid:t},
             success:function(data){
                 var t2 = $("#depId").empty();
                 for ( var i = 0; i < data.length; i++) {
-                    t2.append("<option value='"+data[i].key+"'>"+ data[i].value+"</option>");
+                    t2.append("<option value='"+data[i].id+"'>"+ data[i].name+"</option>");
                 }
             }
         })
@@ -27,14 +27,14 @@ $().ready(function() {
             return;
         }
         $.ajax({
-            url:'/area/code',
+            url:'/thesisMamager/thesisStudent/teacher',
             async:false,
             type:'post',
             data:{id:t,ranNum:Math.random()},
             success:function(data){
                 var t3 = $("#teacherId").empty();
                 for ( var i = 0; i < data.length; i++) {
-                    t3.append("<option value='"+data[i].key+"'>"+ data[i].value+"</option>");
+                    t3.append("<option value='"+data[i].id+"'>"+ data[i].teacherTitle+"</option>");
                 }
             }
         })
@@ -43,6 +43,8 @@ $().ready(function() {
 
 
 });
+
+uploadImg("uploadCover", "headImg", "upload", "");//thesisMamager/thesisStudent/
 
 $.validator.setDefaults({
 	submitHandler : function() {
@@ -88,4 +90,44 @@ function validateRule() {
 			}
 		}
 	})
+}
+
+//回显旧图片,再上传新图片
+function uploadImg(btnId, valueId, url, imgs) {
+    if("" != imgs){
+        var images = "";
+        var imgArr = imgs.split(",");
+        for (var i in imgArr) {
+            images += "<img src='" + imgArr[i] + "' class='file-preview-image' style='width:100px;height:100px;'>,"
+        }
+        if (images.length > 0) {
+            images = images.substring(0, images.length - 1);
+        }
+        preImg(btnId, valueId, url, images);
+    }else{
+        $("#" + btnId).fileinput({
+            enctype : "multipart/form-data",
+            uploadUrl : url,
+            language : "zh",
+            browseClass : "btn btn-info",
+            browseLabel : "选择图片",
+            maxFileCount : 10,
+            showUpload : true, //是否显示上传按钮
+            showRemove : true, //是否显示移除按钮
+            showCaption : false, //是否显示标题
+            dropZoneEnabled : false, //是否显示预览区域
+            allowedFileExtensions : [ "jpg", "png", "gif" ] //接收的文件后缀
+        }).on("fileuploaded", function(event, ret, previewId, index) {
+        	debugger;
+            var filePath = ret.response.data.filepath;
+            $("#" + valueId).val(filePath);
+        }).on("fileclear", function(event, key) {
+            return false;
+        }).on("filecleared", function(event, key) {
+            $("#" + valueId).val("");
+            return false;
+        }).on("change", function(event, key) {
+            return false;
+        });
+    }
 }
