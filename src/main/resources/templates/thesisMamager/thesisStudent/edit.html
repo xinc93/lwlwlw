@@ -22,16 +22,24 @@
 									<input id="mobile" name="mobile" th:value="${thesisStudent.mobile}" class="form-control" type="text">
 								</div>
 							</div>
-														<div class="form-group">	
+							<div class="form-group">
 								<label class="col-sm-3 control-label">学历层次：</label>
 								<div class="col-sm-8">
-									<input id="eduClass" name="eduClass" th:value="${thesisStudent.eduClass}" class="form-control" type="text">
-								</div>
+									<!--<input id="aa" name="eduClass" th:value="${thesisStudent.eduClass}" class="form-control" type="text">-->
+									<select class="form-control" id="eduClass" name="eduClass">
+										<option value="0">请选择</option>
+										<option th:each="dict : ${typelist}" th:value="${dict.id}"  th:selected="(${dict.id} == ${thesisStudent.eduClass})"  th:text="${dict.name}" >Options</option>
+									</select><!--${dict.name}---->
+								</div><!--  th:if="${thesisStudent.eduClass == dict.id}"-->
 							</div>
 														<div class="form-group">	
 								<label class="col-sm-3 control-label">学习形式：</label>
 								<div class="col-sm-8">
-									<input id="learnClass" name="learnClass" th:value="${thesisStudent.learnClass}" class="form-control" type="text">
+									<!--<input id="learnClass" name="learnClass" th:value="${thesisStudent.learnClass}" class="form-control" type="text">-->
+									<select class="form-control" id="learnClass" name="learnClass">
+										<option value="0">请选择</option>
+										<option th:each="dict : ${waylist}" th:value="${dict.id}" th:text="${dict.name}" th:selected="(${dict.id} == ${thesisStudent.learnClass})">Options</option>
+									</select>
 								</div>
 							</div>
 														<div class="form-group">	
@@ -46,49 +54,66 @@
 									<input id="professionalDirection" name="professionalDirection" th:value="${thesisStudent.professionalDirection}" class="form-control" type="text">
 								</div>
 							</div>
-														<div class="form-group">	
+							<div class="form-group">
 								<label class="col-sm-3 control-label">年级：</label>
 								<div class="col-sm-8">
 									<input id="schoolGrade" name="schoolGrade" th:value="${thesisStudent.schoolGrade}" class="form-control" type="text">
 								</div>
 							</div>
-														<div class="form-group">	
+							<div class="form-group">
 								<label class="col-sm-3 control-label">学籍号：</label>
 								<div class="col-sm-8">
 									<input id="schoolNo" name="schoolNo" th:value="${thesisStudent.schoolNo}" class="form-control" type="text">
 								</div>
 							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">学校ID：</label>
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label">学校：</label>
 								<div class="col-sm-8">
-									<input id="schoolId" name="schoolId" th:value="${thesisStudent.schoolId}" class="form-control" type="text">
+									<select class="form-control" id="schoolId" name="schoolId">
+										<option value="0">请选择</option>
+										<option th:each="dict : ${mylist}" th:value="${dict.id}"  th:selected="(${thesisStudent.schoolId} == ${dict.id})"  th:text="${dict.name}" >Options</option>
+									</select>
 								</div>
 							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">院系ID：</label>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">院系：</label>
 								<div class="col-sm-8">
-									<input id="depId" name="depId" th:value="${thesisStudent.depId}" class="form-control" type="text">
+									<select class="form-control" id="depId" name="depId">
+										<option value="0">请选择</option>
+										<option th:each="dict : ${faculty}" th:value="${dict.id}" th:text="${dict.name}"  th:selected="(${thesisStudent.depId} == ${dict.id})">Options</option>
+									</select>
 								</div>
 							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">导师id：</label>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">导师：</label>
 								<div class="col-sm-8">
-									<input id="teacherId" name="teacherId" th:value="${thesisStudent.teacherId}" class="form-control" type="text">
+									<select class="form-control" id="teacherId" name="teacherId">
+										<option value="0">请选择</option>
+										<option th:each="dict : ${teachers}" th:value="${dict.id}" th:text="${dict.teacherTitle}"  th:selected="(${thesisStudent.teacherId} == ${dict.id})">Options</option>
+									</select>
 								</div>
 							</div>
-														<div class="form-group">	
-								<label class="col-sm-3 control-label">账号类型   1 个人账号  2 学校授权账号：</label>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">账号类型 ：</label>
 								<div class="col-sm-8">
-									<input id="accountType" name="accountType" th:value="${thesisStudent.accountType}" class="form-control" type="text">
+									<!--<input id="accountType" name="accountType" th:value="${thesisStudent.accountType}" class="form-control" type="text">-->
+									<select class="form-control" id="accountType" name="accountType">
+										<option value="0">请选择</option>
+										<option value="1" th:selected="${thesisStudent.accountType == '1'}">个人账号</option>
+										<option value="2" th:selected="${thesisStudent.accountType == '2'}">学校授权账号</option>
+
+									</select>
 								</div>
 							</div>
-														<div class="form-group">	
+							<!--
+							<div class="form-group">
 								<label class="col-sm-3 control-label">账号有效期：</label>
 								<div class="col-sm-8">
 									<input id="accountTm" name="accountTm" th:value="${thesisStudent.accountTm}" class="form-control" type="text">
 								</div>
 							</div>
-														<div class="form-group">	
+														<div class="form-group">
 								<label class="col-sm-3 control-label">chuangjianshijian ：</label>
 								<div class="col-sm-8">
 									<input id="createTm" name="createTm" th:value="${thesisStudent.createTm}" class="form-control" type="text">
@@ -99,14 +124,26 @@
 								<div class="col-sm-8">
 									<input id="lastloginTm" name="lastloginTm" th:value="${thesisStudent.lastloginTm}" class="form-control" type="text">
 								</div>
-							</div>
-														<div class="form-group">	
+							</div>-->
+							<div class="form-group">
 								<label class="col-sm-3 control-label">头像：</label>
 								<div class="col-sm-8">
 									<input id="headImg" name="headImg" th:value="${thesisStudent.headImg}" class="form-control" type="text">
 								</div>
 							</div>
-																					<div class="form-group">
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label" for="headImg">头像：</label>
+								<div class="col-sm-8">
+									<input type="text" id="headImg" name="headImg" class="form-control" readOnly style="margin-bottom: 5px;"/>
+									<input id="uploadCover" type="file" class="file">
+								</div>
+							</div>
+
+
+
+
+							<div class="form-group">
 								<div class="col-sm-8 col-sm-offset-3">
 									<button type="submit" class="btn btn-primary">提交</button>
 								</div>

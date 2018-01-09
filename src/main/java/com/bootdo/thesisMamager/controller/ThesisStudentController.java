@@ -95,6 +95,32 @@ public class ThesisStudentController {
 	String edit(@PathVariable("id") Long id,Model model){
 		ThesisStudentDO thesisStudent = thesisStudentService.get(id);
 		model.addAttribute("thesisStudent", thesisStudent);
+		Map map=new HashMap();
+		//学习层次
+		map.put("type","study_type");
+		model.addAttribute("typelist",sysDictService.list(map));
+		//学习形式
+		map.put("type","study_way");
+		model.addAttribute("waylist",sysDictService.list(map));
+		//选择学校
+		Map College=new HashMap();
+		College.put("state","0");
+		College.put("pid","0");
+		model.addAttribute("mylist",thesisCollegeService.list(College));
+
+		//院系
+		Map faculty=new HashMap();
+		faculty.put("state","0");
+		faculty.put("pid",thesisStudent.getSchoolId());
+		model.addAttribute("faculty",thesisCollegeService.list(faculty));
+		//导师
+		Map teachers=new HashMap();
+		//faculty.put("state","0");
+		teachers.put("id",thesisStudent.getSchoolId());
+		teachers.put("depId",thesisStudent.getDepId());
+		model.addAttribute("teachers",thesisTeacherService.list(teachers));
+
+
 	    return "thesisMamager/thesisStudent/edit";
 	}
 
@@ -119,7 +145,7 @@ public class ThesisStudentController {
 	/*@RequiresPermissions("thesisMamager:thesisStudent:add")*/
 	public List teacher(String dep_id){
 		Map map=new HashMap();
-		map.put("dep_id",dep_id);
+		map.put("depId",dep_id);
 		List li=thesisTeacherService.list(map);
 		return li;
 	}

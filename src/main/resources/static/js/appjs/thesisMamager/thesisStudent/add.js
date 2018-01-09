@@ -14,6 +14,7 @@ $().ready(function() {
             data:{pid:t},
             success:function(data){
                 var t2 = $("#depId").empty();
+                $("#teacherId").empty();
                 for ( var i = 0; i < data.length; i++) {
                     t2.append("<option value='"+data[i].id+"'>"+ data[i].name+"</option>");
                 }
@@ -30,7 +31,7 @@ $().ready(function() {
             url:'/thesisMamager/thesisStudent/teacher',
             async:false,
             type:'post',
-            data:{id:t,ranNum:Math.random()},
+            data:{depId:t},
             success:function(data){
                 var t3 = $("#teacherId").empty();
                 for ( var i = 0; i < data.length; i++) {
