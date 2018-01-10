@@ -1,8 +1,10 @@
 package com.bootdo.thesisMamager.controller;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.bootdo.common.utils.*;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -17,9 +19,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.bootdo.thesisMamager.domain.ThesisCollegeDO;
 import com.bootdo.thesisMamager.service.ThesisCollegeService;
-import com.bootdo.common.utils.PageUtils;
-import com.bootdo.common.utils.Query;
-import com.bootdo.common.utils.R;
 
 /**
  * 
@@ -44,25 +43,37 @@ public class ThesisCollegeController {
 	@ResponseBody
 	@GetMapping("/list")
 	@RequiresPermissions("thesisMamager:thesisCollege:thesisCollege")
-	public PageUtils list(@RequestParam Map<String, Object> params){
+	public List<ThesisCollegeDO> list(@RequestParam Map<String, Object> params){
 		//查询列表数据
-        Query query = new Query(params);
+		Map<String, Object> query = new HashMap<>(params);
 		List<ThesisCollegeDO> thesisCollegeList = thesisCollegeService.list(query);
-		int total = thesisCollegeService.count(query);
-		PageUtils pageUtils = new PageUtils(thesisCollegeList, total);
-		return pageUtils;
+		return thesisCollegeList;
 	}
 	
-	@GetMapping("/add")
+	@GetMapping("/add/{pId}")
 	@RequiresPermissions("thesisMamager:thesisCollege:add")
-	String add(){
-	    return "thesisMamager/thesisCollege/add";
+	String add(@PathVariable("pId") String pId, Model model) {
+		Long p = Long.parseLong(pId);
+		model.addAttribute("pid", pId);
+		if (p == 0) {
+			model.addAttribute("pName", "总部门");
+		} else {
+			model.addAttribute("pName", thesisCollegeService.get(p).getName());
+		}
+		return  "thesisMamager/thesisCollege/add";
 	}
 
 	@GetMapping("/edit/{id}")
 	@RequiresPermissions("thesisMamager:thesisCollege:edit")
 	String edit(@PathVariable("id") Long id,Model model){
 		ThesisCollegeDO thesisCollege = thesisCollegeService.get(id);
+		Long p = thesisCollege.getPid();
+		model.addAttribute("pid", p);
+		if (p == 0) {
+			model.addAttribute("pName", "总部门");
+		} else {
+			model.addAttribute("pName", thesisCollegeService.get(p).getName());
+		}
 		model.addAttribute("thesisCollege", thesisCollege);
 	    return "thesisMamager/thesisCollege/edit";
 	}
@@ -74,6 +85,16 @@ public class ThesisCollegeController {
 	@PostMapping("/save")
 	@RequiresPermissions("thesisMamager:thesisCollege:add")
 	public R save( ThesisCollegeDO thesisCollege){
+		if(	thesisCollegeService.get(thesisCollege.getPid()).getLevel() != 1){
+			return R.error(1,"只能在学校下添加院系");
+		}
+		thesisCollege.setCreateTm(DateUtil.getCurDateTime());
+		if(thesisCollege.getPid() !=0){
+			thesisCollege.setLevel(2);
+		}else {
+			thesisCollege.setLevel(1);
+		}
+		thesisCollege.setState(0);
 		if(thesisCollegeService.save(thesisCollege)>0){
 			return R.ok();
 		}
@@ -106,12 +127,12 @@ public class ThesisCollegeController {
 	/**
 	 * 删除
 	 */
-	@PostMapping( "/batchRemove")
+	/*@PostMapping( "/batchRemove")
 	@ResponseBody
 	@RequiresPermissions("thesisMamager:thesisCollege:batchRemove")
 	public R remove(@RequestParam("ids[]") Long[] ids){
 		thesisCollegeService.batchRemove(ids);
 		return R.ok();
-	}
+	}*/
 	
 }

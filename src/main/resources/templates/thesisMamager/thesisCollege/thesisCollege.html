@@ -9,12 +9,8 @@
 				<div class="ibox-body">
 					<div class="fixed-table-toolbar">
 						<div class="columns pull-left">
-							<button shiro:hasPermission="thesisMamager:thesisCollege:add" type="button" class="btn  btn-primary" onclick="add()">
+							<button shiro:hasPermission="thesisMamager:thesisCollege:add" type="button" class="btn  btn-primary" onclick="add(0)">
 								<i class="fa fa-plus" aria-hidden="true"></i>添加
-							</button>
-							<button shiro:hasPermission="thesisMamager:thesisCollege:batchRemove" type="button" class="btn  btn-danger"
-								onclick="batchRemove()">
-								<i class="fa fa-trash" aria-hidden="true"></i>删除
 							</button>
 						</div>
 						<div class="columns pull-right">
@@ -34,6 +30,7 @@
 	<!--shiro控制bootstraptable行内按钮看见性 来自bootdo的创新方案 -->
 		<div>
 			<script type="text/javascript">
+                var s_add_h = 'hidden';
 				var s_edit_h = 'hidden';
 				var s_remove_h = 'hidden';
 				var s_resetPwd_h = 'hidden';
@@ -42,6 +39,11 @@
 		<div shiro:hasPermission="thesisMamager:thesisCollege:edit">
 			<script type="text/javascript">
 				s_edit_h = '';
+			</script>
+		</div>
+		<div shiro:hasPermission="thesisMamager:thesisCollege:add">
+			<script type="text/javascript">
+				s_add_h = '';
 			</script>
 		</div>
 		<div shiro:hasPermission="thesisMamager:thesisCollege:remove">

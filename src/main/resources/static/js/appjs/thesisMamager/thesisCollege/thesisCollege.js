@@ -20,16 +20,12 @@ function load() {
                         expandAll : false, // 是否全部展开
                         // toolbar : '#exampleToolbar',
                         columns : [
+                            {
+                                field : 'id',
+                                title : '底'
+                            },
 								{
 									checkbox : true
-								},
-																{
-									field : 'id', 
-									title : '院校ID'
-								},
-																{
-									field : 'level', 
-									title : '层级' 
 								},
 																{
 									field : 'name', 
@@ -37,7 +33,15 @@ function load() {
 								},
 																{
 									field : 'state', 
-									title : '0 正常使用  1 停止使用' 
+									title : '使用状态',
+									align : 'center',
+									formatter : function(item, index) {
+                                    if (item.state == '0') {
+                                    return '<span class="label label-primary">正常</span>';
+                                     } else if (item.state == '1') {
+                                     return '<span class="label label-danger">停用</span>';
+                                      }
+									}
 								},
 																{
 									field : 'licenseKey', 
@@ -51,17 +55,17 @@ function load() {
 									title : '操作',
 									field : 'id',
 									align : 'center',
-									formatter : function(value, row, index) {
-										var e = '<a class="btn btn-primary btn-sm '+s_edit_h+'" href="#" mce_href="#" title="编辑" onclick="edit(\''
-												+ row.id
+									formatter : function(item, index) {
+										var e = '<a class="btn btn-primary btn-sm '+s_edit_h+'" href="# 	" mce_href="#" title="编辑" onclick="edit(\''
+												+ item.id
 												+ '\')"><i class="fa fa-edit"></i></a> ';
-										var d = '<a class="btn btn-warning btn-sm '+s_remove_h+'" href="#" title="删除"  mce_href="#" onclick="remove(\''
-												+ row.id
-												+ '\')"><i class="fa fa-remove"></i></a> ';
-										var f = '<a class="btn btn-success btn-sm" href="#" title="备用"  mce_href="#" onclick="resetPwd(\''
-												+ row.id
-												+ '\')"><i class="fa fa-key"></i></a> ';
-										return e + d ;
+                                        var a = '<a class="btn btn-primary btn-sm ' + s_add_h + '" href="#" title="增加下級"  mce_href="#" onclick="add(\''
+                                            + item.id
+                                            + '\')"><i class="fa fa-plus"></i></a> ';
+										/*var d = '<a class="btn btn-warning btn-sm '+s_remove_h+'" href="#" title="删除"  mce_href="#" onclick="remove(\''
+												+ item.id
+												+ '\')"><i class="fa fa-remove"></i></a> ';*/
+										return e+a;
 									}
 								} ]
 					});
@@ -69,14 +73,15 @@ function load() {
 function reLoad() {
 	$('#exampleTable').bootstrapTable('refresh');
 }
-function add() {
+function add(pId) {
+	debugger;
 	layer.open({
 		type : 2,
 		title : '增加',
 		maxmin : true,
 		shadeClose : false, // 点击遮罩关闭层
 		area : [ '800px', '520px' ],
-		content : prefix + '/add' // iframe的url
+		content : prefix + '/add/'+ pId // iframe的url
 	});
 }
 function edit(id) {
