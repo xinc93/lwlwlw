@@ -1,26 +1,35 @@
 package com.bootdo.thesisMamager.controller;
 
-import java.util.List;
-import java.util.Map;
+import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
-import com.bootdo.common.utils.IdGen;
+import com.bootdo.common.domain.DictDO;
+import com.bootdo.common.service.DictService;
+import com.bootdo.common.utils.*;
+import com.bootdo.thesisMamager.service.ThesisCollegeService;
+import com.bootdo.thesisMamager.service.ThesisTeacherService;
+import com.google.common.hash.Hashing;
+import com.google.common.io.Files;
+import org.apache.commons.io.FileUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.tomcat.util.http.fileupload.FileItem;
+import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
+import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import com.bootdo.thesisMamager.domain.ThesisStudentDO;
 import com.bootdo.thesisMamager.service.ThesisStudentService;
-import com.bootdo.common.utils.PageUtils;
-import com.bootdo.common.utils.Query;
-import com.bootdo.common.utils.R;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * 
@@ -33,9 +42,18 @@ import com.bootdo.common.utils.R;
 @Controller
 @RequestMapping("/thesisMamager/thesisStudent")
 public class ThesisStudentController {
+
 	@Autowired
 	private ThesisStudentService thesisStudentService;
-	
+	@Autowired
+	private DictService sysDictService;
+	@Autowired
+	private ThesisCollegeService thesisCollegeService;
+	@Autowired
+	private ThesisTeacherService thesisTeacherService;
+	@Value("${bootdo.uploadPath}")
+	private String uploadPath;
+
 	@GetMapping("/thesisStudent")
 	@RequiresPermissions("thesisMamager:thesisStudent:thesisStudent")
 	String ThesisStudent(){
@@ -56,7 +74,19 @@ public class ThesisStudentController {
 	
 	@GetMapping("/add")
 	@RequiresPermissions("thesisMamager:thesisStudent:add")
-	String add(){
+	String add(Model model){
+		Map map=new HashMap();
+		//学习层次
+		map.put("type","study_type");
+		model.addAttribute("typelist",sysDictService.list(map));
+		//学习形式
+		map.put("type","study_way");
+		model.addAttribute("waylist",sysDictService.list(map));
+		//选择学校
+		Map College=new HashMap();
+		College.put("state","0");
+		College.put("pid","0");
+		model.addAttribute("mylist",thesisCollegeService.list(College));
 	    return "thesisMamager/thesisStudent/add";
 	}
 
@@ -65,9 +95,111 @@ public class ThesisStudentController {
 	String edit(@PathVariable("id") Long id,Model model){
 		ThesisStudentDO thesisStudent = thesisStudentService.get(id);
 		model.addAttribute("thesisStudent", thesisStudent);
+		Map map=new HashMap();
+		//学习层次
+		map.put("type","study_type");
+		model.addAttribute("typelist",sysDictService.list(map));
+		//学习形式
+		map.put("type","study_way");
+		model.addAttribute("waylist",sysDictService.list(map));
+		//选择学校
+		Map College=new HashMap();
+		College.put("state","0");
+		College.put("pid","0");
+		model.addAttribute("mylist",thesisCollegeService.list(College));
+
+		//院系
+		Map faculty=new HashMap();
+		faculty.put("state","0");
+		faculty.put("pid",thesisStudent.getSchoolId());
+		model.addAttribute("faculty",thesisCollegeService.list(faculty));
+		//导师
+		Map teachers=new HashMap();
+		//faculty.put("state","0");
+		teachers.put("id",thesisStudent.getSchoolId());
+		teachers.put("depId",thesisStudent.getDepId());
+		model.addAttribute("teachers",thesisTeacherService.list(teachers));
+
+
 	    return "thesisMamager/thesisStudent/edit";
 	}
-	
+
+	/**
+	 * 查询院系
+	 */
+	@ResponseBody
+	@PostMapping("/faculty")
+	/*@RequiresPermissions("thesisMamager:thesisStudent:add")*/
+	public List faculty(String pid){
+		Map map=new HashMap();
+		map.put("pid",pid);
+		List li=thesisCollegeService.list(map);
+		return li;
+	}
+
+	/**
+	 * 查询老师
+	 */
+	@ResponseBody
+	@PostMapping("/teacher")
+	/*@RequiresPermissions("thesisMamager:thesisStudent:add")*/
+	public List teacher(String dep_id){
+		Map map=new HashMap();
+		map.put("depId",dep_id);
+		List li=thesisTeacherService.list(map);
+		return li;
+	}
+
+	@RequestMapping(value = "/upload", method = RequestMethod.POST)
+	@ResponseBody
+	public Map upload(HttpServletRequest request,HttpServletResponse response) throws UnsupportedEncodingException {//@RequestParam("file") MultipartFile file,,HttpServletRequest request
+		String filePathdata="";
+		request.setCharacterEncoding("UTF-8");
+
+		Map<String, Object> json = new HashMap<String, Object>();
+		MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+
+		/** 页面控件的文件流* */
+		MultipartFile multipartFile = null;
+		Map map =multipartRequest.getFileMap();
+		for (Iterator i = map.keySet().iterator(); i.hasNext();) {
+			Object obj = i.next();
+			multipartFile=(MultipartFile) map.get(obj);
+
+		}
+		/** 获取文件的后缀* */
+		String filename = multipartFile.getOriginalFilename();
+		String filePath = uploadPath+"/imgupload/";
+		System.out.println("fileName-->" + filePath+filename);
+		try {
+			FileUtil.uploadFile(multipartFile.getBytes(), filePath, filename);
+			filePathdata="/imgupload/"+filename;
+		} catch (Exception e) {
+			e.getMessage();
+		}
+
+
+
+		json.put("message", "应用上传成功");
+		json.put("status", true);
+		json.put("filepath",filePathdata);
+		return json;
+		/*if (!file.isEmpty()) {
+			String contentType = file.getContentType();
+			String fileName = file.getOriginalFilename();
+			System.out.println("fileName-->" + fileName);
+			System.out.println("getContentType-->" + contentType);
+			filePath = uploadPath+"/imgupload/";
+				System.out.println("fileName-->" + filePath+fileName);
+			try {
+				FileUtil.uploadFile(file.getBytes(), filePath, fileName);
+			} catch (Exception e) {
+				e.getMessage();
+			}
+			//返回json
+			return filePath+fileName;
+		}*/
+	}
 	/**
 	 * 保存
 	 */
@@ -75,7 +207,8 @@ public class ThesisStudentController {
 	@PostMapping("/save")
 	@RequiresPermissions("thesisMamager:thesisStudent:add")
 	public R save( ThesisStudentDO thesisStudent){
-		thesisStudent.setId(IdGen.next());
+		SimpleDateFormat sdf=new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
+		thesisStudent.setCreateTm(sdf.format(new Date()));
 		if(thesisStudentService.save(thesisStudent)>0){
 			return R.ok();
 		}
@@ -98,7 +231,7 @@ public class ThesisStudentController {
 	@PostMapping( "/remove")
 	@ResponseBody
 	@RequiresPermissions("thesisMamager:thesisStudent:remove")
-	public R remove( Long id){
+	public R remove(Long id){
 		if(thesisStudentService.remove(id)>0){
 		return R.ok();
 		}

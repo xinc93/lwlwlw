@@ -1,5 +1,10 @@
 package com.bootdo.thesisMamager.domain;
 
+import com.bootdo.common.utils.LongJsonDeserializer;
+import com.bootdo.common.utils.LongJsonSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -16,6 +21,8 @@ public class ThesisStudentDO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	//学生ID
+	/*@JsonSerialize(using = LongJsonSerializer.class)
+	@JsonDeserialize(using = LongJsonDeserializer.class)*/
 	private Long id;
 	//学生姓名
 	private String name;
@@ -125,15 +132,14 @@ public class ThesisStudentDO implements Serializable {
 	/**
 	 * 设置：专业方向
 	 */
-	public void setprofessionalDirection(String professionalDirection) {
-		this.professionalDirection =  professionalDirection;
+	public String getProfessionalDirection() {
+		return professionalDirection;
 	}
-	/**
-	 * 获取：专业方向
-	 */
-	public String getprofessionalDirection() {
-		return  professionalDirection;
+
+	public void setProfessionalDirection(String professionalDirection) {
+		this.professionalDirection = professionalDirection;
 	}
+
 	/**
 	 * 设置：年级
 	 */

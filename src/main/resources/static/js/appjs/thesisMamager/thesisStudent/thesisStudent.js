@@ -97,7 +97,15 @@ function load() {
 								},
 																{
 									field : 'accountType', 
-									title : '账号类型   1 个人账号  2 学校授权账号' 
+									title : '账号类型' ,
+									formatter : function(value, row, index) {
+										if(value=="1"){
+                                            return "个人账号" ;
+										}else{
+                                            return "学校授权账号";
+										}
+
+									}
 								},
 																{
 									field : 'accountTm', 
@@ -111,10 +119,10 @@ function load() {
 									field : 'lastloginTm', 
 									title : '最后一次登录时间' 
 								},
-																{
+																/*{
 									field : 'headImg', 
 									title : '头像' 
-								},
+								},*/
 																{
 									title : '操作',
 									field : 'id',

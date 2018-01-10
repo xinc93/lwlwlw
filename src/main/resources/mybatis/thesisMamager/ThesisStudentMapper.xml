@@ -5,7 +5,7 @@
 
 	<select id="get" resultType="com.bootdo.thesisMamager.domain.ThesisStudentDO">
 		select `id`,`name`,`mobile`,`edu_class`,`learn_class`,`major`,`professional_direction`,`school_grade`,`school_no`,`school_id`,`dep_id`,`teacher_id`,`account_type`,
-		`account_tm`,`create_tm`,`lastlogin_tm`,`head_img` from thesis_student where id = #{value}
+		`account_tm`,`create_tm`,`lastlogin_tm`,`head_img` from thesis_student where id = #{id}
 	</select>
 
 	<select id="list" resultType="com.bootdo.thesisMamager.domain.ThesisStudentDO">
@@ -133,7 +133,7 @@
 	</update>
 	
 	<delete id="remove">
-		delete from thesis_student where id = #{value}
+		delete from thesis_student where id = #{id}
 	</delete>
 	
 	<delete id="batchRemove">
