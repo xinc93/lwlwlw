@@ -2,7 +2,7 @@ $().ready(function() {
 	validateRule();
 
 
-    $("#schoolId").change(function(){
+    $("#schoolId").change(function(){debugger;
         var t = $("#schoolId").val();
         if(t ==''){
             return;
@@ -23,15 +23,16 @@ $().ready(function() {
     });
 
     $("#depId").change(function(){
-        var t = $("#depId").val();
-        if(t ==''){
+        debugger;
+        var depId = $("#depId").val();
+        if(depId ==''){
             return;
         }
         $.ajax({
             url:'/thesisMamager/thesisStudent/teacher',
             async:false,
             type:'post',
-            data:{depId:t},
+            data:{dep_id:$("#depId").val()},
             success:function(data){
                 var t3 = $("#teacherId").empty();
                 for ( var i = 0; i < data.length; i++) {
@@ -42,14 +43,13 @@ $().ready(function() {
     });
 
 
-
 });
 
 uploadImg("uploadCover", "headImg", "upload", "");//thesisMamager/thesisStudent/
 
 $.validator.setDefaults({
 	submitHandler : function() {
-		save();
+            save();
 	}
 });
 function save() {
@@ -80,17 +80,96 @@ function save() {
 function validateRule() {
 	var icon = "<i class='fa fa-times-circle'></i> ";
 	$("#signupForm").validate({
-		rules : {
-			name : {
-				required : true
-			}
-		},
-		messages : {
-			name : {
-				required : icon + "请输入姓名"
-			}
-		}
+        rules:{
+            name:{
+                required:true,
+                maxlength:20
+            },
+            mobile:{
+                required:true,
+                maxlength:11
+            },
+            eduClass:{
+                required:true
+            },
+            learnClass:{
+                required:true
+            },
+            major:{
+                required:true
+            },
+            professionalDirection:{
+                required:true,
+            },
+            schoolGrade:{
+                required:true,
+            },
+            schoolNo:{
+                required:true,
+            } ,
+            schoolId:{
+                required:true
+            },
+            depId:{
+                required:true
+            },
+            teacherId:{
+                required:true
+            },
+            accountType:{
+                required:true
+            },
+            headImg:{
+                required:true,
+            }
+        },
+        messages:{
+            name:{
+                required:"必填",
+            },
+            mobile:{
+                required:"必填",
+            },
+            eduClass:{
+                required: "必填",
+            },
+            learnClass:{
+                required:"必填",
+            },
+            major:{
+                required:"必填"
+            },
+            professionalDirection:{
+                required:"必填"
+            },
+            schoolGrade:{
+                required:"必填"
+            },
+            schoolNo:{
+                required:"必填"
+            },
+            schoolId:{
+                required:"必填",
+            },
+            depId:{
+                required:"必填",
+            },
+            teacherId:{
+                required:"必填",
+            },
+            accountType:{
+                required:"必填",
+            },
+            headImg:{
+                required:"必填",
+            }
+        }
 	})
+
+
+
+
+
 }
 
 //回显旧图片,再上传新图片
@@ -119,8 +198,7 @@ function uploadImg(btnId, valueId, url, imgs) {
             dropZoneEnabled : false, //是否显示预览区域
             allowedFileExtensions : [ "jpg", "png", "gif" ] //接收的文件后缀
         }).on("fileuploaded", function(event, ret, previewId, index) {
-        	debugger;
-            var filePath = ret.response.data.filepath;
+            var filePath = ret.response.filepath;
             $("#" + valueId).val(filePath);
         }).on("fileclear", function(event, key) {
             return false;
