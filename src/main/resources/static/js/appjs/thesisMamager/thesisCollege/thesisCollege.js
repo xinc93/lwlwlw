@@ -52,7 +52,7 @@ function load() {
 									title : '创建时间' 
 								},
 																{
-									title : '操作',
+									title : '操作 s',
 									field : 'id',
 									align : 'center',
 									formatter : function(item, index) {
