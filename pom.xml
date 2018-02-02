@@ -185,6 +185,24 @@
             <version>${activiti.version}</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>jaxen</groupId>
+            <artifactId>jaxen</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+
+        <dependency>
+             <groupId>org.freemarker</groupId>
+              <artifactId>freemarker</artifactId>
+              <version>2.3.23</version>
+        </dependency>
         <!--swagger2-->
         <dependency>
             <groupId>io.springfox</groupId>
