@@ -7,6 +7,10 @@
 		select `id`,`pid`,`level`,`name`,`state`,`license_key`,`create_tm` from thesis_college where id = #{value}
 	</select>
 
+	<select id="getByPid" resultType="com.bootdo.thesisMamager.domain.ThesisCollegeDO">
+		select `id`,`pid`,`level`,`name`,`state`,`license_key`,`create_tm` from thesis_college where pid = #{value}
+	</select>
+
 	<select id="list" resultType="com.bootdo.thesisMamager.domain.ThesisCollegeDO">
 		select `id`,`pid`,`level`,`name`,`state`,`license_key`,`create_tm` from thesis_college
         <where>  

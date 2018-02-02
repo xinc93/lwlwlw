@@ -15,6 +15,8 @@ import java.util.Map;
 public interface ThesisCollegeService {
 	
 	ThesisCollegeDO get(Long id);
+
+	ThesisCollegeDO getByPid(Long id);
 	
 	List<ThesisCollegeDO> list(Map<String, Object> map);
 	

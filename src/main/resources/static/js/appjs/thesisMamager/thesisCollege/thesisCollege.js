@@ -22,7 +22,7 @@ function load() {
                         columns : [
                             {
                                 field : 'id',
-                                title : '底'
+                                title : 'id'
                             },
 								{
 									checkbox : true

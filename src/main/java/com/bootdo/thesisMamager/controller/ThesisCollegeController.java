@@ -85,7 +85,8 @@ public class ThesisCollegeController {
 	@PostMapping("/save")
 	@RequiresPermissions("thesisMamager:thesisCollege:add")
 	public R save( ThesisCollegeDO thesisCollege){
-		if(	thesisCollegeService.get(thesisCollege.getPid()).getLevel() != 1){
+		ThesisCollegeDO thesisCollege1 = thesisCollegeService.get(thesisCollege.getPid());
+		if(thesisCollege1 != null && (thesisCollege1 != null && thesisCollege1.getLevel() != 1)){
 			return R.error(1,"只能在学校下添加院系");
 		}
 		thesisCollege.setCreateTm(DateUtil.getCurDateTime());

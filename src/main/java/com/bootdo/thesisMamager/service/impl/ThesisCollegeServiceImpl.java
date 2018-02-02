@@ -21,7 +21,12 @@ public class ThesisCollegeServiceImpl implements ThesisCollegeService {
 	public ThesisCollegeDO get(Long id){
 		return thesisCollegeDao.get(id);
 	}
-	
+
+	@Override
+	public ThesisCollegeDO getByPid(Long id) {
+		return thesisCollegeDao.getByPid(id);
+	}
+
 	@Override
 	public List<ThesisCollegeDO> list(Map<String, Object> map){
 		return thesisCollegeDao.list(map);
