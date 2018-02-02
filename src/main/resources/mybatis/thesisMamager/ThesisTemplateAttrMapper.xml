@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bootdo.thesisMamager.dao.ThesisTemplateAttrDao">
+
+	<select id="get" resultType="com.bootdo.thesisMamager.domain.ThesisTemplateAttrDO">
+		select `attributeId`,`attributeName`,`templateId`,`attrbutecCode` from thesis_template_attr where attributeId = #{value}
+	</select>
+
+	<select id="list" resultType="com.bootdo.thesisMamager.domain.ThesisTemplateAttrDO">
+		select `attributeId`,`attributeName`,`templateId`,`attrbutecCode` from thesis_template_attr
+        <where>  
+		  		  <if test="attributeid != null and attributeid != ''"> and attributeId = #{attributeid} </if>
+		  		  <if test="attributename != null and attributename != ''"> and attributeName = #{attributename} </if>
+		  		  <if test="templateid != null and templateid != ''"> and templateId = #{templateid} </if>
+		  		  <if test="attrbuteccode != null and attrbuteccode != ''"> and attrbutecCode = #{attrbuteccode} </if>
+		  		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by attributeId desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from thesis_template_attr
+		 <where>  
+		  		  <if test="attributeid != null and attributeid != ''"> and attributeId = #{attributeid} </if>
+		  		  <if test="attributename != null and attributename != ''"> and attributeName = #{attributename} </if>
+		  		  <if test="templateid != null and templateid != ''"> and templateId = #{templateid} </if>
+		  		  <if test="attrbuteccode != null and attrbuteccode != ''"> and attrbutecCode = #{attrbuteccode} </if>
+		  		</where>
+	</select>
+	 
+	<insert id="save" parameterType="com.bootdo.thesisMamager.domain.ThesisTemplateAttrDO">
+		insert into thesis_template_attr
+		(
+			`attributeId`, 
+			`attributeName`, 
+			`templateId`, 
+			`attrbutecCode`
+		)
+		values
+		(
+			#{attributeid}, 
+			#{attributename}, 
+			#{templateid}, 
+			#{attrbuteccode}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.bootdo.thesisMamager.domain.ThesisTemplateAttrDO">
+		update thesis_template_attr 
+		<set>
+			<if test="attributename != null">`attributeName` = #{attributename}, </if>
+			<if test="templateid != null">`templateId` = #{templateid}, </if>
+			<if test="attrbuteccode != null">`attrbutecCode` = #{attrbuteccode}</if>
+		</set>
+		where attributeId = #{attributeid}
+	</update>
+	
+	<delete id="remove">
+		delete from thesis_template_attr where attributeId = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from thesis_template_attr where attributeId in 
+		<foreach item="attributeid" collection="array" open="(" separator="," close=")">
+			#{attributeid}
+		</foreach>
+	</delete>
+
+</mapper>

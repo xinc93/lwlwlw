@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bootdo.thesisMamager.dao.ThesisTemplateDao">
+
+	<select id="get" resultType="com.bootdo.thesisMamager.domain.ThesisTemplateDO">
+		select `templateId`,`templateName`,`shoolId`,`depId` from thesis_template where templateId = #{value}
+	</select>
+
+	<select id="list" resultType="com.bootdo.thesisMamager.domain.ThesisTemplateDO">
+		select `templateId`,`templateName`,`shoolId`,`depId` from thesis_template
+        <where>  
+		  		  <if test="templateid != null and templateid != ''"> and templateId = #{templateid} </if>
+		  		  <if test="templatename != null and templatename != ''"> and templateName = #{templatename} </if>
+		  		  <if test="shoolid != null and shoolid != ''"> and shoolId = #{shoolid} </if>
+		  		  <if test="depid != null and depid != ''"> and depId = #{depid} </if>
+		  		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by templateId desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from thesis_template
+		 <where>  
+		  		  <if test="templateid != null and templateid != ''"> and templateId = #{templateid} </if>
+		  		  <if test="templatename != null and templatename != ''"> and templateName = #{templatename} </if>
+		  		  <if test="shoolid != null and shoolid != ''"> and shoolId = #{shoolid} </if>
+		  		  <if test="depid != null and depid != ''"> and depId = #{depid} </if>
+		  		</where>
+	</select>
+	 
+	<insert id="save" parameterType="com.bootdo.thesisMamager.domain.ThesisTemplateDO">
+		insert into thesis_template
+		(
+			`templateId`, 
+			`templateName`, 
+			`shoolId`, 
+			`depId`
+		)
+		values
+		(
+			#{templateid}, 
+			#{templatename}, 
+			#{shoolid}, 
+			#{depid}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.bootdo.thesisMamager.domain.ThesisTemplateDO">
+		update thesis_template 
+		<set>
+			<if test="templatename != null">`templateName` = #{templatename}, </if>
+			<if test="shoolid != null">`shoolId` = #{shoolid}, </if>
+			<if test="depid != null">`depId` = #{depid}</if>
+		</set>
+		where templateId = #{templateid}
+	</update>
+	
+	<delete id="remove">
+		delete from thesis_template where templateId = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from thesis_template where templateId in 
+		<foreach item="templateid" collection="array" open="(" separator="," close=")">
+			#{templateid}
+		</foreach>
+	</delete>
+
+</mapper>
