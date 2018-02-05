@@ -45,8 +45,10 @@ public class ThesisCollegeController {
 	@RequiresPermissions("thesisMamager:thesisCollege:thesisCollege")
 	public List<ThesisCollegeDO> list(@RequestParam Map<String, Object> params){
 		//查询列表数据
+
 		Map<String, Object> query = new HashMap<>(params);
 		List<ThesisCollegeDO> thesisCollegeList = thesisCollegeService.list(query);
+
 		return thesisCollegeList;
 	}
 	

@@ -3,6 +3,7 @@ package com.bootdo.thesisMamager.controller;
 import com.bootdo.common.config.BootdoConfig;
 import com.bootdo.common.domain.FileDO;
 import com.bootdo.common.utils.*;
+import com.bootdo.thesisMamager.domain.ThesisCollegeDO;
 import com.bootdo.thesisMamager.domain.ThesisTemplateAttrDO;
 import com.bootdo.thesisMamager.domain.ThesisTemplateDO;
 import com.bootdo.thesisMamager.service.ThesisCollegeService;
@@ -58,6 +59,32 @@ public class ThesisTemplateController {
         //查询列表数据
         Query query = new Query(params);
         List<ThesisTemplateDO> thesisTemplateList = thesisTemplateService.list(query);
+
+        for(int i=0;i<thesisTemplateList.size();i++)
+        {
+
+            ThesisCollegeDO collegeDO= thesisCollegeService.get(thesisTemplateList.get(i).getShoolid());
+            ThesisCollegeDO collegeDOdep= thesisCollegeService.get(thesisTemplateList.get(i).getDepid());
+            if(collegeDO==null)
+            {
+                thesisTemplateList.get(i).setSchoolName("未知");
+            }
+            else
+            {
+                thesisTemplateList.get(i).setSchoolName(collegeDO.getName());
+            }
+
+            if(collegeDOdep==null)
+            {
+                thesisTemplateList.get(i).setDepName("未知");
+            }
+            else
+            {
+                thesisTemplateList.get(i).setDepName(collegeDOdep.getName());
+            }
+
+        }
+
         int total = thesisTemplateService.count(query);
         PageUtils pageUtils = new PageUtils(thesisTemplateList, total);
         return pageUtils;
@@ -98,7 +125,9 @@ public class ThesisTemplateController {
             if (type.equals("Word.Bookmark.Start")) {
                 ThesisTemplateAttrDO thesisTemplateAttrDO=new ThesisTemplateAttrDO();
                 thesisTemplateAttrDO.setTemplateid(id);
-                thesisTemplateAttrDO.setAttributename(node.valueOf("@w:name"));
+                String[] obj=node.valueOf("@w:name").toString().split(",");
+                thesisTemplateAttrDO.setAttrbuteccode(obj[0]);
+                thesisTemplateAttrDO.setAttributename(obj[1]);
                 thesisTemplateAttrDO.setAttributeid(IdGen.next());
                 System.out.println(node.valueOf("@w:name"));
                 thesisTemplateAttrService.save(thesisTemplateAttrDO);
@@ -182,6 +211,7 @@ public class ThesisTemplateController {
 
     public R remove(@RequestParam("ids[]") Long[] templateids){
         thesisTemplateService.batchRemove(templateids);
+        thesisTemplateAttrService.batchRemove(templateids);
         return R.ok();
     }
 

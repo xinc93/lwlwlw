@@ -36,7 +36,7 @@ public class ThesisTemplateAttrController {
 	private ThesisTemplateAttrService thesisTemplateAttrService;
 	
 	@GetMapping()
-	@RequiresPermissions("thesisMamager:thesisTemplateAttr:thesisTemplateAttr")
+
 	String ThesisTemplateAttr(){
 	    return "thesisMamager/thesisTemplateAttr/thesisTemplateAttr";
 	}
@@ -46,7 +46,10 @@ public class ThesisTemplateAttrController {
 
 	public PageUtils list(@RequestParam Map<String, Object> params){
 		//查询列表数据
-        Query query = new Query(params);
+		/*params.put("offset",10000);
+		params.put("limit",1);*/
+
+		Query query = new Query(params);
 		List<ThesisTemplateAttrDO> thesisTemplateAttrList = thesisTemplateAttrService.list(query);
 		int total = thesisTemplateAttrService.count(query);
 		PageUtils pageUtils = new PageUtils(thesisTemplateAttrList, total);

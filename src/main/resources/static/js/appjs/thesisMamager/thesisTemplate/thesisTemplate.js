@@ -1,5 +1,6 @@
 
 var prefix = "/thesisMamager/thesisTemplate"
+var prefixAttr = "/thesisMamager/thesisTemplateAttr"
 $(function() {
 	load();
 });
@@ -56,15 +57,25 @@ function load() {
 									title : '模板名称'
 								},
 																{
-									field : 'shoolid', 
-									title : '' 
+									field : 'schoolName',
+									title : '所需学校'
 								},
 																{
-									field : 'depid', 
-									title : '' 
-								},
+									field : 'depName',
+									title : '所属院系'
+								},	{
+                                title : '操作',
+                                field : 'templateid',
+                                align : 'center',
+                                formatter : function(value, row, index) {
+                                    var e = '<a class="btn btn-primary btn-sm" href="#" mce_href="#" title="查看模板属性" onclick="view(\''
+                                        + row.id
+                                        + '\')"><i class="fa fa-edit"></i> 查看模板属性</a> ';
+                                    return e ;
+                                }
+                            }
 
-														  ]
+                        ]
 					});
 }
 function reLoad() {
@@ -89,6 +100,17 @@ function edit(id) {
 		area : [ '800px', '520px' ],
 		content : prefix + '/edit/' + id // iframe的url
 	});
+}
+function  view(id) {
+
+    layer.open({
+        type : 2,
+        title : '编辑',
+        maxmin : true,
+        shadeClose : false, // 点击遮罩关闭层
+        area : [ '800px', '520px' ],
+        content : prefixAttr
+    });
 }
 function remove(id) {
 	layer.confirm('确定要删除选中的记录？', {

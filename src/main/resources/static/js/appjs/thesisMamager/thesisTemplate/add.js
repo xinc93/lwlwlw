@@ -14,6 +14,7 @@ $("#schoolId").change(function(){debugger;
         data:{pid:t},
         success:function(data){
             var t2 = $("#depId").empty();
+         //   $("#depId").val(data[0].id);
             for ( var i = 0; i < data.length; i++) {
                 t2.append("<option value='"+data[i].id+"'>"+ data[i].name+"</option>");
             }
@@ -49,8 +50,8 @@ function save() {
     var formData = new FormData();
     formData.append('myfile', $('input[name=myfile]')[0].files[0]);
     formData.append('templatename', $("#templatename").val());
-    formData.append('shoolid', $("#shoolid").val());
-    formData.append('depid', $("#depid").val());
+    formData.append('shoolid', $("#schoolId").val());
+    formData.append('depid', $("#depId").val());
   /*  alert(1)
     $.ajax({
 		cache : true,

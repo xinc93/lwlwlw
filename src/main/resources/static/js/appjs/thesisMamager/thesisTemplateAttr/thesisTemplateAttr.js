@@ -48,20 +48,12 @@ function load() {
 									checkbox : true
 								},
 																{
-									field : 'attributeid', 
-									title : '' 
+									field : 'attrbuteccode',
+									title : '字段code'
 								},
 																{
-									field : 'attributename', 
-									title : '' 
-								},
-																{
-									field : 'templateid', 
-									title : '' 
-								},
-																{
-									field : 'attrbuteccode', 
-									title : '预留字段' 
+									field : 'attributename',
+									title : '字段'
 								},
 																{
 									title : '操作',

@@ -70,7 +70,7 @@
 	</delete>
 	
 	<delete id="batchRemove">
-		delete from thesis_template_attr where attributeId in 
+		delete from thesis_template_attr where templateId in
 		<foreach item="attributeid" collection="array" open="(" separator="," close=")">
 			#{attributeid}
 		</foreach>

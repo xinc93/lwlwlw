@@ -22,6 +22,25 @@ public class ThesisTemplateDO implements Serializable {
 	//
 	private Long depid;
 
+	private  String schoolName;
+	private  String depName;
+
+	public String getSchoolName() {
+		return schoolName;
+	}
+
+	public void setSchoolName(String schoolName) {
+		this.schoolName = schoolName;
+	}
+
+	public String getDepName() {
+		return depName;
+	}
+
+	public void setDepName(String depName) {
+		this.depName = depName;
+	}
+
 	/**
 	 * 设置：
 	 */
