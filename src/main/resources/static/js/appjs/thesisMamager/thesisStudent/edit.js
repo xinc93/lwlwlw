@@ -15,6 +15,9 @@ $().ready(function() {
                 var t2 = $("#depId").empty();
                 $("#teacherId").empty();
                 for ( var i = 0; i < data.length; i++) {
+                    if(i==0){
+                        t2.append("<option value=''>--请选择--</option>");
+                    }
                     t2.append("<option value='"+data[i].id+"'>"+ data[i].name+"</option>");
                 }
             }
@@ -35,6 +38,9 @@ $().ready(function() {
             success:function(data){
                 var t3 = $("#teacherId").empty();
                 for ( var i = 0; i < data.length; i++) {
+                    if(i==0){
+                        t3.append("<option value=''>--请选择--</option>");
+                    }
                     t3.append("<option value='"+data[i].id+"'>"+ data[i].teacherTitle+"</option>");
                 }
             }

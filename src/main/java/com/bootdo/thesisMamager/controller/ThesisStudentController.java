@@ -169,11 +169,11 @@ public class ThesisStudentController {
 		}
 		/** 获取文件的后缀* */
 		String filename = multipartFile.getOriginalFilename();
-		String filePath = "src/main/resources/static/imgupload/";
+		String filePath = uploadPath;//"src/main/resources/static/imgupload/";
 		System.out.println("fileName-->" + filePath+filename);
 		try {
 			FileUtil.uploadFile(multipartFile.getBytes(), filePath, filename);
-			filePathdata="/imgupload/"+filename;
+			filePathdata="/files/"+filename;//"/imgupload/"+
 		} catch (Exception e) {
 			e.getMessage();
 		}

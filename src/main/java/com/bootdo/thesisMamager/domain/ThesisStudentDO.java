@@ -21,8 +21,8 @@ public class ThesisStudentDO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	//学生ID
-	/*@JsonSerialize(using = LongJsonSerializer.class)
-	@JsonDeserialize(using = LongJsonDeserializer.class)*/
+	@JsonSerialize(using = LongJsonSerializer.class)
+	@JsonDeserialize(using = LongJsonDeserializer.class)
 	private Long id;
 	//学生姓名
 	private String name;
@@ -42,10 +42,13 @@ public class ThesisStudentDO implements Serializable {
 	private String schoolNo;
 	//学校ID
 	private Long schoolId;
+	private String schoolName;
 	//院系ID
 	private Long depId;
+	private String depName;
 	//导师id
 	private Long teacherId;
+	private String teacherName;
 	//账号类型   1 个人账号  2 学校授权账号
 	private String accountType;
 	//账号有效期
@@ -259,5 +262,29 @@ public class ThesisStudentDO implements Serializable {
 	 */
 	public String getHeadImg() {
 		return headImg;
+	}
+
+	public String getSchoolName() {
+		return schoolName;
+	}
+
+	public void setSchoolName(String schoolName) {
+		this.schoolName = schoolName;
+	}
+
+	public String getDepName() {
+		return depName;
+	}
+
+	public void setDepName(String depName) {
+		this.depName = depName;
+	}
+
+	public String getTeacherName() {
+		return teacherName;
+	}
+
+	public void setTeacherName(String teacherName) {
+		this.teacherName = teacherName;
 	}
 }
