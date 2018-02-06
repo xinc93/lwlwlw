@@ -65,7 +65,7 @@ function load() {
 								},
 																{
 									field : 'teacherTitle', 
-									title : '' 
+									title : '姓名'
 								},
 																{
 									field : 'major', 
