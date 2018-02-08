@@ -1,6 +1,56 @@
 $().ready(function() {
 	validateRule();
+
+    $("#schoolId").change(function(){debugger;
+        var t = $("#schoolId").val();
+        if(t ==''){
+            return;
+        }
+        $.ajax({
+            url:'/thesisMamager/thesisStudent/faculty',
+            async:false,
+            type:'post',
+            data:{pid:t},
+            success:function(data){
+                var t2 = $("#depId").empty();
+                $("#teacherId").empty();
+                for ( var i = 0; i < data.length; i++) {
+                    if(i==0){
+                        t2.append("<option value=''>--请选择--</option>");
+                    }
+                    t2.append("<option value='"+data[i].id+"'>"+ data[i].name+"</option>");
+                }
+            }
+        })
+    });
+
+    $("#depId").change(function(){
+        debugger;
+        var depId = $("#depId").val();
+        if(depId ==''){
+            return;
+        }
+        $.ajax({
+            url:'/thesisMamager/thesisStudent/teacher',
+            async:false,
+            type:'post',
+            data:{dep_id:$("#depId").val()},
+            success:function(data){
+                var t3 = $("#teacherId").empty();
+                for ( var i = 0; i < data.length; i++) {
+                    if(i==0){
+                        t3.append("<option value=''>--请选择--</option>");
+                    }
+                    t3.append("<option value='"+data[i].id+"'>"+ data[i].teacherTitle+"</option>");
+                }
+            }
+        })
+    });
+
+
+
 });
+uploadImg("uploadCover", "headImg", "upload", "");//thesisMamager/thesisStudent/
 
 $.validator.setDefaults({
 	submitHandler : function() {
