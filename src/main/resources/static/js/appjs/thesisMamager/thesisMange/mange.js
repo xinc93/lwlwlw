@@ -1,5 +1,5 @@
 
-var prefix = "/thesisMamager/thesisStudent"
+var prefix = "/thesisMamager/thesisMange"
 $(function() {
 	load();
 });
@@ -32,9 +32,9 @@ function load() {
 							return {
 								//说明：传入后台的参数包括offset开始索引，limit步长，sort排序列，order：desc或者,以及所有列的键值对
 								limit: params.limit,
-								offset:params.offset,
+								offset:params.offset
 					           // name:$('#searchName').val(),
-					           name:$('#searchName').val()
+					           // username:$('#searchName').val()
 							};
 						},
 						// //请求服务器数据时，你可以通过重写参数的方式添加一些额外的参数，例如 toolbar 中的参数 如果
@@ -49,86 +49,79 @@ function load() {
 								},
 																{
 									field : 'id', 
-									title : '学生ID' 
+									title : 'id' 
 								},
 																{
-									field : 'name',
-									title : '学生姓名' 
+									field : 'thesisName', 
+									title : '论文名字' 
 								},
 																{
-									field : 'mobile', 
-									title : '手机号' 
+									field : 'schoolname',
+									title : '学校'
 								},
 																{
-									field : 'eduClass', 
-									title : '学历层次' 
+									field : 'depname',
+									title : '院系'
 								},
 																{
-									field : 'learnClass', 
-									title : '学习形式' 
+									field : 'thesisDirection', 
+									title : '所属专业' 
 								},
 																{
-									field : 'major', 
-									title : '专业' 
+									field : 'studentname',
+									title : '所属学生' 
+								},
+								{
+									field : 'teachername',
+									title : '所属导师' 
 								},
 																{
-									field : 'professionalDirection',
-									title : '专业方向' 
-								},
-																{
-									field : 'schoolGrade', 
-									title : '年级' 
-								},
-																{
-									field : 'schoolNo', 
-									title : '学籍号' 
-								},
-																{
-									field : 'schoolId', 
-									title : '学校ID' 
-								},
-																{
-									field : 'depId', 
-									title : '院系ID' 
-								},
-																{
-									field : 'teacherId', 
-									title : '导师id' 
-								},
-																{
-									field : 'accountType', 
-									title : '账号类型' ,
+									field : 'thesisStutes', 
+									title : '论文状态',
 									formatter : function(value, row, index) {
-										if(value=="1"){
-                                            return "个人账号" ;
+										if(value=="0"){
+											return "未完成" ;
 										}else{
-                                            return "学校授权账号";
+											return "已完成";
 										}
-
+									}
+								},
+																{
+									field : 'thesisType', 
+									title : '论文类型',
+									formatter : function(value, row, index) {
+										if(value=="0"){
+											return "硕士" ;
+										}else{
+											return "本科";
+										}
+									}
+								},
+																{
+									field : 'updateTime', 
+									title : '创建时间'
+								},
+																{
+									field : 'updateCount', 
+									title : '修改次数'
+								},
+																{
+									field : 'isRead', 
+									title : '是否批阅',
+									formatter : function(value, row, index) {
+										if(value=="0"){
+											return "批阅" ;
+										}else{
+											return "未批";
+										}
 									}
 								},
 								{
-									field : 'accountTm', 
-									title : '账号有效期' 
-								},
-								{
-									field : 'createTm', 
-									title : '创建时间 '
-								},
-																{
-									field : 'lastloginTm', 
-									title : '最后一次登录时间' 
-								},
-																/*{
-									field : 'headImg', 
-									title : '头像' 
-								},*/
-																{
 									title : '操作',
 									field : 'id',
 									align : 'center',
 									formatter : function(value, row, index) {
-										var e = '<a class="btn btn-primary btn-sm '+s_edit_h+'" href="#" mce_href="#" title="编辑" onclick="edit(\''
+										var e = '<a class="btn btn-primary btn-sm '+s_edit_h+'" href="#" mce_href="#" title="下载" onclick="edit(\''
 												+ row.id
 												+ '\')"><i class="fa fa-edit"></i></a> ';
 										var d = '<a class="btn btn-warning btn-sm '+s_remove_h+'" href="#" title="删除"  mce_href="#" onclick="remove(\''

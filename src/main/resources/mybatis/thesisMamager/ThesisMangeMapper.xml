@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bootdo.thesisMamager.dao.ThesisMangeDao">
+
+	<select id="get" resultType="com.bootdo.thesisMamager.domain.ThesisMangeDO">
+		select `id`,`thesis_name`,`thesis_school`,`thesis_dep`,`thesis_direction`,`thesis_stuid`,`thesis_teachid`,`thesis_stutes`,`thesis_type`,`update_time`,`update_count`,`is_read` from thesis_mange where id = #{value}
+	</select>
+
+	<select id="list" resultType="com.bootdo.thesisMamager.domain.ThesisMangeDO">
+		select tm.`id`,tm.`thesis_name`,tm.`thesis_school`,tm.`thesis_dep`,tm.`thesis_direction`,tm.`thesis_stuid`,tm.`thesis_teachid`,tm.`thesis_stutes`,tm.`thesis_type`,tm.`update_time`,tm.`update_count`,tm.`is_read`,
+
+		tm.`thesis_stutes`,tm.`thesis_type`,tm.`update_time`,tm.`update_count`,tm.`is_read`,
+
+		tc.name as schoolname,tt.teacher_title as teachername,ts.`name` as studentname,(SELECT tce.`name` from thesis_college tce where tce.id=tm.`thesis_dep`) as depname
+
+		from thesis_mange tm
+
+		LEFT JOIN  thesis_college tc on  tc.id=tm.`thesis_school`
+
+		LEFT JOIN  thesis_teacher tt on  tt.id=tm.`thesis_teachid`
+
+		LEFT JOIN  thesis_student ts on  ts.id=tm.`thesis_stuid`
+        <where>  
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="thesisName != null and thesisName != ''"> and thesis_name = #{thesisName} </if>
+		  		  <if test="thesisSchool != null and thesisSchool != ''"> and thesis_school = #{thesisSchool} </if>
+		  		  <if test="thesisDep != null and thesisDep != ''"> and thesis_dep = #{thesisDep} </if>
+		  		  <if test="thesisDirection != null and thesisDirection != ''"> and thesis_direction = #{thesisDirection} </if>
+		  		  <if test="thesisStuid != null and thesisStuid != ''"> and thesis_stuid = #{thesisStuid} </if>
+		  		  <if test="thesisTeachid != null and thesisTeachid != ''"> and thesis_teachid = #{thesisTeachid} </if>
+		  		  <if test="thesisStutes != null and thesisStutes != ''"> and thesis_stutes = #{thesisStutes} </if>
+		  		  <if test="thesisType != null and thesisType != ''"> and thesis_type = #{thesisType} </if>
+		  		  <if test="updateTime != null and updateTime != ''"> and update_time = #{updateTime} </if>
+		  		  <if test="updateCount != null and updateCount != ''"> and update_count = #{updateCount} </if>
+		  		  <if test="isRead != null and isRead != ''"> and is_read = #{isRead} </if>
+		  		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from thesis_mange
+		 <where>  
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="thesisName != null and thesisName != ''"> and thesis_name = #{thesisName} </if>
+		  		  <if test="thesisSchool != null and thesisSchool != ''"> and thesis_school = #{thesisSchool} </if>
+		  		  <if test="thesisDep != null and thesisDep != ''"> and thesis_dep = #{thesisDep} </if>
+		  		  <if test="thesisDirection != null and thesisDirection != ''"> and thesis_direction = #{thesisDirection} </if>
+		  		  <if test="thesisStuid != null and thesisStuid != ''"> and thesis_stuid = #{thesisStuid} </if>
+		  		  <if test="thesisTeachid != null and thesisTeachid != ''"> and thesis_teachid = #{thesisTeachid} </if>
+		  		  <if test="thesisStutes != null and thesisStutes != ''"> and thesis_stutes = #{thesisStutes} </if>
+		  		  <if test="thesisType != null and thesisType != ''"> and thesis_type = #{thesisType} </if>
+		  		  <if test="updateTime != null and updateTime != ''"> and update_time = #{updateTime} </if>
+		  		  <if test="updateCount != null and updateCount != ''"> and update_count = #{updateCount} </if>
+		  		  <if test="isRead != null and isRead != ''"> and is_read = #{isRead} </if>
+		  		</where>
+	</select>
+	 
+	<insert id="save" parameterType="com.bootdo.thesisMamager.domain.ThesisMangeDO" useGeneratedKeys="true" keyProperty="id">
+		insert into thesis_mange
+		(
+			`thesis_name`, 
+			`thesis_school`, 
+			`thesis_dep`, 
+			`thesis_direction`, 
+			`thesis_stuid`, 
+			`thesis_teachid`, 
+			`thesis_stutes`, 
+			`thesis_type`, 
+			`update_time`, 
+			`update_count`, 
+			`is_read`
+		)
+		values
+		(
+			#{thesisName}, 
+			#{thesisSchool}, 
+			#{thesisDep}, 
+			#{thesisDirection}, 
+			#{thesisStuid}, 
+			#{thesisTeachid}, 
+			#{thesisStutes}, 
+			#{thesisType}, 
+			#{updateTime}, 
+			#{updateCount}, 
+			#{isRead}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.bootdo.thesisMamager.domain.ThesisMangeDO">
+		update thesis_mange 
+		<set>
+			<if test="thesisName != null">`thesis_name` = #{thesisName}, </if>
+			<if test="thesisSchool != null">`thesis_school` = #{thesisSchool}, </if>
+			<if test="thesisDep != null">`thesis_dep` = #{thesisDep}, </if>
+			<if test="thesisDirection != null">`thesis_direction` = #{thesisDirection}, </if>
+			<if test="thesisStuid != null">`thesis_stuid` = #{thesisStuid}, </if>
+			<if test="thesisTeachid != null">`thesis_teachid` = #{thesisTeachid}, </if>
+			<if test="thesisStutes != null">`thesis_stutes` = #{thesisStutes}, </if>
+			<if test="thesisType != null">`thesis_type` = #{thesisType}, </if>
+			<if test="updateTime != null">`update_time` = #{updateTime}, </if>
+			<if test="updateCount != null">`update_count` = #{updateCount}, </if>
+			<if test="isRead != null">`is_read` = #{isRead}</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<delete id="remove">
+		delete from thesis_mange where id = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from thesis_mange where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>
