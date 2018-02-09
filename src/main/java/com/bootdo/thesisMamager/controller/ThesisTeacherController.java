@@ -1,8 +1,10 @@
 package com.bootdo.thesisMamager.controller;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.bootdo.thesisMamager.service.ThesisCollegeService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -34,6 +36,8 @@ import com.bootdo.common.utils.R;
 public class ThesisTeacherController {
 	@Autowired
 	private ThesisTeacherService thesisTeacherService;
+	@Autowired
+	private ThesisCollegeService thesisCollegeService;
 	
 	@GetMapping()
 	@RequiresPermissions("thesisMamager:thesisTeacher:thesisTeacher")
@@ -55,7 +59,13 @@ public class ThesisTeacherController {
 	
 	@GetMapping("/add")
 	@RequiresPermissions("thesisMamager:thesisTeacher:add")
-	String add(){
+	String add(Model model){
+		Map map=new HashMap();
+		//选择学校
+		Map College=new HashMap();
+		College.put("state","0");
+		College.put("pid","0");
+		model.addAttribute("mylist",thesisCollegeService.list(College));
 	    return "thesisMamager/thesisTeacher/add";
 	}
 
