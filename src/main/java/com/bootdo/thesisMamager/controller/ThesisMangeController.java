@@ -1,5 +1,6 @@
 package com.bootdo.thesisMamager.controller;
 
+import java.io.*;
 import java.util.List;
 import java.util.Map;
 
@@ -7,6 +8,7 @@ import com.bootdo.thesisMamager.domain.ThesisMangeDO;
 import com.bootdo.thesisMamager.service.ThesisMangeService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +21,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.bootdo.common.utils.PageUtils;
 import com.bootdo.common.utils.Query;
 import com.bootdo.common.utils.R;
+
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * 
@@ -34,7 +39,9 @@ public class ThesisMangeController {
 
 	@Autowired
 	private ThesisMangeService thesisMangeService;
-	
+    @Value("${bootdo.uploadPath}")
+    private String uploadPath;
+
 	@GetMapping("/thesisMange")
 	@RequiresPermissions("thesisMamager:thesisMange:thesisMange")
 	String Mange(){
@@ -57,6 +64,65 @@ public class ThesisMangeController {
 	@RequiresPermissions("system:mange:add")
 	String add(){
 	    return "system/mange/add";
+	}
+
+	@GetMapping("/downloade")
+	@RequiresPermissions("thesisMamager:thesisMange:downloade")
+    void downloade(String id,String thesisName,String thesisStuid,HttpServletResponse response) throws IOException {
+       String path= uploadPath+"/"+thesisStuid+"/"+id+"/"+thesisName+".doc";
+       /* try {
+            // path是指欲下载的文件的路径。
+            File file = new File(path);
+            if (!file.exists()) {
+                response.sendError(404, "File not found!");
+                return;
+            }
+            // 取得文件名。
+            String filename = file.getName();
+            // 取得文件的后缀名。
+            String ext = filename.substring(filename.lastIndexOf(".") + 1).toUpperCase();
+
+            // 以流的形式下载文件。
+            InputStream fis = new BufferedInputStream(new FileInputStream(path));
+            byte[] buffer = new byte[fis.available()];
+            fis.read(buffer);
+            fis.close();
+            // 清空response
+            response.reset();
+            // 设置response的Header
+            response.setHeader("Content-disposition", String.format("attachment; filename=\"%s\"", filename));
+            response.addHeader("Content-Length", "" + file.length());
+            OutputStream toClient = new BufferedOutputStream(response.getOutputStream());
+            response.setContentType("application/x-msdownload");
+            toClient.write(buffer);
+            toClient.flush();
+            toClient.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }*/
+        File file = new File(path);
+        long size = file.length();
+        //为了解决中文名称乱码问题 这里是设置文件下载后的名称
+        String fileName = new String(file.getName().getBytes("UTF-8"), "iso-8859-1");
+        response.reset();
+        response.setHeader("Accept-Ranges", "bytes");
+        //设置文件下载是以附件的形式下载
+        response.setHeader("Content-disposition", String.format("attachment; filename=\"%s\"", fileName));
+        response.addHeader("Content-Length", String.valueOf(size));
+        response.setContentType("application/octet-stream; charset=UTF-8");
+
+        ServletOutputStream sos = response.getOutputStream();
+        FileInputStream in = new FileInputStream(file);
+        BufferedOutputStream outputStream = new BufferedOutputStream(sos);
+        byte[] b = new byte[1024];
+        int i = 0;
+        while ((i = in.read(b)) > 0) {
+            outputStream.write(b, 0, i);
+        }
+        outputStream.flush();
+        sos.close();
+        outputStream.close();
+        in.close();
 	}
 
 	@GetMapping("/edit/{id}")
