@@ -7,6 +7,8 @@ import java.util.*;
 import com.bootdo.common.domain.DictDO;
 import com.bootdo.common.service.DictService;
 import com.bootdo.common.utils.*;
+import com.bootdo.thesisMamager.domain.MealManageDO;
+import com.bootdo.thesisMamager.service.MealManageService;
 import com.bootdo.thesisMamager.service.ThesisCollegeService;
 import com.bootdo.thesisMamager.service.ThesisTeacherService;
 import com.google.common.hash.Hashing;
@@ -51,6 +53,8 @@ public class ThesisStudentController {
 	private ThesisCollegeService thesisCollegeService;
 	@Autowired
 	private ThesisTeacherService thesisTeacherService;
+	@Autowired
+	private MealManageService mealManageService;
 	@Value("${bootdo.uploadPath}")
 	private String uploadPath;
 
@@ -59,7 +63,7 @@ public class ThesisStudentController {
 	String ThesisStudent(){
 	    return "thesisMamager/thesisStudent/thesisStudent";
 	}
-	
+
 	@ResponseBody
 	@GetMapping("/list")
 	@RequiresPermissions("thesisMamager:thesisStudent:thesisStudent")

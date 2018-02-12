@@ -105,7 +105,7 @@ function load() {
 									field : 'updateCount', 
 									title : '修改次数'
 								},
-																{
+								{
 									field : 'isRead', 
 									title : '是否批阅',
 									formatter : function(value, row, index) {
@@ -122,7 +122,7 @@ function load() {
 									align : 'center',
 									formatter : function(value, row, index) {//downloade(\''+ row.id + ',\''+row.thesisName+',\''+row.thesisStuid+'\')
 										var e = '<a class="btn btn-primary btn-sm '+s_edit_h+'" href="#" mce_href="#" title="下载" ' +
-											'onclick="downloade(\''+row.id+'\',\''+row.thesisName+'\',\''+row.thesisStuid+'\')"><i class="fa fa-edit"></i></a> ';
+											'onclick="downloade(\''+row.id+'\',\''+row.thesisName+'\',\''+row.thesisStuid+'\')"><i class="glyphicon glyphicon-cloud-download"></i></a> ';
 										var d = '<a class="btn btn-warning btn-sm '+s_remove_h+'" href="#" title="删除"  mce_href="#" onclick="remove(\''
 												+ row.id
 												+ '\')"><i class="fa fa-remove"></i></a> ';

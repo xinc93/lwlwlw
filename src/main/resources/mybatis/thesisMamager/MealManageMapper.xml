@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bootdo.thesisMamager.dao.MealManageDao">
+
+	<select id="get" resultType="com.bootdo.thesisMamager.domain.MealManageDO">
+		select `id`,`user_id`,`type`,`price` from meal_manage where id = #{value}
+	</select>
+
+	<select id="list" resultType="com.bootdo.thesisMamager.domain.MealManageDO">
+		select mm.`id`,mm.`user_id`,mm.`type`,mm.`price`,
+
+		ts.name,ts.school_no
+
+		from meal_manage mm
+
+		LEFT JOIN  thesis_student ts on  ts.id = mm.`id`
+        <where>  
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="userId != null and userId != ''"> and user_id = #{userId} </if>
+		  		  <if test="type != null and type != ''"> and type = #{type} </if>
+		  		  <if test="price != null and price != ''"> and price = #{price} </if>
+					<if test="school_no != null and school_no != ''"> and ts.school_no = #{school_no} </if>
+		  		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from meal_manage
+		 <where>  
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="userId != null and userId != ''"> and user_id = #{userId} </if>
+		  		  <if test="type != null and type != ''"> and type = #{type} </if>
+		  		  <if test="price != null and price != ''"> and price = #{price} </if>
+		  		</where>
+	</select>
+	 
+	<insert id="save" parameterType="com.bootdo.thesisMamager.domain.MealManageDO" useGeneratedKeys="true" keyProperty="id">
+		insert into meal_manage
+		(
+			`user_id`, 
+			`type`, 
+			`price`
+		)
+		values
+		(
+			#{userId}, 
+			#{type}, 
+			#{price}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.bootdo.thesisMamager.domain.MealManageDO">
+		update meal_manage 
+		<set>
+			<if test="userId != null">`user_id` = #{userId}, </if>
+			<if test="type != null">`type` = #{type}, </if>
+			<if test="price != null">`price` = #{price}</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<delete id="remove">
+		delete from meal_manage where id = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from meal_manage where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>
