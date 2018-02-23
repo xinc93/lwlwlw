@@ -197,6 +197,7 @@ function uploadImg(btnId, valueId, url, imgs) {
         }).on("fileuploaded", function(event, ret, previewId, index) {
             var filePath = ret.response.filepath;
             $("#" + valueId).val(filePath);
+            $("#headImgShow").css("display","none");
         }).on("fileclear", function(event, key) {
             return false;
         }).on("filecleared", function(event, key) {

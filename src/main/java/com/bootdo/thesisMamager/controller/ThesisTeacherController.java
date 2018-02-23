@@ -1,27 +1,30 @@
 package com.bootdo.thesisMamager.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import com.bootdo.common.utils.FileUtil;
 import com.bootdo.thesisMamager.service.ThesisCollegeService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import com.bootdo.thesisMamager.domain.ThesisTeacherDO;
 import com.bootdo.thesisMamager.service.ThesisTeacherService;
 import com.bootdo.common.utils.PageUtils;
 import com.bootdo.common.utils.Query;
 import com.bootdo.common.utils.R;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * 
@@ -38,6 +41,8 @@ public class ThesisTeacherController {
 	private ThesisTeacherService thesisTeacherService;
 	@Autowired
 	private ThesisCollegeService thesisCollegeService;
+	@Value("${bootdo.uploadPath}")
+	private String uploadPath;
 	
 	@GetMapping()
 	@RequiresPermissions("thesisMamager:thesisTeacher:thesisTeacher")
@@ -74,6 +79,17 @@ public class ThesisTeacherController {
 	String edit(@PathVariable("id") Long id,Model model){
 		ThesisTeacherDO thesisTeacher = thesisTeacherService.get(id);
 		model.addAttribute("thesisTeacher", thesisTeacher);
+		//选择学校
+		Map College=new HashMap();
+		College.put("state","0");
+		College.put("pid","0");
+		model.addAttribute("mylist",thesisCollegeService.list(College));
+
+		//院系
+		Map faculty=new HashMap();
+		faculty.put("state","0");
+		faculty.put("pid",thesisTeacher.getSchoolId());
+		model.addAttribute("faculty",thesisCollegeService.list(faculty));
 	    return "thesisMamager/thesisTeacher/edit";
 	}
 	
@@ -123,5 +139,106 @@ public class ThesisTeacherController {
 		thesisTeacherService.batchRemove(ids);
 		return R.ok();
 	}
-	
+
+	@RequestMapping(value = "/upload")
+	@ResponseBody
+	public Map upload(HttpServletRequest request,HttpServletResponse response) throws UnsupportedEncodingException {//@RequestParam("file") MultipartFile file,,HttpServletRequest request
+		String filePathdata="";
+		request.setCharacterEncoding("UTF-8");
+
+		Map<String, Object> json = new HashMap<String, Object>();
+		MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+
+		/** 页面控件的文件流* */
+		MultipartFile multipartFile = null;
+		Map map =multipartRequest.getFileMap();
+		for (Iterator i = map.keySet().iterator(); i.hasNext();) {
+			Object obj = i.next();
+			multipartFile=(MultipartFile) map.get(obj);
+
+		}
+		/** 获取文件的后缀* */
+		String filename = multipartFile.getOriginalFilename();
+		String filePath = uploadPath;//"src/main/resources/static/imgupload/";
+		System.out.println("fileName-->" + filePath+filename);
+		try {
+			FileUtil.uploadFile(multipartFile.getBytes(), filePath, filename);
+			filePathdata="/files/"+filename;//"/imgupload/"+
+		} catch (Exception e) {
+			e.getMessage();
+		}
+
+
+
+		json.put("message", "应用上传成功");
+		json.put("status", true);
+		json.put("filepath",filePathdata);
+		return json;
+		/*if (!file.isEmpty()) {
+			String contentType = file.getContentType();
+			String fileName = file.getOriginalFilename();
+			System.out.println("fileName-->" + fileName);
+			System.out.println("getContentType-->" + contentType);
+			filePath = uploadPath+"/imgupload/";
+				System.out.println("fileName-->" + filePath+fileName);
+			try {
+				FileUtil.uploadFile(file.getBytes(), filePath, fileName);
+			} catch (Exception e) {
+				e.getMessage();
+			}
+			//返回json
+			return filePath+fileName;
+		}*/
+	}
+
+	@RequestMapping(value = "edit/upload")
+	@ResponseBody
+	public Map editUpload(HttpServletRequest request,HttpServletResponse response) throws UnsupportedEncodingException {//@RequestParam("file") MultipartFile file,,HttpServletRequest request
+		String filePathdata="";
+		request.setCharacterEncoding("UTF-8");
+
+		Map<String, Object> json = new HashMap<String, Object>();
+		MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+
+		/** 页面控件的文件流* */
+		MultipartFile multipartFile = null;
+		Map map =multipartRequest.getFileMap();
+		for (Iterator i = map.keySet().iterator(); i.hasNext();) {
+			Object obj = i.next();
+			multipartFile=(MultipartFile) map.get(obj);
+
+		}
+		/** 获取文件的后缀* */
+		String filename = multipartFile.getOriginalFilename();
+		String filePath = uploadPath;//"src/main/resources/static/imgupload/";
+		System.out.println("fileName-->" + filePath+filename);
+		try {
+			FileUtil.uploadFile(multipartFile.getBytes(), filePath, filename);
+			filePathdata="/files/"+filename;//"/imgupload/"+
+		} catch (Exception e) {
+			e.getMessage();
+		}
+
+
+
+		json.put("message", "应用上传成功");
+		json.put("status", true);
+		json.put("filepath",filePathdata);
+		return json;
+		/*if (!file.isEmpty()) {
+			String contentType = file.getContentType();
+			String fileName = file.getOriginalFilename();
+			System.out.println("fileName-->" + fileName);
+			System.out.println("getContentType-->" + contentType);
+			filePath = uploadPath+"/imgupload/";
+				System.out.println("fileName-->" + filePath+fileName);
+			try {
+				FileUtil.uploadFile(file.getBytes(), filePath, fileName);
+			} catch (Exception e) {
+				e.getMessage();
+			}
+			//返回json
+			return filePath+fileName;
+		}*/
+	}
 }

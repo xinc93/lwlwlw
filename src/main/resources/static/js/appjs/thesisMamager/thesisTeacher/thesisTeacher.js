@@ -84,10 +84,6 @@ function load() {
 									title : '最后一次登录时间' 
 								},
 																{
-									field : 'headImg', 
-									title : '头像' 
-								},
-																{
 									title : '操作',
 									field : 'id',
 									align : 'center',

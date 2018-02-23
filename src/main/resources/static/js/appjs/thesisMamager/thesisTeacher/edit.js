@@ -1,5 +1,58 @@
 $().ready(function() {
-	validateRule();
+    validateRule();
+
+    $("#schoolId").change(function(){debugger;
+        var t = $("#schoolId").val();
+        if(t ==''){
+            return;
+        }
+        $.ajax({
+            url:'/thesisMamager/thesisStudent/faculty',
+            async:false,
+            type:'post',
+            data:{pid:t},
+            success:function(data){
+                var t2 = $("#depId").empty();
+                $("#teacherId").empty();
+                for ( var i = 0; i < data.length; i++) {
+                    if(i==0){
+                        t2.append("<option value=''>--请选择--</option>");
+                    }
+                    t2.append("<option value='"+data[i].id+"'>"+ data[i].name+"</option>");
+                }
+            }
+        })
+    });
+
+    $("#depId").change(function(){
+        debugger;
+        var depId = $("#depId").val();
+        if(depId ==''){
+            return;
+        }
+        $.ajax({
+            url:'/thesisMamager/thesisStudent/teacher',
+            async:false,
+            type:'post',
+            data:{dep_id:$("#depId").val()},
+            success:function(data){
+                var t3 = $("#teacherId").empty();
+                for ( var i = 0; i < data.length; i++) {
+                    if(i==0){
+                        t3.append("<option value=''>--请选择--</option>");
+                    }
+                    t3.append("<option value='"+data[i].id+"'>"+ data[i].teacherTitle+"</option>");
+                }
+            }
+        })
+    });
+  /*  $("#headImg").change(function () {
+        debugger;
+        $("#headImgShow").attr("hidden",hidden);
+    })*/
+
+
+
 });
 
 $.validator.setDefaults({
@@ -7,6 +60,9 @@ $.validator.setDefaults({
 		update();
 	}
 });
+
+uploadImg("uploadCover", "headImg", "upload", "");//thesisMamager/thesisStudent/
+
 function update() {
 	$.ajax({
 		cache : true,
@@ -46,4 +102,44 @@ function validateRule() {
 			}
 		}
 	})
+}
+
+//回显旧图片,再上传新图片
+function uploadImg(btnId, valueId, url, imgs) {
+    if("" != imgs){
+        var images = "";
+        var imgArr = imgs.split(",");
+        for (var i in imgArr) {
+            images += "<img src='" + imgArr[i] + "' class='file-preview-image' style='width:100px;height:100px;'>,"
+        }
+        if (images.length > 0) {
+            images = images.substring(0, images.length - 1);
+        }
+        preImg(btnId, valueId, url, images);
+    }else{
+        $("#" + btnId).fileinput({
+            enctype : "multipart/form-data",
+            uploadUrl : url,
+            language : "zh",
+            browseClass : "btn btn-info",
+            browseLabel : "选择图片",
+            maxFileCount : 10,
+            showUpload : true, //是否显示上传按钮
+            showRemove : true, //是否显示移除按钮
+            showCaption : false, //是否显示标题
+            dropZoneEnabled : false, //是否显示预览区域
+            allowedFileExtensions : [ "jpg", "png", "gif" ] //接收的文件后缀
+        }).on("fileuploaded", function(event, ret, previewId, index) {
+            var filePath = ret.response.filepath;
+            $("#" + valueId).val(filePath);
+            $("#headImgShow").css("display","none");
+        }).on("fileclear", function(event, key) {
+            return false;
+        }).on("filecleared", function(event, key) {
+            $("#" + valueId).val("");
+            return false;
+        }).on("change", function(event, key) {
+            return false;
+        });
+    }
 }

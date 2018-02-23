@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06166bf8-68eb-4f4a-a22e-5fdc957a5fb7" name="Default" comment="">
+    <list default="true" id="06166bf8-68eb-4f4a-a22e-5fdc957a5fb7" name="Default" comment="学校学院">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bootdo/system/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/bootdo/system/controller/LoginController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisTeacher/add.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisTeacher/add.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTeacherController.java" afterPath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTeacherController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisStudent/edit.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisStudent/edit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisTeacher/edit.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisTeacher/edit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisTeacher/thesisTeacher.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisTeacher/thesisTeacher.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisStudent/edit.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisStudent/edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisTeacher/add.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisTeacher/add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisTeacher/edit.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisTeacher/edit.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +28,21 @@
       <file leaf-file-name="ThesisTeacherController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTeacherController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1647">
-              <caret line="84" column="39" lean-forward="false" selection-start-line="84" selection-start-column="39" selection-end-line="84" selection-end-column="39" />
+            <state relative-caret-position="1037">
+              <caret line="190" column="11" lean-forward="true" selection-start-line="190" selection-start-column="11" selection-end-line="190" selection-end-column="11" />
+              <folding>
+                <element signature="e#4354#4370#0" expanded="true" />
+                <element signature="e#6055#6071#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThesisStudentController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisStudentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="207" column="41" lean-forward="false" selection-start-line="207" selection-start-column="29" selection-end-line="207" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -32,22 +51,10 @@
       <file leaf-file-name="add.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisTeacher/add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1836">
-              <caret line="68" column="79" lean-forward="false" selection-start-line="68" selection-start-column="79" selection-end-line="68" selection-end-column="79" />
+            <state relative-caret-position="255">
+              <caret line="53" column="51" lean-forward="false" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#5;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisStudent/add.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4860">
-              <caret line="180" column="14" lean-forward="false" selection-start-line="180" selection-start-column="14" selection-end-line="180" selection-end-column="14" />
-              <folding>
-                <marker date="1517906846397" expanded="true" signature="4493:4518" ph="..." />
               </folding>
             </state>
           </provider>
@@ -56,32 +63,78 @@
       <file leaf-file-name="edit.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisStudent/edit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+            <state relative-caret-position="344">
+              <caret line="169" column="1" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="169" selection-end-column="1" />
               <folding>
-                <marker date="1517906846407" expanded="true" signature="4390:4415" ph="..." />
+                <marker date="1519369327841" expanded="true" signature="4390:4415" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="edit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisStudent/edit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="621">
+              <caret line="137" column="74" lean-forward="true" selection-start-line="137" selection-start-column="74" selection-end-line="137" selection-end-column="74" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#12;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisTeacher/add.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="39" column="56" lean-forward="true" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
+            <state relative-caret-position="1632">
+              <caret line="115" column="26" lean-forward="false" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
               <folding>
-                <marker date="1518142289524" expanded="true" signature="2682:2707" ph="..." />
+                <marker date="1519352296395" expanded="true" signature="2682:2707" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisStudent/add.html">
+      <file leaf-file-name="edit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisTeacher/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+            <state relative-caret-position="221">
+              <caret line="53" column="118" lean-forward="true" selection-start-line="53" selection-start-column="101" selection-end-line="53" selection-end-column="118" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#5;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisTeacher/edit.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="104" selection-end-column="1" />
+              <folding>
+                <marker date="1519369398696" expanded="true" signature="2810:2835" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="thesisTeacher.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisTeacher/thesisTeacher.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="46" column="42" lean-forward="false" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="thesisTeacher.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisTeacher/thesisTeacher.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-243">
+              <caret line="87" column="49" lean-forward="false" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -99,7 +152,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>select `user_id`,`username`,`name`,`password`,`dept_id`,`email`,`</find>
       <find>select `user_id`,`username`,`name`,`password`,`dept_id`,`email`,`mobile`,`status`,`user_id_create`,`gmt_create`,`gmt_modified`,`sex`,`birth`,`pic_id`,`live_address`,`hobby`,`province`,`city`,`district` from sys_user WHERE username =</find>
       <find>`birth`,`pic_id`,`live_address`,`hobby`,`province`,`city`,`district` from sys_user WHERE username =</find>
       <find>select `user_id`,`username`,`name`,`password`,`dept_id`,`email`,`mobile`,`status`,`user_id_create`,</find>
@@ -119,10 +171,17 @@
       <find>jackson</find>
       <find>offset</find>
       <find>batchRemove</find>
-      <find>最后一次登录时间</find>
       <find>fileinput</find>
       <find>depId</find>
+      <find>url</find>
+      <find>upload</find>
+      <find>_urlPath</find>
+      <find>thesisTeacher</find>
+      <find>最后一次登录时间</find>
+      <find>像</find>
       <find>uploadImg</find>
+      <find>edit/upload</find>
+      <find>headImg</find>
     </findStrings>
     <dirStrings>
       <dir>H:\lwxt\bootdo</dir>
@@ -143,7 +202,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/bootdo/BootdoApplication.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index_v1.html" />
@@ -187,8 +245,14 @@
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/thesisMamager/ThesisTemplateAttrMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisStudent/add.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisTeacher/add.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisTeacher/thesisTeacher.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisTeacher/add.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisTeacher/add.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTeacherController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisTeacher/edit.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisStudent/edit.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisStudent/edit.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisTeacher/edit.js" />
       </list>
     </option>
   </component>
@@ -228,7 +292,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -533,9 +598,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -581,6 +645,12 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisMangeController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisStudentController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/domain/ThesisMangeDO.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisMange/mange.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisStudent/thesisStudent.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisMange/mange.html</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -588,38 +658,21 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_LANG.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_ar.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_bg.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_ca.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_cr.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_cz.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_da.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_de.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_el.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_es.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_fa.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_fr.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_hu.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_id.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_it.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_ja.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_nl.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_pl.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_pt-BR.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_pt.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_ro.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_ru.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_sk.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_th.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_tr.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_uk.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_zh-TW.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/fileinput_locale_zh.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/plugins/canvas-to-blob.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/MealManageController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/dao/MealManageDao.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/domain/MealManageDO.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/service/MealManageService.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/service/impl/MealManageServiceImpl.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/mybatis/thesisMamager/MealManageMapper.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/imgupload/130838169574476132.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/imgupload/3279ac47448942a584c70bada85ad71b.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/imgupload/C_mode.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/mealmanage/add.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/mealmanage/edit.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/mealmanage/mealmanage.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/thesisMamager/mealmanage/add.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/thesisMamager/mealmanage/edit.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/templates/thesisMamager/mealmanage/mealmanage.html</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -837,7 +890,9 @@
       <workItem from="1517879488215" duration="1134000" />
       <workItem from="1517966670941" duration="5394000" />
       <workItem from="1518051024209" duration="5334000" />
-      <workItem from="1518141609309" duration="5555000" />
+      <workItem from="1518141609309" duration="5564000" />
+      <workItem from="1518311780091" duration="1221000" />
+      <workItem from="1519347982220" duration="10752000" />
     </task>
     <task id="LOCAL-00001" summary="提交提交">
       <created>1514960322761</created>
@@ -909,31 +964,38 @@
       <option name="project" value="LOCAL" />
       <updated>1518082324340</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="学校学院">
+      <created>1518168748633</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1518168748633</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115728000" />
+    <option name="totallyTimeSpent" value="127710000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2064" height="1128" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769555" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32698414" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32940018" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17285156" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1828125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -941,8 +1003,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23703703" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38839725" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1053,12 +1115,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTeacherController.java</url>
-          <line>86</line>
+          <line>145</line>
           <properties />
-          <option name="timeStamp" value="40" />
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="41" />
+      <option name="time" value="44" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
@@ -1068,70 +1130,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisCollege/thesisCollege.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="54" column="49" lean-forward="false" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/service/ThesisTemplateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/service/impl/ThesisTemplateServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-pro.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sin.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/system/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.10.RELEASE/spring-aop-4.3.10.RELEASE.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.10.RELEASE/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/multipart/MultipartFile.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.10.RELEASE/spring-aop-4.3.10.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1199,14 +1197,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisStudentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="50" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisStudent/thesisStudent.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-57">
@@ -1260,13 +1250,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.10.RELEASE/spring-core-4.3.10.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1369,14 +1352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisCollege/edit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -1391,58 +1366,165 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisStudent/edit.js">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.10.RELEASE/spring-aop-4.3.10.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
-          <folding>
-            <marker date="1517906846407" expanded="true" signature="4390:4415" ph="..." />
-          </folding>
+        <state relative-caret-position="183">
+          <caret line="476" column="0" lean-forward="false" selection-start-line="476" selection-start-column="0" selection-end-line="476" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTeacherController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.10.RELEASE/spring-core-4.3.10.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1647">
-          <caret line="84" column="39" lean-forward="false" selection-start-line="84" selection-start-column="39" selection-end-line="84" selection-end-column="39" />
+        <state relative-caret-position="381">
+          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/Util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="44" column="28" lean-forward="false" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="28" />
+          <folding>
+            <marker date="1518168766202" expanded="true" signature="235:260" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisStudent/add.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4860">
-          <caret line="180" column="14" lean-forward="false" selection-start-line="180" selection-start-column="14" selection-end-line="180" selection-end-column="14" />
+        <state relative-caret-position="156">
+          <caret line="53" column="9" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="9" />
           <folding>
-            <marker date="1517906846397" expanded="true" signature="4493:4518" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisTeacher/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="68" column="79" lean-forward="false" selection-start-line="68" selection-start-column="79" selection-end-line="68" selection-end-column="79" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#5;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1519352281377" expanded="true" signature="4493:4518" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisStudent/add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        <state relative-caret-position="53">
+          <caret line="10" column="106" lean-forward="true" selection-start-line="10" selection-start-column="106" selection-end-line="10" selection-end-column="106" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/domain/ThesisTeacherDO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisStudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="207" column="41" lean-forward="false" selection-start-line="207" selection-start-column="29" selection-end-line="207" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTeacherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="190" column="11" lean-forward="true" selection-start-line="190" selection-start-column="11" selection-end-line="190" selection-end-column="11" />
+          <folding>
+            <element signature="e#4354#4370#0" expanded="true" />
+            <element signature="e#6055#6071#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisTeacher/thesisTeacher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-243">
+          <caret line="87" column="49" lean-forward="false" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisTeacher/thesisTeacher.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="46" column="42" lean-forward="false" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisTeacher/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="53" column="118" lean-forward="true" selection-start-line="53" selection-start-column="101" selection-end-line="53" selection-end-column="118" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#5;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisTeacher/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="53" column="51" lean-forward="false" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#5;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisStudent/edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="169" column="1" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="169" selection-end-column="1" />
+          <folding>
+            <marker date="1519369327841" expanded="true" signature="4390:4415" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisTeacher/add.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="39" column="56" lean-forward="true" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
+        <state relative-caret-position="1632">
+          <caret line="115" column="26" lean-forward="false" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
           <folding>
-            <marker date="1518142289524" expanded="true" signature="2682:2707" ph="..." />
+            <marker date="1519352296395" expanded="true" signature="2682:2707" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisStudent/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="137" column="74" lean-forward="true" selection-start-line="137" selection-start-column="74" selection-end-line="137" selection-end-column="74" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#12;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisTeacher/edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="104" selection-end-column="1" />
+          <folding>
+            <marker date="1519369398696" expanded="true" signature="2810:2835" ph="..." />
           </folding>
         </state>
       </provider>
