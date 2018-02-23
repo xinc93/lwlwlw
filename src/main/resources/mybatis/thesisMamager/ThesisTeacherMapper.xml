@@ -4,11 +4,11 @@
 <mapper namespace="com.bootdo.thesisMamager.dao.ThesisTeacherDao">
 
 	<select id="get" resultType="com.bootdo.thesisMamager.domain.ThesisTeacherDO">
-		select `id`,`mobile`,`school_id`,`dep_id`,`teacher_title`,`major`,`student_count`,`create_tm`,`lastlogin_tm`,`head_img` from thesis_teacher where id = #{value}
+		select `id`,`mobile`,`school_id`,`dep_id`,`teacher_title`,`major`,`student_count`,`create_tm`,`lastlogin_tm`,`head_img`,`state` from thesis_teacher where id = #{value}
 	</select>
 
 	<select id="list" resultType="com.bootdo.thesisMamager.domain.ThesisTeacherDO">
-		select `id`,`mobile`,`school_id`,`dep_id`,`teacher_title`,`major`,`student_count`,`create_tm`,`lastlogin_tm`,`head_img` from thesis_teacher
+		select `id`,`mobile`,`school_id`,`dep_id`,`teacher_title`,`major`,`student_count`,`create_tm`,`lastlogin_tm`,`head_img`,`state` from thesis_teacher
         <where>  
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
 		  		  <if test="mobile != null and mobile != ''"> and mobile = #{mobile} </if>
@@ -20,7 +20,8 @@
 		  		  <if test="createTm != null and createTm != ''"> and create_tm = #{createTm} </if>
 		  		  <if test="lastloginTm != null and lastloginTm != ''"> and lastlogin_tm = #{lastloginTm} </if>
 		  		  <if test="headImg != null and headImg != ''"> and head_img = #{headImg} </if>
-		  		</where>
+			      <if test="state != null and state != ''"> and state = #{state} </if>
+		</where>
         <choose>
             <when test="sort != null and sort.trim() != ''">
                 order by ${sort} ${order}
@@ -61,8 +62,9 @@
 			`major`, 
 			`student_count`, 
 			`create_tm`, 
-			`lastlogin_tm`, 
-			`head_img`
+			`lastlogin_tm`,
+			`head_img`,
+			`state`
 		)
 		values
 		(
@@ -75,7 +77,9 @@
 			#{studentCount}, 
 			#{createTm}, 
 			#{lastloginTm}, 
-			#{headImg}
+			#{headImg},
+			#{state}
+
 		)
 	</insert>
 	 
@@ -91,6 +95,7 @@
 			<if test="createTm != null">`create_tm` = #{createTm}, </if>
 			<if test="lastloginTm != null">`lastlogin_tm` = #{lastloginTm}, </if>
 			<if test="headImg != null">`head_img` = #{headImg}</if>
+			<if test="state != null">`state` = #{state}</if>
 		</set>
 		where id = #{id}
 	</update>

@@ -154,9 +154,8 @@ public class ThesisCollegeController {
 	@ResponseBody
 	@RequiresPermissions("thesisMamager:thesisCollege:stop")
 	public R stop( Long id) {
-		ThesisCollegeDO thesisCollegeDO = new ThesisCollegeDO();
-		thesisCollegeDO.setId(id);
-		if(thesisCollegeService.get(id).getState() == 0){
+		ThesisCollegeDO thesisCollegeDO = thesisCollegeService.get(id);
+		if(thesisCollegeDO.getState() == 0){
 			thesisCollegeDO.setState(1);
 		}else{
 			thesisCollegeDO.setState(0);
