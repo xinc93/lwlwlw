@@ -62,10 +62,13 @@ function load() {
                                         var a = '<a class="btn btn-primary btn-sm ' + s_add_h + '" href="#" title="增加下級"  mce_href="#" onclick="add(\''
                                             + item.id
                                             + '\')"><i class="fa fa-plus"></i></a> ';
-										/*var d = '<a class="btn btn-warning btn-sm '+s_remove_h+'" href="#" title="删除"  mce_href="#" onclick="remove(\''
+										var d = '<a class="btn btn-danger btn-sm '+s_remove_h+'" href="#" title="删除"  mce_href="#" onclick="remove(\''
 												+ item.id
-												+ '\')"><i class="fa fa-remove"></i></a> ';*/
-										return e+a;
+												+ '\')"><i class="fa fa-remove"></i></a> ';
+                                        var f = '<a class="btn btn-warning btn-sm'+s_remove_h+'" href="#" title="停用/启用"  mce_href="#" onclick="stop(\''
+                                            + item.id
+                                            + '\')"><i class="fa fa-remove"></i></a> ';
+										return e+a+d+f;
 									}
 								} ]
 					});
@@ -114,6 +117,28 @@ function remove(id) {
 			}
 		});
 	})
+}
+
+function stop(id) {
+    layer.confirm('确定要停用/启用选中的记录？', {
+        btn : [ '确定', '取消' ]
+    }, function() {
+        $.ajax({
+            url : prefix+"/stop",
+            type : "post",
+            data : {
+                'id' : id
+            },
+            success : function(r) {
+                if (r.code==0) {
+                    layer.msg(r.msg);
+                    reLoad();
+                }else{
+                    layer.msg(r.msg);
+                }
+            }
+        });
+    })
 }
 
 function resetPwd(id) {

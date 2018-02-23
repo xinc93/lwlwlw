@@ -27,4 +27,5 @@ public interface ThesisTeacherService {
 	int remove(Long id);
 	
 	int batchRemove(Long[] ids);
+
 }
