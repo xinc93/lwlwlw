@@ -1,5 +1,6 @@
 package com.bootdo.thesisMamager.domain;
 
+import java.beans.Transient;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -25,8 +26,12 @@ public class MealManageDO implements Serializable {
 	//
 	private BigDecimal price;
 
-	private String name;
+	private String stuname;
 
+	private String schoolname;
+
+	private Long depId;
+	private String depname;
 
 	/**
 	 * 设置：
@@ -75,5 +80,37 @@ public class MealManageDO implements Serializable {
 	 */
 	public BigDecimal getPrice() {
 		return price;
+	}
+
+	public String getStuname() {
+		return stuname;
+	}
+
+	public void setStuname(String stuname) {
+		this.stuname = stuname;
+	}
+
+	public String getSchoolname() {
+		return schoolname;
+	}
+
+	public void setSchoolname(String schoolname) {
+		this.schoolname = schoolname;
+	}
+
+	public Long getDepId() {
+		return depId;
+	}
+
+	public void setDepId(Long depId) {
+		this.depId = depId;
+	}
+
+	public String getDepname() {
+		return depname;
+	}
+
+	public void setDepname(String depname) {
+		this.depname = depname;
 	}
 }

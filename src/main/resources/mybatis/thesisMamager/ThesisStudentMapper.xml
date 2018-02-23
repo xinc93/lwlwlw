@@ -4,16 +4,23 @@
 <mapper namespace="com.bootdo.thesisMamager.dao.ThesisStudentDao">
 
 	<select id="get" resultType="com.bootdo.thesisMamager.domain.ThesisStudentDO">
-		select `id`,`name`,`mobile`,`edu_class`,`learn_class`,`major`,`professional_direction`,`school_grade`,`school_no`,`school_id`,`dep_id`,`teacher_id`,`account_type`,
+		select `id`,`name`,`mobile`,`edu_class`,`learn_class`,`major`,`professional_direction`,`school_grade`,`school_no`,state,`school_id`,`dep_id`,`teacher_id`,`account_type`,
 		`account_tm`,`create_tm`,`lastlogin_tm`,`head_img` from thesis_student where id = #{id}
 	</select>
 
 	<select id="list" resultType="com.bootdo.thesisMamager.domain.ThesisStudentDO">
-		select `id`,`name`,`mobile`,`edu_class`,`learn_class`,`major`,`professional_direction`,`school_grade`,`school_no`,`school_id`,
-		`dep_id`,`teacher_id`,`account_type`,`account_tm`,`create_tm`,`lastlogin_tm`,`head_img` from thesis_student
+		select ts.`id`,ts.`name`,ts.`mobile`,ts.`edu_class`,ts.`learn_class`,ts.`major`,ts.`professional_direction`,ts.`school_grade`,ts.`school_no`,ts.`school_id`,ts.state,
+
+		ts.`dep_id`,ts.`teacher_id`,ts.`account_type`,ts.`account_tm`,ts.`create_tm`,ts.`lastlogin_tm`,ts.`head_img`,tc.`name` AS schoolName,tt.teacher_title AS teacherName
+
+		from thesis_student ts
+
+		LEFT JOIN thesis_college tc ON ts.school_id=tc.id
+
+		LEFT JOIN thesis_teacher tt ON tt.id=ts.teacher_id
         <where>  
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
-		  		  <if test="name != null and name != ''"> and name = #{name} </if>
+		  		  <if test="name != null and name != ''"> and ts.name LIKE Concat('%',#{name},'%') </if>
 		  		  <if test="mobile != null and mobile != ''"> and mobile = #{mobile} </if>
 		  		  <if test="eduClass != null and eduClass != ''"> and edu_class = #{eduClass} </if>
 		  		  <if test="learnClass != null and learnClass != ''"> and learn_class = #{learnClass} </if>
@@ -29,7 +36,8 @@
 		  		  <if test="createTm != null and createTm != ''"> and create_tm = #{createTm} </if>
 		  		  <if test="lastloginTm != null and lastloginTm != ''"> and lastlogin_tm = #{lastloginTm} </if>
 		  		  <if test="headImg != null and headImg != ''"> and head_img = #{headImg} </if>
-		  		</where>
+			      <if test="state != null">`state` = #{state}</if>
+		 </where>
         <choose>
             <when test="sort != null and sort.trim() != ''">
                 order by ${sort} ${order}
@@ -62,7 +70,8 @@
 		  		  <if test="accountTm != null and accountTm != ''"> and account_tm = #{accountTm} </if>
 		  		  <if test="createTm != null and createTm != ''"> and create_tm = #{createTm} </if>
 		  		  <if test="lastloginTm != null and lastloginTm != ''"> and lastlogin_tm = #{lastloginTm} </if>
-		  		  <if test="headImg != null and headImg != ''"> and head_img = #{headImg} </if>
+		  		  <if test="headImg != null and headImg != ''"> and head_img = #{headImg},</if>
+			      <if test="state != null">`state` = #{state}</if>
 		  		</where>
 	</select>
 	 
@@ -85,7 +94,8 @@
 			`account_tm`, 
 			`create_tm`, 
 			`lastlogin_tm`, 
-			`head_img`
+			`head_img`,
+			`state`
 		)
 		values
 		(
@@ -105,7 +115,8 @@
 			#{accountTm}, 
 			#{createTm}, 
 			#{lastloginTm}, 
-			#{headImg}
+			#{headImg},
+			#{state}
 		)
 	</insert>
 	 
@@ -127,7 +138,8 @@
 			<if test="accountTm != null">`account_tm` = #{accountTm}, </if>
 			<if test="createTm != null">`create_tm` = #{createTm}, </if>
 			<if test="lastloginTm != null">`lastlogin_tm` = #{lastloginTm}, </if>
-			<if test="headImg != null">`head_img` = #{headImg}</if>
+			<if test="headImg != null">`head_img` = #{headImg},</if>
+			<if test="state != null">`state` = #{state}</if>
 		</set>
 		where id = #{id}
 	</update>

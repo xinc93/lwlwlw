@@ -8,6 +8,7 @@ import com.bootdo.common.domain.DictDO;
 import com.bootdo.common.service.DictService;
 import com.bootdo.common.utils.*;
 import com.bootdo.thesisMamager.domain.MealManageDO;
+import com.bootdo.thesisMamager.domain.ThesisCollegeDO;
 import com.bootdo.thesisMamager.service.MealManageService;
 import com.bootdo.thesisMamager.service.ThesisCollegeService;
 import com.bootdo.thesisMamager.service.ThesisTeacherService;
@@ -71,6 +72,10 @@ public class ThesisStudentController {
 		//查询列表数据
         Query query = new Query(params);
 		List<ThesisStudentDO> thesisStudentList = thesisStudentService.list(query);
+		for (ThesisStudentDO li:thesisStudentList) {
+			ThesisCollegeDO thesisCollegeDO=thesisCollegeService.get(li.getDepId());
+			li.setDepName(thesisCollegeDO.getName());
+		}
 		int total = thesisStudentService.count(query);
 		PageUtils pageUtils = new PageUtils(thesisStudentList, total);
 		return pageUtils;
@@ -249,6 +254,7 @@ public class ThesisStudentController {
 	@RequiresPermissions("thesisMamager:thesisStudent:add")
 	public R save( ThesisStudentDO thesisStudent){
 		SimpleDateFormat sdf=new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
+		thesisStudent.setState("0");
 		thesisStudent.setCreateTm(sdf.format(new Date()));
 		if(thesisStudentService.save(thesisStudent)>0){
 			return R.ok();
@@ -273,9 +279,25 @@ public class ThesisStudentController {
 	@ResponseBody
 	@RequiresPermissions("thesisMamager:thesisStudent:remove")
 	public R remove(Long id){
-		if(thesisStudentService.remove(id)>0){
-		return R.ok();
+		/*if(thesisStudentService.remove(id)>0){
+			return R.ok();
+		}*/
+		ThesisStudentDO thesisStudent=thesisStudentService.get(id);
+		ThesisStudentDO thesisStudentDO=new ThesisStudentDO();
+		if(thesisStudent.getState().equals("0")){
+			thesisStudentDO.setId(id);
+			thesisStudentDO.setState("1");
+			if(thesisStudentService.update(thesisStudentDO)>0){
+				return R.ok();
+			}
+		}else{
+			thesisStudentDO.setId(id);
+			thesisStudentDO.setState("0");
+			if(thesisStudentService.update(thesisStudentDO)>0){
+				return R.ok();
+			}
 		}
+
 		return R.error();
 	}
 	

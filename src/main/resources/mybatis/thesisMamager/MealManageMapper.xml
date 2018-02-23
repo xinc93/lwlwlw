@@ -10,18 +10,22 @@
 	<select id="list" resultType="com.bootdo.thesisMamager.domain.MealManageDO">
 		select mm.`id`,mm.`user_id`,mm.`type`,mm.`price`,
 
-		ts.name,ts.school_no
+		ts.name as stuname,ts.school_no,ts.school_id,ts.dep_id,tc.name as schoolname
 
 		from meal_manage mm
 
-		LEFT JOIN  thesis_student ts on  ts.id = mm.`id`
+		LEFT JOIN  thesis_student ts on  ts.id = mm.`user_id`
+
+		LEFT JOIN  thesis_college tc on  tc.id = ts.school_id
+
         <where>  
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
 		  		  <if test="userId != null and userId != ''"> and user_id = #{userId} </if>
 		  		  <if test="type != null and type != ''"> and type = #{type} </if>
 		  		  <if test="price != null and price != ''"> and price = #{price} </if>
-					<if test="school_no != null and school_no != ''"> and ts.school_no = #{school_no} </if>
-		  		</where>
+			      <if test="school_no != null and school_no != ''"> and ts.school_no = #{school_no} </if>
+			      <if test="stuname != null and stuname != ''"> and ts.name like Concat('%',#{stuname},'%')  </if>
+		 </where>
         <choose>
             <when test="sort != null and sort.trim() != ''">
                 order by ${sort} ${order}
