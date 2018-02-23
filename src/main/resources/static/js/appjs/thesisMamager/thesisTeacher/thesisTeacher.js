@@ -56,12 +56,12 @@ function load() {
 									title : '手机号' 
 								},
 																{
-									field : 'schoolId', 
-									title : '学校ID' 
+									field : 'schoolName',
+									title : '学校'
 								},
 																{
-									field : 'depId', 
-									title : '院系ID' 
+									field : 'depName',
+									title : '院系'
 								},
 																{
 									field : 'teacherTitle', 

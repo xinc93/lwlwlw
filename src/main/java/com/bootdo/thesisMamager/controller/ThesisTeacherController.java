@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import com.bootdo.common.utils.FileUtil;
+import com.bootdo.common.utils.*;
 import com.bootdo.thesisMamager.service.ThesisCollegeService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +17,6 @@ import org.springframework.web.bind.annotation.*;
 
 import com.bootdo.thesisMamager.domain.ThesisTeacherDO;
 import com.bootdo.thesisMamager.service.ThesisTeacherService;
-import com.bootdo.common.utils.PageUtils;
-import com.bootdo.common.utils.Query;
-import com.bootdo.common.utils.R;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
@@ -57,6 +54,10 @@ public class ThesisTeacherController {
 		//查询列表数据
         Query query = new Query(params);
 		List<ThesisTeacherDO> thesisTeacherList = thesisTeacherService.list(query);
+		thesisTeacherList.stream().forEach(i->{
+			i.setSchoolName(thesisCollegeService.get(i.getSchoolId()).getName());
+			i.setDepName(thesisCollegeService.get(i.getDepId()).getName());
+		});
 		int total = thesisTeacherService.count(query);
 		PageUtils pageUtils = new PageUtils(thesisTeacherList, total);
 		return pageUtils;
@@ -100,6 +101,8 @@ public class ThesisTeacherController {
 	@PostMapping("/save")
 	@RequiresPermissions("thesisMamager:thesisTeacher:add")
 	public R save( ThesisTeacherDO thesisTeacher){
+		thesisTeacher.setCreateTm(DateUtil.getCurDateTime());
+		thesisTeacher.setStudentCount(0);
 		if(thesisTeacherService.save(thesisTeacher)>0){
 			return R.ok();
 		}

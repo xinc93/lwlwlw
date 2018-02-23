@@ -92,14 +92,44 @@ function validateRule() {
 	var icon = "<i class='fa fa-times-circle'></i> ";
 	$("#signupForm").validate({
 		rules : {
-			name : {
+            teacherTitle : {
 				required : true
-			}
+			},
+            mobile : {
+                required : true
+            },
+            schoolId : {
+                required : true
+            },
+            depId : {
+                required : true
+            },
+            major : {
+                required : true
+            },
+            headImg : {
+                required : true
+            }
 		},
 		messages : {
-			name : {
+            teacherTitle : {
 				required : icon + "请输入名字"
-			}
+			},
+            mobile : {
+                required : icon + "手机号"
+            },
+            schoolId : {
+                required : icon + "请选择学校"
+            },
+            depId : {
+                required : icon + "请选择院系"
+            },
+            major : {
+                required : icon + "请输入专业"
+            },
+            headImg : {
+                required : icon + "请上传头像"
+            }
 		}
 	})
 }
