@@ -71,7 +71,7 @@ function load() {
 					});
 }
 function reLoad() {
-	$('#exampleTable').bootstrapTable('refresh');
+    load();
 }
 function add(pId) {
 	debugger;

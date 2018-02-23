@@ -83,19 +83,49 @@ function save() {
 
 }
 function validateRule() {
-	var icon = "<i class='fa fa-times-circle'></i> ";
-	$("#signupForm").validate({
-		rules : {
-			name : {
-				required : true
-			}
-		},
-		messages : {
-			name : {
-				required : icon + "请输入姓名"
-			}
-		}
-	})
+    var icon = "<i class='fa fa-times-circle'></i> ";
+    $("#signupForm").validate({
+        rules : {
+            teacherTitle : {
+                required : true
+            },
+            mobile : {
+                required : true
+            },
+            schoolId : {
+                required : true
+            },
+            depId : {
+                required : true
+            },
+            major : {
+                required : true
+            },
+            headImg : {
+                required : true
+            }
+        },
+        messages : {
+            teacherTitle : {
+                required : icon + "请输入名字"
+            },
+            mobile : {
+                required : icon + "手机号"
+            },
+            schoolId : {
+                required : icon + "请选择学校"
+            },
+            depId : {
+                required : icon + "请选择院系"
+            },
+            major : {
+                required : icon + "请输入专业"
+            },
+            headImg : {
+                required : icon + "请上传头像"
+            }
+        }
+    })
 }
 
 //回显旧图片,再上传新图片

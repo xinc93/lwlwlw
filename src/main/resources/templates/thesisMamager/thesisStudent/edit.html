@@ -9,7 +9,6 @@
 				<div class="ibox float-e-margins">
 					<div class="ibox-content">
 						<form class="form-horizontal m-t" id="signupForm">
-							<img th:src="${thesisStudent.headImg}"  width="200px" height="200px" style="margin: 10px 5px 20px 447px;">
 						<input id="id" name="id" th:value="${thesisStudent.id}"  type="hidden">
 							<div class="form-group">	
 								<label class="col-sm-3 control-label">学生姓名：</label>
@@ -138,6 +137,7 @@
 								<div class="col-sm-8">
 									<input type="text" id="headImg" name="headImg" class="form-control" th:value="${thesisStudent.headImg}" readOnly style="margin-bottom: 5px;"/>
 									<input id="uploadCover" type="file" class="file">
+									<img id="headImgShow" th:src="${thesisStudent.headImg}"  width="200px" height="200px" style="margin: 10px 5px 20px 47px;">
 								</div>
 							</div>
 

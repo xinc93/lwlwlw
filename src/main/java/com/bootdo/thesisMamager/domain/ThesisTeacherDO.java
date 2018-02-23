@@ -1,5 +1,6 @@
 package com.bootdo.thesisMamager.domain;
 
+import java.beans.Transient;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -35,6 +36,25 @@ public class ThesisTeacherDO implements Serializable {
 	private String lastloginTm;
 	//头像
 	private String headImg;
+
+	private String schoolName;
+	private String depName;
+
+	public String getSchoolName() {
+		return schoolName;
+	}
+
+	public void setSchoolName(String schoolName) {
+		this.schoolName = schoolName;
+	}
+
+	public String getDepName() {
+		return depName;
+	}
+
+	public void setDepName(String depName) {
+		this.depName = depName;
+	}
 
 	/**
 	 * 设置：导师ID
