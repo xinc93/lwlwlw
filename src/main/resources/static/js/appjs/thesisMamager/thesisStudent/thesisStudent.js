@@ -70,6 +70,17 @@ function load() {
 									field : 'major', 
 									title : '专业' 
 								},
+								{
+									field : 'state',
+									title : '账号状态',
+                                    formatter : function(value, row, index) {
+                                        if(value=="0"){
+                                            return "正常" ;
+                                        }else{
+                                            return "已屏蔽";
+                                        }
+                                    }
+                            	},
 																{
 									field : 'professionalDirection',
 									title : '专业方向' 
@@ -83,16 +94,16 @@ function load() {
 									title : '学籍号' 
 								},
 																{
-									field : 'schoolId', 
-									title : '学校ID' 
+									field : 'schoolName',
+									title : '学校'
 								},
 																{
-									field : 'depId', 
-									title : '院系ID' 
+									field : 'depName',
+									title : '院系'
 								},
 																{
-									field : 'teacherId', 
-									title : '导师id' 
+									field : 'teacherName',
+									title : '导师'
 								},
 																{
 									field : 'accountType', 
@@ -127,15 +138,17 @@ function load() {
 									field : 'id',
 									align : 'center',
 									formatter : function(value, row, index) {
-										var e = '<a class="btn btn-primary btn-sm '+s_edit_h+'" href="#" mce_href="#" title="编辑" onclick="edit(\''
-												+ row.id
+										var e = '<a class="btn btn-primary btn-sm '+s_edit_h+'" href="#" mce_href="#" title="编辑" onclick="edit(\''+ row.id
 												+ '\')"><i class="fa fa-edit"></i></a> ';
-										var d = '<a class="btn btn-warning btn-sm '+s_remove_h+'" href="#" title="删除"  mce_href="#" onclick="remove(\''
+                                        var d ="";
+										/*var f = '<a class="btn btn-success btn-sm" href="#" title="备用"  mce_href="#" onclick="resetPwd(\''
 												+ row.id
-												+ '\')"><i class="fa fa-remove"></i></a> ';
-										var f = '<a class="btn btn-success btn-sm" href="#" title="备用"  mce_href="#" onclick="resetPwd(\''
-												+ row.id
-												+ '\')"><i class="fa fa-key"></i></a> ';
+												+ '\')"><i class="fa fa-key"></i></a> ';*/
+										if(row.state=="0"){
+                                            d = '<a class="btn btn-warning btn-sm '+s_remove_h+'" href="#" title="屏蔽"  mce_href="#" onclick="remove(\''+ row.id+ '\')"><i class="fa fa-remove"></i></a> ';
+										}else{
+                                            d = '<a class="btn btn-warning btn-sm '+s_remove_h+'" href="#" title="显示"  mce_href="#" onclick="remove(\''+ row.id+ '\')"><i class="fa fa-remove"></i></a> ';
+										}
 										return e + d ;
 									}
 								} ]
@@ -165,7 +178,7 @@ function edit(id) {
 	});
 }
 function remove(id) {
-	layer.confirm('确定要删除选中的记录？', {
+	layer.confirm('确定要操作选中的记录？', {
 		btn : [ '确定', '取消' ]
 	}, function() {
 		$.ajax({

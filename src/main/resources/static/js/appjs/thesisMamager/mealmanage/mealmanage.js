@@ -22,7 +22,7 @@ function load() {
                 // //设置为limit则会发送符合RESTFull格式的参数
                 singleSelect : false, // 设置为true将禁止多选
                 // contentType : "application/x-www-form-urlencoded",
-                // //发送到服务器的数据编码类型
+                //发送到服务器的数据编码类型
                 pageSize : 10, // 如果设置了分页，每页数据条数
                 pageNumber : 1, // 如果设置了分布，首页页码
                 //search : true, // 是否显示搜索框
@@ -32,8 +32,8 @@ function load() {
                     return {
                         //说明：传入后台的参数包括offset开始索引，limit步长，sort排序列，order：desc或者,以及所有列的键值对
                         limit: params.limit,
-                        offset:params.offset
-                        // name:$('#searchName').val(),
+                        offset:params.offset,
+                        stuname:$('#searchName').val()
                         // username:$('#searchName').val()
                     };
                 },
@@ -54,14 +54,34 @@ function load() {
                     {
                         field : 'userId',
                         title : '用户id'
+                    },{
+                        field : 'stuname',
+                        title : '学生姓名'
+                    },
+                    {
+                        field : 'schoolname',
+                        title : '学校'
+                    },
+                    {
+                        field : 'depname',
+                        title : '专业'
                     },
                     {
                         field : 'type',
-                        title : '套餐类型0.个人账号1.学校授权'
+                        title : '套餐类型',
+                        formatter : function(value, row, index) {
+                            var e = "";
+                            if(index=="0"){
+                                e = "个人账号";
+                            }else{
+                                e = "学校授权";
+                            }
+                            return e;
+                        }
                     },
                     {
                         field : 'price',
-                        title : ''
+                        title : '金额'
                     },
                     {
                         title : '操作',
@@ -96,13 +116,21 @@ function add() {
     });
 }
 function edit(id) {
-    layer.open({
+    /*layer.open({
         type : 2,
         title : '编辑',
         maxmin : true,
         shadeClose : false, // 点击遮罩关闭层
         area : [ '800px', '520px' ],
         content : prefix + '/edit/' + id // iframe的url
+    });*/
+    layer.open({
+        type : 2,
+        title : '编辑',
+        maxmin : true,
+        shadeClose : false, // 点击遮罩关闭层
+        area : [ '800px', '520px' ],
+        content : prefix + '/edit/' + id
     });
 }
 function remove(id) {

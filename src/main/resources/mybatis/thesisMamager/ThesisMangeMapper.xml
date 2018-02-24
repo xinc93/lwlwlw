@@ -23,6 +23,7 @@
 		LEFT JOIN  thesis_student ts on  ts.id=tm.`thesis_stuid`
         <where>  
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+			      <if test="name != null and name != ''"> and ts.`name` LIKE Concat('%',#{name},'%')  </if>
 		  		  <if test="thesisName != null and thesisName != ''"> and thesis_name = #{thesisName} </if>
 		  		  <if test="thesisSchool != null and thesisSchool != ''"> and thesis_school = #{thesisSchool} </if>
 		  		  <if test="thesisDep != null and thesisDep != ''"> and thesis_dep = #{thesisDep} </if>

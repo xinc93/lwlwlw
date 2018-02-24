@@ -1,10 +1,13 @@
 package com.bootdo.thesisMamager.controller;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.bootdo.thesisMamager.domain.MealManageDO;
+import com.bootdo.thesisMamager.domain.ThesisCollegeDO;
 import com.bootdo.thesisMamager.service.MealManageService;
+import com.bootdo.thesisMamager.service.ThesisCollegeService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -34,6 +37,8 @@ import com.bootdo.common.utils.R;
 public class MealManageController {
 	@Autowired
 	private MealManageService mealManageService;
+	@Autowired
+	private ThesisCollegeService thesisCollegeService;
 
 	@GetMapping("/mealmanage")
 	@RequiresPermissions("MealManage:MealManage:mealmanage")
@@ -48,9 +53,37 @@ public class MealManageController {
 		//查询列表数据
 		Query query = new Query(params);
 		List<MealManageDO> manageList = mealManageService.list(query);
+
+		for (MealManageDO li:manageList) {
+			ThesisCollegeDO thesisCollegeDO=thesisCollegeService.get(li.getDepId());
+			li.setDepname(thesisCollegeDO.getName());
+		}
 		int total = mealManageService.count(query);
 		PageUtils pageUtils = new PageUtils(manageList, total);
 		return pageUtils;
 	}
-	
+
+	@GetMapping("/edit/{id}")
+	@RequiresPermissions("MealManage:MealManage:edit")
+	String edit(@PathVariable("id") Long id,Model model){
+		MealManageDO mealManageDO = mealManageService.get(id);
+		model.addAttribute("mealManageDO", mealManageDO);
+		/*Map map=new HashMap();
+		//学习层次
+		map.put("type","study_type");*/
+		//model.addAttribute("typelist",sysDictService.list(map));
+		return "thesisMamager/mealmanage/edit";
+	}
+
+	/**
+	 * 修改
+	 */
+	@ResponseBody
+	@PostMapping("/update")
+	@RequiresPermissions("MealManage:MealManage:edit")
+	public R update(MealManageDO mealManageDO){
+		mealManageService.update(mealManageDO);
+		return R.ok();
+	}
+
 }

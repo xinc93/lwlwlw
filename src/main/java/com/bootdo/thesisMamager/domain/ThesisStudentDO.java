@@ -59,7 +59,7 @@ public class ThesisStudentDO implements Serializable {
 	private String lastloginTm;
 	//头像
 	private String headImg;
-
+	private String state;
 	/**
 	 * 设置：学生ID
 	 */
@@ -286,5 +286,13 @@ public class ThesisStudentDO implements Serializable {
 
 	public void setTeacherName(String teacherName) {
 		this.teacherName = teacherName;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
 	}
 }
