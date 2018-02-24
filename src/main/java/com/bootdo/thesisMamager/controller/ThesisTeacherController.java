@@ -131,7 +131,7 @@ public class ThesisTeacherController {
 	@RequiresPermissions("thesisMamager:thesisTeacher:remove")
 	public R remove( Long id){
 		Map m = new HashMap();
-		m.put("depId",id);
+		m.put("teacherId",id);
 		if(	thesisStudentService.list(m).size()>0){
 			return R.error("删除失败,下级还有学生的数据");
 		}
