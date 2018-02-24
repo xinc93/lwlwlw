@@ -37,6 +37,16 @@ public class ThesisTeacherDO implements Serializable {
 	//头像
 	private String headImg;
 
+	private String state;
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
 	private String schoolName;
 	private String depName;
 

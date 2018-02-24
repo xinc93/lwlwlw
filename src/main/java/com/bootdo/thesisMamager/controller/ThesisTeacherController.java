@@ -8,6 +8,8 @@ import java.util.Map;
 
 import com.bootdo.common.utils.*;
 import com.bootdo.thesisMamager.service.ThesisCollegeService;
+import com.bootdo.thesisMamager.service.ThesisStudentService;
+import com.bootdo.thesisMamager.service.impl.ThesisStudentServiceImpl;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -36,6 +38,8 @@ import javax.servlet.http.HttpServletResponse;
 public class ThesisTeacherController {
 	@Autowired
 	private ThesisTeacherService thesisTeacherService;
+	@Autowired
+	private ThesisStudentService thesisStudentService;
 	@Autowired
 	private ThesisCollegeService thesisCollegeService;
 	@Value("${bootdo.uploadPath}")
@@ -126,10 +130,32 @@ public class ThesisTeacherController {
 	@ResponseBody
 	@RequiresPermissions("thesisMamager:thesisTeacher:remove")
 	public R remove( Long id){
+		Map m = new HashMap();
+		m.put("depId",id);
+		if(	thesisStudentService.list(m).size()>0){
+			return R.error("删除失败,下级还有学生的数据");
+		}
 		if(thesisTeacherService.remove(id)>0){
-		return R.ok();
+			return R.ok();
 		}
 		return R.error();
+	}
+
+	/**
+	 * stop
+	 */
+	@PostMapping( "/stop")
+	@ResponseBody
+	@RequiresPermissions("thesisMamager:thesisTeacher:stop")
+	public R stop( Long id){
+		ThesisTeacherDO thesisTeacherDO= thesisTeacherService.get(id);
+		if("0".equals(thesisTeacherDO.getState())){
+			thesisTeacherDO.setState("1");
+		}else {
+			thesisTeacherDO.setState("0");
+		}
+		thesisTeacherService.update(thesisTeacherDO);
+		return R.ok();
 	}
 	
 	/**
