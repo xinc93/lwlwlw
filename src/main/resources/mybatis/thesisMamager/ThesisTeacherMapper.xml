@@ -37,7 +37,7 @@
 	
  	<select id="count" resultType="int">
 		select count(*) from thesis_teacher
-		 <where>  
+		 <where>
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
 		  		  <if test="mobile != null and mobile != ''"> and mobile = #{mobile} </if>
 		  		  <if test="schoolId != null and schoolId != ''"> and school_id = #{schoolId} </if>

@@ -127,6 +127,7 @@ public class ThesisStudentController {
 		//faculty.put("state","0");
 		teachers.put("schoolId",thesisStudent.getSchoolId());
 		teachers.put("depId",thesisStudent.getDepId());
+		teachers.put("state","0");
 		model.addAttribute("teachers",thesisTeacherService.list(teachers));
 
 
@@ -142,6 +143,7 @@ public class ThesisStudentController {
 	public List faculty(String pid){
 		Map map=new HashMap();
 		map.put("pid",pid);
+		map.put("state","0");
 		List li=thesisCollegeService.list(map);
 		return li;
 	}
@@ -155,6 +157,7 @@ public class ThesisStudentController {
 	public List teacher(String dep_id){
 		Map map=new HashMap();
 		map.put("depId",dep_id);
+		map.put("state","0");
 		List li=thesisTeacherService.list(map);
 		return li;
 	}
