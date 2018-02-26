@@ -76,11 +76,11 @@ function load() {
                                 title : '使用状态',
                                 align : 'center',
                                 formatter : function(item, index) {
-                                    if (item.state == '0') {
-                                        return '<span class="label label-primary">正常</span>';
-                                    } else if (item.state == '1') {
-                                        return '<span class="label label-danger">停用</span>';
-                                    }
+                                    if (item == 0) {
+                                         return '<span class="label label-primary">正常</span>';
+                                     } else if (item == 1) {
+                                         return '<span class="label label-danger">停用</span>';
+                                     }
                                 }
                             },
 																{
@@ -106,10 +106,10 @@ function load() {
 										var d = '<a class="btn btn-danger btn-sm '+s_remove_h+'" href="#" title="删除"  mce_href="#" onclick="remove(\''
 												+ row.id
 												+ '\')"><i class="fa fa-remove"></i></a> ';
-										var f = '<a class="btn btn-warning btn-sm" href="#" title="停用/启用"  mce_href="#" onclick="resetPwd(\''
+										var f = '<a class="btn btn-warning btn-sm'+s_edit_h+'" href="#" title="停用/启用"  mce_href="#" onclick="stop(\''
 												+ row.id
 												+ '\')"><i class="fa fa-key"></i></a> ';
-										return e + d ;
+										return e + d +f;
 									}
 								} ]
 					});
@@ -159,7 +159,7 @@ function remove(id) {
 	})
 }
 
-function resetPwd(id) {
+function stop(id) {
     layer.confirm('确定要停用/启用选中的记录？', {
         btn : [ '确定', '取消' ]
     }, function() {

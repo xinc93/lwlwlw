@@ -48,6 +48,7 @@
 		  		  <if test="createTm != null and createTm != ''"> and create_tm = #{createTm} </if>
 		  		  <if test="lastloginTm != null and lastloginTm != ''"> and lastlogin_tm = #{lastloginTm} </if>
 		  		  <if test="headImg != null and headImg != ''"> and head_img = #{headImg} </if>
+			 		<if test="state != null and state != ''"> and state = #{state} </if>
 		  		</where>
 	</select>
 	 
@@ -94,7 +95,7 @@
 			<if test="studentCount != null">`student_count` = #{studentCount}, </if>
 			<if test="createTm != null">`create_tm` = #{createTm}, </if>
 			<if test="lastloginTm != null">`lastlogin_tm` = #{lastloginTm}, </if>
-			<if test="headImg != null">`head_img` = #{headImg}</if>
+			<if test="headImg != null">`head_img` = #{headImg},</if>
 			<if test="state != null">`state` = #{state}</if>
 		</set>
 		where id = #{id}
