@@ -56,6 +56,7 @@ public class ThesisStudentController {
 	private ThesisTeacherService thesisTeacherService;
 	@Autowired
 	private MealManageService mealManageService;
+
 	@Value("${bootdo.uploadPath}")
 	private String uploadPath;
 
@@ -260,6 +261,14 @@ public class ThesisStudentController {
 		thesisStudent.setState("0");
 		thesisStudent.setCreateTm(sdf.format(new Date()));
 		if(thesisStudentService.save(thesisStudent)>0){
+			MealManageDO mealManageDO=new  MealManageDO();
+			mealManageDO.setUserId(thesisStudent.getId());
+			if(thesisStudent.getAccountType().equals("1")){
+				mealManageDO.setType("0");
+			}else{
+				mealManageDO.setType("1");
+			}
+			mealManageService.save(mealManageDO);
 			return R.ok();
 		}
 		return R.error();
@@ -272,6 +281,16 @@ public class ThesisStudentController {
 	@RequiresPermissions("thesisMamager:thesisStudent:edit")
 	public R update( ThesisStudentDO thesisStudent){
 		thesisStudentService.update(thesisStudent);
+		Map map=new HashMap();
+		map.put("userId",thesisStudent.getId());
+		List<MealManageDO> list=mealManageService.list(map);
+		MealManageDO mealManageDO=list.get(0);
+		if(thesisStudent.getAccountType().equals("1")){
+			mealManageDO.setType("0");
+		}else{
+			mealManageDO.setType("1");
+		}
+		mealManageService.update(mealManageDO);
 		return R.ok();
 	}
 	

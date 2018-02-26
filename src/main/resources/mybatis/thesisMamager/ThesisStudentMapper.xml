@@ -75,7 +75,7 @@
 		  		</where>
 	</select>
 	 
-	<insert id="save" parameterType="com.bootdo.thesisMamager.domain.ThesisStudentDO">
+	<insert id="save" parameterType="com.bootdo.thesisMamager.domain.ThesisStudentDO" useGeneratedKeys="true" keyProperty="id">
 		insert into thesis_student
 		(
 			`id`, 

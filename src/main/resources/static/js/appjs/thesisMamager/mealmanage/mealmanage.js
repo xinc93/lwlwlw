@@ -33,7 +33,8 @@ function load() {
                         //说明：传入后台的参数包括offset开始索引，limit步长，sort排序列，order：desc或者,以及所有列的键值对
                         limit: params.limit,
                         offset:params.offset,
-                        stuname:$('#searchName').val()
+                        stuname:$('#searchName').val(),
+                        state:"0"
                         // username:$('#searchName').val()
                     };
                 },
@@ -71,7 +72,7 @@ function load() {
                         title : '套餐类型',
                         formatter : function(value, row, index) {
                             var e = "";
-                            if(index=="0"){
+                            if(value=="0"){
                                 e = "个人账号";
                             }else{
                                 e = "学校授权";

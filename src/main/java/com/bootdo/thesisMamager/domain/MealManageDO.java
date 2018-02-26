@@ -1,5 +1,10 @@
 package com.bootdo.thesisMamager.domain;
 
+import com.bootdo.common.utils.LongJsonDeserializer;
+import com.bootdo.common.utils.LongJsonSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import java.beans.Transient;
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -18,8 +23,12 @@ public class MealManageDO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	//
+	@JsonSerialize(using = LongJsonSerializer.class)
+	@JsonDeserialize(using = LongJsonDeserializer.class)
 	private Long id;
 	//用户id
+	@JsonSerialize(using = LongJsonSerializer.class)
+	@JsonDeserialize(using = LongJsonDeserializer.class)
 	private Long userId;
 	//套餐类型0.个人账号1.学校授权
 	private String type;

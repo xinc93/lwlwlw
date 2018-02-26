@@ -10,7 +10,7 @@
 	<select id="list" resultType="com.bootdo.thesisMamager.domain.MealManageDO">
 		select mm.`id`,mm.`user_id`,mm.`type`,mm.`price`,
 
-		ts.name as stuname,ts.school_no,ts.school_id,ts.dep_id,tc.name as schoolname
+		ts.name as stuname,ts.school_no,ts.school_id,ts.dep_id,tc.name as schoolname,ts.state
 
 		from meal_manage mm
 
@@ -24,6 +24,7 @@
 		  		  <if test="type != null and type != ''"> and type = #{type} </if>
 		  		  <if test="price != null and price != ''"> and price = #{price} </if>
 			      <if test="school_no != null and school_no != ''"> and ts.school_no = #{school_no} </if>
+			      <if test="state != null and state != ''"> and ts.state = #{state} </if>
 			      <if test="stuname != null and stuname != ''"> and ts.name like Concat('%',#{stuname},'%')  </if>
 		 </where>
         <choose>
