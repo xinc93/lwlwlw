@@ -1,7 +1,7 @@
 $().ready(function() {
 	validateRule();
 
-    $("#schoolId").change(function(){debugger;
+    $("#schoolId").change(function(){
         var t = $("#schoolId").val();
         if(t ==''){
             return;
@@ -25,7 +25,6 @@ $().ready(function() {
     });
 
     $("#depId").change(function(){
-    	debugger;
         var depId = $("#depId").val();
         if(depId ==''){
             return;

@@ -50,6 +50,7 @@ public class MealManageController {
 	@GetMapping("/list")
 	@RequiresPermissions("MealManage:MealManage:mealmanage")
 	public PageUtils mealmanagelist(@RequestParam Map<String, Object> params){
+		//params.put("state",0);
 		//查询列表数据
 		Query query = new Query(params);
 		List<MealManageDO> manageList = mealManageService.list(query);

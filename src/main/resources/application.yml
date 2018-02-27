@@ -24,8 +24,8 @@ spring:
       max-request-size: 30Mb
   devtools:
     restart:
-      enabled: true    
-mybatis: 
+      enabled: true
+mybatis:
   configuration:
     map-underscore-to-camel-case: true
   mapper-locations: mybatis/**/*Mapper.xml
