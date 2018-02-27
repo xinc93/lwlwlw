@@ -19,6 +19,8 @@ public interface ThesisCollegeService {
 	ThesisCollegeDO getByPid(Long id);
 	
 	List<ThesisCollegeDO> list(Map<String, Object> map);
+
+	List<Long> getByPidList(Long id);
 	
 	int count(Map<String, Object> map);
 	

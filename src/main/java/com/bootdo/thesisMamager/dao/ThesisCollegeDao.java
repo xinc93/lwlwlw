@@ -32,4 +32,6 @@ public interface ThesisCollegeDao {
 	int batchRemove(Long[] ids);
 
     ThesisCollegeDO getByPid(Long id);
+
+	List<Long> getByPidList(Long id);
 }

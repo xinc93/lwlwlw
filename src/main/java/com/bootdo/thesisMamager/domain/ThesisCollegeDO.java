@@ -30,6 +30,16 @@ public class ThesisCollegeDO implements Serializable {
 	//创建时间
 	private String createTm;
 
+	private String isLicense;
+
+	public String getIsLicense() {
+		return isLicense;
+	}
+
+	public void setIsLicense(String isLicense) {
+		this.isLicense = isLicense;
+	}
+
 	/**
 	 * 设置：学校 部门ID
 	 */

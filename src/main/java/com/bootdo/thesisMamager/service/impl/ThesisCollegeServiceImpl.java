@@ -31,7 +31,12 @@ public class ThesisCollegeServiceImpl implements ThesisCollegeService {
 	public List<ThesisCollegeDO> list(Map<String, Object> map){
 		return thesisCollegeDao.list(map);
 	}
-	
+
+	@Override
+	public List<Long> getByPidList(Long id) {
+		return thesisCollegeDao.getByPidList(id);
+	}
+
 	@Override
 	public int count(Map<String, Object> map){
 		return thesisCollegeDao.count(map);

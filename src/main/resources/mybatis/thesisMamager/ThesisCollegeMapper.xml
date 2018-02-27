@@ -11,6 +11,10 @@
 		select `id`,`pid`,`level`,`name`,`state`,`license_key`,`create_tm` from thesis_college where pid = #{value}
 	</select>
 
+	<select id="getByPidList" resultType="java.lang.Long">
+		select `id` from thesis_college where pid = #{id}
+	</select>
+
 	<select id="list" resultType="com.bootdo.thesisMamager.domain.ThesisCollegeDO">
 		select `id`,`pid`,`level`,`name`,`state`,`license_key`,`create_tm` from thesis_college
         <where>  
@@ -21,7 +25,9 @@
 		  		  <if test="state != null and state != ''"> and state = #{state} </if>
 		  		  <if test="licenseKey != null and licenseKey != ''"> and license_key = #{licenseKey} </if>
 		  		  <if test="createTm != null and createTm != ''"> and create_tm = #{createTm} </if>
-		  		</where>
+				  <if test="isLicense != null and isLicense != ''"> and license_key is null </if>
+
+		</where>
         <choose>
             <when test="sort != null and sort.trim() != ''">
                 order by ${sort} ${order}
@@ -51,8 +57,8 @@
 	<insert id="save" parameterType="com.bootdo.thesisMamager.domain.ThesisCollegeDO">
 		insert into thesis_college
 		(
-			`id`, 
-			`pid`, 
+			`id`,
+			`pid`,
 			`level`, 
 			`name`, 
 			`state`, 
@@ -61,8 +67,8 @@
 		)
 		values
 		(
-			#{id}, 
-			#{pid}, 
+			#{id},
+			#{pid},
 			#{level}, 
 			#{name}, 
 			#{state}, 
