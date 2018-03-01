@@ -39,6 +39,16 @@ public class ThesisTeacherDO implements Serializable {
 
 	private String state;
 
+	private String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public String getState() {
 		return state;
 	}

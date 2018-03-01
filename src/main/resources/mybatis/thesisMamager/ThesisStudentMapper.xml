@@ -11,7 +11,7 @@
 	<select id="list" resultType="com.bootdo.thesisMamager.domain.ThesisStudentDO">
 		select ts.`id`,ts.`name`,ts.`mobile`,ts.`edu_class`,ts.`learn_class`,ts.`major`,ts.`professional_direction`,ts.`school_grade`,ts.`school_no`,ts.`school_id`,ts.state,
 
-		ts.`dep_id`,ts.`teacher_id`,ts.`account_type`,ts.`account_tm`,ts.`create_tm`,ts.`lastlogin_tm`,ts.`head_img`,tc.`name` AS schoolName,tt.teacher_title AS teacherName
+		ts.`dep_id`,ts.`teacher_id`,ts.`account_type`,ts.`account_tm`,ts.`create_tm`,ts.`lastlogin_tm`,ts.`head_img`,tc.`name` AS schoolName,tt.name AS teacherName
 
 		from thesis_student ts
 
