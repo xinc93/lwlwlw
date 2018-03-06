@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="06166bf8-68eb-4f4a-a22e-5fdc957a5fb7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootdo.iml" afterPath="$PROJECT_DIR$/bootdo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/Test.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,21 +27,113 @@
       <file leaf-file-name="fff.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fff.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="447">
+              <caret line="1417" column="19" lean-forward="false" selection-start-line="1417" selection-start-column="19" selection-end-line="1417" selection-end-column="19" />
+              <folding>
+                <element signature="n#o:DocumentProperties#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#o:CustomDocumentProperties#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:fonts#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:styles#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:shapeDefaults#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:docPr#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#2;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#4;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#5;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#6;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#7;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#8;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:pPr#0;n#w:p#8;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#0;n#w:p#8;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#1;n#w:p#8;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#2;n#w:p#8;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#9;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#10;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#11;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:pPr#0;n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#0;n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#1;n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#2;n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#3;n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#4;n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#5;n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#6;n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#13;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#14;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#15;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#16;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#17;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:pPr#0;n#w:p#17;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#18;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#19;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#20;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#21;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#22;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#0;n#w:p#22;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#1;n#w:p#22;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#2;n#w:p#22;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#23;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#24;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#25;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#26;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#27;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#1;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#2;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#3;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#4;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#5;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#6;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#7;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#8;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:pPr#0;n#w:p#8;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:hlink#0;n#w:p#8;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#9;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:pPr#0;n#w:p#9;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#10;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#11;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#12;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#13;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#14;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#15;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#16;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#17;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#1;n#w:p#3;n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#2;n#w:p#3;n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#3;n#w:p#3;n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#4;n#w:p#3;n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#5;n#w:p#3;n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#6;n#w:p#3;n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#7;n#w:p#3;n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#8;n#w:p#3;n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#wx:sub-section#2;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#wx:sub-section#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#0;n#wx:sub-section#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#0;n#w:p#0;n#wx:sub-section#0;n#wx:sub-section#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#1;n#w:p#0;n#wx:sub-section#0;n#wx:sub-section#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:r#2;n#w:p#0;n#wx:sub-section#0;n#wx:sub-section#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#wx:sub-section#0;n#wx:sub-section#0;n#wx:sub-section#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#0;n#wx:sub-section#0;n#wx:sub-section#0;n#wx:sub-section#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#1;n#wx:sub-section#0;n#wx:sub-section#0;n#wx:sub-section#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#wx:sub-section#4;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#wx:sub-section#5;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:p#2;n#wx:sub-section#5;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="n#w:sectPr#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Wr.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/Wr.java">
+      <file leaf-file-name="vvv.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vvv.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="297">
+              <caret line="11" column="45" lean-forward="true" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,91 +141,86 @@
       <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+            <state relative-caret-position="189">
+              <caret line="101" column="26" lean-forward="true" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#613#614#0" expanded="true" />
+                <element signature="e#642#643#0" expanded="true" />
+                <element signature="method#findParent#0;class#Test#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Body.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/Body.java">
+      <file leaf-file-name="Document.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/Document.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-              <folding>
-                <element signature="e#731#732#0" expanded="true" />
-                <element signature="e#761#762#0" expanded="true" />
-                <element signature="e#809#810#0" expanded="true" />
-                <element signature="e#847#848#0" expanded="true" />
-                <element signature="e#906#907#0" expanded="true" />
-                <element signature="e#948#949#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Wp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/Wp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="162">
+              <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WpPr.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WpPr.java">
+      <file leaf-file-name="Branch.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/Branch.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-              <folding>
-                <element signature="e#567#568#0" expanded="true" />
-                <element signature="e#592#593#0" expanded="true" />
-                <element signature="e#628#629#0" expanded="true" />
-                <element signature="e#656#657#0" expanded="true" />
-                <element signature="e#686#687#0" expanded="true" />
-                <element signature="e#712#713#0" expanded="true" />
-                <element signature="e#750#751#0" expanded="true" />
-                <element signature="e#780#781#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WrPr.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WrPr.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="e#510#511#0" expanded="true" />
-                <element signature="e#535#536#0" expanded="true" />
-                <element signature="e#571#572#0" expanded="true" />
-                <element signature="e#599#600#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WxSubSection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WxSubSection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            <state relative-caret-position="162">
+              <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvocableHandlerMethod.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.10.RELEASE/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <file leaf-file-name="Node.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/Node.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+            <state relative-caret-position="162">
+              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bbb.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/bbb.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThesisTemplateAttrController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateAttrController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThesisTemplateController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="140" column="48" lean-forward="true" selection-start-line="140" selection-start-column="48" selection-end-line="140" selection-end-column="48" />
+              <folding>
+                <element signature="e#1759#1760#0" expanded="true" />
+                <element signature="e#1827#1828#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudentController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/StudentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="514">
+              <caret line="74" column="61" lean-forward="false" selection-start-line="74" selection-start-column="61" selection-end-line="74" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -152,36 +238,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>swagger</find>
-      <find>Interceptors</find>
-      <find>shiro</find>
-      <find>addInterceptoraddInterceptor</find>
-      <find>reLoad</find>
-      <find>element</find>
-      <find>1</find>
-      <find>o:DocumentProperties</find>
-      <find>o:Lines</find>
+      <find>w:rsidRPr</find>
+      <find>Des</find>
+      <find>目录</find>
+      <find>参考文献</find>
+      <find>remo</find>
+      <find>aml:annotation</find>
+      <find>标题</find>
       <find>中文</find>
-      <find>Word.Bookmark.End</find>
-      <find>wordDocument</find>
-      <find>中</find>
+      <find>title</find>
+      <find>_title</find>
+      <find>阿西吧</find>
+      <find>doc</find>
+      <find>fm_title</find>
+      <find>fm_titleen</find>
+      <find>fm_title_标题</find>
+      <find>fm_yjfx</find>
+      <find>fm_rq</find>
+      <find>英文标题</find>
       <find>中文摘要</find>
-      <find>wx:sectPr</find>
-      <find>wsp:rsidRDefault</find>
-      <find>w:sectPr</find>
-      <find>&lt;w:hlink</find>
-      <find>wsp:rsidP</find>
-      <find>wsp:rsidR</find>
-      <find>w:wordDocument</find>
-      <find>w:sz-cs</find>
-      <find>wsp:rsidRPr</find>
-      <find>docMod</find>
-      <find>sp:rsidRPr</find>
-      <find>w:pPr</find>
-      <find>w:jc</find>
-      <find>w:rPr</find>
-      <find>wr</find>
-      <find>w:r</find>
+      <find>ckwx_ckwxnr_参考文献</find>
+      <find>w:name=&quot;</find>
+      <find>wx:sub-section</find>
+      <find>16ckwx_ckwxnr</find>
+      <find>thank_thanknr_致谢</find>
+      <find>w:name=&quot;</find>
+      <find>Word.Bookmark.Start</find>
+      <find>thank_thanknr</find>
+      <find>w:type=&quot;Word.Bookmark.Start&quot;</find>
+      <find>00650383</find>
+      <find>replaceChild</find>
     </findStrings>
     <dirStrings>
       <dir>H:\lwxt\bootdo</dir>
@@ -202,8 +288,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisStudent/edit.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisStudent/thesisStudent.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/appjs/system/sysDept/add.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisCollege/add.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/appjs/system/sysDept/sysDept.js" />
@@ -229,7 +313,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisTeacher/thesisTeacher.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/XmlTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTeacherController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docRoot.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/wordDocument.java" />
@@ -246,12 +329,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docSecRoot.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WxSubSection.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WrPr.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/Wr.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WpPr.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/Wp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/Body.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/Wr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/Wp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WpPr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WrPr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateController.java" />
+        <option value="$PROJECT_DIR$/vvv.xml" />
         <option value="$PROJECT_DIR$/src/fff.xml" />
+        <option value="$PROJECT_DIR$/src/vvv.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/Test.java" />
       </list>
     </option>
@@ -292,6 +378,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -332,25 +419,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="bootdo" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lwlwlw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lwlwlw" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bootdo" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lwlwlw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lwlwlw" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bootdo" type="462c0819:PsiDirectoryNode" />
               <item name="thesisMamager" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -373,27 +441,14 @@
               <item name="thesisMamager" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lwlwlw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lwlwlw" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bootdo" type="462c0819:PsiDirectoryNode" />
-              <item name="thesisMamager" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="docMod" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -407,7 +462,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
-    <property name="SearchEverywhereHistoryKey" value="test&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/java/com/bootdo/thesisMamager/controller/api/test.java&#10;ThesisStudent&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/thesisMamager/ThesisStudentMapper.xml&#10;thesisTeacher&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/thesisMamager/ThesisTeacherMapper.xml&#10;hesisTeache&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/thesisMamager/ThesisTeacherMapper.xml&#10;ThesisTeacher&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/thesisMamager/ThesisTeacherMapper.xml&#10;dept&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/system/sysDept/sysDept.js&#10;thesisCollege&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/thesisMamager/thesisCollege/thesisCollege.js&#10;thesisStudent.js&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/thesisMamager/thesisStudent/thesisStudent.js&#10;thesisCollege.js&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/thesisMamager/thesisCollege/thesisCollege.js&#10;sysDept.js&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/system/sysDept/sysDept.js&#10;Dept&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/system/DeptMapper.xml&#10;User&#9;FILE&#9;file://H:/lwxt/lwlw/src/main/resources/mybatis/system/UserMapper.xml" />
+    <property name="SearchEverywhereHistoryKey" value="test&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/java/com/bootdo/thesisMamager/controller/api/Test.java&#10;ThesisStudent&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/thesisMamager/ThesisStudentMapper.xml&#10;thesisTeacher&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/thesisMamager/ThesisTeacherMapper.xml&#10;hesisTeache&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/thesisMamager/ThesisTeacherMapper.xml&#10;ThesisTeacher&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/thesisMamager/ThesisTeacherMapper.xml&#10;dept&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/system/sysDept/sysDept.js&#10;thesisCollege&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/thesisMamager/thesisCollege/thesisCollege.js&#10;thesisStudent.js&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/thesisMamager/thesisStudent/thesisStudent.js&#10;thesisCollege.js&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/thesisMamager/thesisCollege/thesisCollege.js&#10;sysDept.js&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/system/sysDept/sysDept.js&#10;Dept&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/system/DeptMapper.xml&#10;User&#9;FILE&#9;file://H:/lwxt/lwlw/src/main/resources/mybatis/system/UserMapper.xml" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -418,11 +473,11 @@
       <recent name="com.bootdo.thesisMamager.domain" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\lwxt\lwlwlw\src" />
+      <recent name="H:\lwxt\lwlwlw" />
       <recent name="H:\lwxt\lwlwlw\src\main\java\com\bootdo\thesisMamager\controller\api\docMod" />
       <recent name="H:\lwxt\lwlwlw\src\main\java\com\bootdo\thesisMamager\controller\api" />
-      <recent name="H:\lwxt\lwlwlw\src" />
       <recent name="F:\javaProject\lwlwlw\src\main\resources\templates\thesisMamager" />
-      <recent name="F:\javaProject\lwlwlw\src\main\resources\static\js\appjs\thesisMamager" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -588,7 +643,8 @@
       <workItem from="1519433259046" duration="4819000" />
       <workItem from="1519692730231" duration="2677000" />
       <workItem from="1519779424555" duration="8655000" />
-      <workItem from="1519865628365" duration="32446000" />
+      <workItem from="1519865628365" duration="32492000" />
+      <workItem from="1520211920692" duration="46633000" />
     </task>
     <task id="LOCAL-00001" summary="提交提交">
       <created>1514960322761</created>
@@ -709,11 +765,25 @@
       <option name="project" value="LOCAL" />
       <updated>1519868118350</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="模板导入测试">
+      <created>1519982814212</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1519982814212</updated>
+    </task>
+    <task id="LOCAL-00019" summary="模板导入测试">
+      <created>1520317900096</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1520317900097</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190743000" />
+    <option name="totallyTimeSpent" value="237422000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -728,19 +798,18 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35343915" sideWeight="0.8177083" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35343915" sideWeight="0.8177083" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32698414" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32804233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32804233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21458334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21458334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32804233" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -750,38 +819,39 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44761905" sideWeight="0.18229167" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35343915" sideWeight="0.8177083" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32698414" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32804233" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32804233" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21458334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21458334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32804233" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -806,7 +876,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="提交提交" />
     <MESSAGE value="学校学院" />
-    <option name="LAST_COMMIT_MESSAGE" value="学校学院" />
+    <MESSAGE value="模板导入测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="模板导入测试" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -816,12 +887,6 @@
           <line>57</line>
           <properties />
           <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateController.java</url>
-          <line>115</line>
-          <properties />
-          <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateAttrController.java</url>
@@ -835,32 +900,8 @@
           <properties />
           <option name="timeStamp" value="39" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateController.java</url>
-          <line>148</line>
-          <properties />
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateController.java</url>
-          <line>147</line>
-          <properties />
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/Test.java</url>
-          <line>28</line>
-          <properties />
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/Test.java</url>
-          <line>25</line>
-          <properties />
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="79" />
+      <option name="time" value="173" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
@@ -870,91 +911,10 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisTeacher/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/thesisMamager/ThesisTeacherMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1488">
-          <caret line="96" column="51" lean-forward="false" selection-start-line="96" selection-start-column="51" selection-end-line="96" selection-end-column="51" />
-          <folding>
-            <marker date="1519867647361" expanded="true" signature="298:472" ph="select `id`,... thesis_teacher" />
-            <marker date="1519867647361" expanded="true" signature="3257:3678" ph="insert into thesis_teacher... " />
-            <marker date="1519867647361" expanded="true" signature="3781:4521" ph="update thesi... " />
-            <marker date="1519867647361" expanded="true" signature="4559:4605" ph="delete from " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisStudent/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2349">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisStudent/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisStudent/thesisStudent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-81">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/appjs/thesisMamager/thesisStudent/thesisStudent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="104" column="56" lean-forward="false" selection-start-line="104" selection-start-column="45" selection-end-line="104" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/domain/ThesisStudentDO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-347">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/service/ThesisStudentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/service/impl/ThesisStudentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-          <folding>
-            <element signature="e#678#679#0" expanded="false" />
-            <element signature="e#718#719#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/dao/ThesisStudentDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -962,12 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1323">
           <caret line="17" column="57" lean-forward="true" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
-          <folding>
-            <marker date="1519867909333" expanded="true" signature="298:557" ph="select `id`,... thesis_student" />
-            <marker date="1519867909333" expanded="true" signature="4952:5610" ph="insert into thesis_student... " />
-            <marker date="1519867909333" expanded="true" signature="5713:6882" ph="update thesi... " />
-            <marker date="1519867909333" expanded="true" signature="6920:6963" ph="delete from " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -983,9 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1519352281377" expanded="true" signature="4493:4518" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -993,9 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1519714101373" expanded="true" signature="4366:4391" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1003,9 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
           <caret line="113" column="14" lean-forward="true" selection-start-line="108" selection-start-column="12" selection-end-line="113" selection-end-column="14" />
-          <folding>
-            <marker date="1519867105834" expanded="true" signature="3619:3644" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1013,7 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="78" column="86" lean-forward="false" selection-start-line="78" selection-start-column="86" selection-end-line="78" selection-end-column="86" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1021,28 +965,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1294">
           <caret line="119" column="14" lean-forward="true" selection-start-line="119" selection-start-column="14" selection-end-line="119" selection-end-column="14" />
-          <folding>
-            <marker date="1519867116417" expanded="true" signature="3693:3718" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/XmlTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="33" column="37" lean-forward="false" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/StudentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="74" column="61" lean-forward="false" selection-start-line="74" selection-start-column="61" selection-end-line="74" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/XmlTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTeacherController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -1051,35 +977,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateAttrController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-307">
-          <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/Node.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="74" column="20" lean-forward="false" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/DocumentHelper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/Branch.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-81">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1091,49 +992,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/util/IndexedElement.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="44" column="52" lean-forward="false" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
-          <folding>
-            <element signature="e#1057#1058#0" expanded="true" />
-            <element signature="e#1125#1126#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-166">
-          <caret line="118" column="64" lean-forward="false" selection-start-line="118" selection-start-column="64" selection-end-line="118" selection-end-column="64" />
-          <folding>
-            <element signature="e#1759#1760#0" expanded="true" />
-            <element signature="e#1827#1828#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/Element.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="116" column="9" lean-forward="false" selection-start-line="116" selection-start-column="9" selection-end-line="116" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/Document.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/com/thoughtworks/xstream/MarshallingStrategy.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1141,26 +1003,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ddd.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="63" column="300" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="16604" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/DomInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ddd.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/DomInfo.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
@@ -1169,123 +1016,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/DocumentProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/IgnoreSubtree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/DocumentProperties.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/IgnoreSubtree.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/com/thoughtworks/xstream/core/AbstractTreeMarshallingStrategy.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="19" column="49" lean-forward="false" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docSecRoot.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.10.RELEASE/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1597">
+          <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/com/thoughtworks/xstream/XStream.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="886" column="18" lean-forward="false" selection-start-line="886" selection-start-column="18" selection-end-line="886" selection-end-column="18" />
-          <folding>
-            <element signature="e#51188#51189#0" expanded="true" />
-            <element signature="e#51249#51250#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="194">
+          <caret line="840" column="16" lean-forward="false" selection-start-line="840" selection-start-column="16" selection-end-line="840" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/AmlAnnotation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
+        <state relative-caret-position="717">
           <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WSectPr.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/Wp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        <state relative-caret-position="-216">
+          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docSecRoot.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WpPr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WordDocument.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="504">
+          <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WrPr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#535#536#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WpPr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding>
-            <element signature="e#567#568#0" expanded="true" />
-            <element signature="e#592#593#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/Wp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="135">
+          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/Body.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-          <folding>
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#761#762#0" expanded="true" />
-            <element signature="e#809#810#0" expanded="true" />
-            <element signature="e#847#848#0" expanded="true" />
-            <element signature="e#906#907#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1293,42 +1078,297 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fff.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.10.RELEASE/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WSectPr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+        <state relative-caret-position="188">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WordDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WxSubSection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        <state relative-caret-position="153">
+          <caret line="9" column="39" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/Body.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="22" column="2" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="22" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="309" column="7" lean-forward="true" selection-start-line="309" selection-start-column="7" selection-end-line="309" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/util/IndexedElement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="107" column="22" lean-forward="false" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/tree/AbstractElement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="760" column="27" lean-forward="false" selection-start-line="760" selection-start-column="27" selection-end-line="760" selection-end-column="27" />
+          <folding>
+            <element signature="e#22863#22864#0" expanded="true" />
+            <element signature="e#22910#22911#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/Iterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-157">
+          <caret line="72" column="11" lean-forward="false" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vvv.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/StudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="74" column="61" lean-forward="false" selection-start-line="74" selection-start-column="61" selection-end-line="74" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="140" column="48" lean-forward="true" selection-start-line="140" selection-start-column="48" selection-end-line="140" selection-end-column="48" />
+          <folding>
+            <element signature="e#1759#1760#0" expanded="true" />
+            <element signature="e#1827#1828#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/io/XMLWriter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="217" column="16" lean-forward="false" selection-start-line="217" selection-start-column="16" selection-end-line="217" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/tree/AbstractBranch.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
+          <folding>
+            <element signature="e#4996#4997#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/Element.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateAttrController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bbb.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bbb.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/Node.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/Branch.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fff.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="1417" column="19" lean-forward="false" selection-start-line="1417" selection-start-column="19" selection-end-line="1417" selection-end-column="19" />
+          <folding>
+            <element signature="n#o:DocumentProperties#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#o:CustomDocumentProperties#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:fonts#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:styles#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:shapeDefaults#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:docPr#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#2;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#4;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#5;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#6;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#7;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#8;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:pPr#0;n#w:p#8;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#0;n#w:p#8;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#1;n#w:p#8;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#2;n#w:p#8;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#9;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#10;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#11;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:pPr#0;n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#0;n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#1;n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#2;n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#3;n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#4;n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#5;n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#6;n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#13;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#14;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#15;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#16;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#17;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:pPr#0;n#w:p#17;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#18;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#19;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#20;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#21;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#22;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#0;n#w:p#22;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#1;n#w:p#22;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#2;n#w:p#22;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#23;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#24;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#25;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#26;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#27;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#1;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#2;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#3;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#4;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#5;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#6;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#7;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#8;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:pPr#0;n#w:p#8;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:hlink#0;n#w:p#8;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#9;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:pPr#0;n#w:p#9;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#10;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#11;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#12;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#13;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#14;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#15;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#16;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#17;n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#1;n#w:p#3;n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#2;n#w:p#3;n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#3;n#w:p#3;n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#4;n#w:p#3;n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#5;n#w:p#3;n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#6;n#w:p#3;n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#7;n#w:p#3;n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#8;n#w:p#3;n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#wx:sub-section#2;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#wx:sub-section#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#0;n#wx:sub-section#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#0;n#w:p#0;n#wx:sub-section#0;n#wx:sub-section#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#1;n#w:p#0;n#wx:sub-section#0;n#wx:sub-section#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:r#2;n#w:p#0;n#wx:sub-section#0;n#wx:sub-section#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#wx:sub-section#0;n#wx:sub-section#0;n#wx:sub-section#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#0;n#wx:sub-section#0;n#wx:sub-section#0;n#wx:sub-section#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#1;n#wx:sub-section#0;n#wx:sub-section#0;n#wx:sub-section#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#wx:sub-section#4;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#wx:sub-section#5;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#2;n#wx:sub-section#5;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:sectPr#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vvv.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="45" lean-forward="true" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/Document.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+        <state relative-caret-position="189">
+          <caret line="101" column="26" lean-forward="true" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+            <element signature="method#findParent#0;class#Test#0" expanded="false" />
           </folding>
         </state>
       </provider>

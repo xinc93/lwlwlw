@@ -1,18 +1,21 @@
 package com.bootdo.thesisMamager.controller.api;
 
-import org.dom4j.Document;
-import org.dom4j.DocumentException;
-import org.dom4j.DocumentHelper;
-import org.dom4j.Element;
+import org.dom4j.*;
+import org.dom4j.dom.DOMDocumentFactory;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
+
 
 /**
  * @author
@@ -24,7 +27,7 @@ public class Test {
     }
     public static void main(String[] args) throws IOException, DocumentException {
 
-        File file = new File("./src/fff.xml");
+        File file = new File("./src/vvv.xml");
         SAXReader saxReader=new SAXReader();
         Document document=saxReader.read(file);
 
@@ -73,36 +76,14 @@ public class Test {
                             });
                         }else{
                             List<Element> i4List = i3.elements();
-                            findParent(i4List);
+                            List<Element> i4List2 = i3.elements();
+
+                            //findParent(i4List);
                         }
 
                     });
                 }
             });
-            System.out.println("当前节点的名称：：" + root.getName());
-            Element r = DocumentHelper.createElement(root.getName());
-            //doc.add(r);
-            // Element e = DocumentHelper.createElement("qwert");
-
-            //Element ele = DocumentHelper.createElement("qwerty");
-
-            List<Element> eleList = root.elements();
-            for(Element element:eleList){
-                List<Element> elements = element.elements();
-                elements.stream().forEach(i->{
-                    System.out.print(i.getName()+"/n");
-                });
-                System.out.print(element.getName());
-                if(element.getName().contains("annotation")){
-                    //e.add((Element)(element.clone()));
-                }else if(element.getName().contains("qwerty")){
-                    //ele.add((Element)(element.clone()));
-                }else{
-                    r.add((Element)(element.clone()));
-                }
-            }
-           /* r.add(e);
-            r.add(ele);*/
 
            OutputFormat format = OutputFormat.createPrettyPrint();
             format.setEncoding("utf-8");
@@ -110,8 +91,46 @@ public class Test {
                     new FileWriter(new File("./src/vvv.xml")), format);
             writer.write(root);
             writer.close();
-
     }
+
+    public static void changeXML(String eleName1,String eleName2,String OutPath) throws ParserConfigurationException, IOException, SAXException {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        org.w3c.dom.Document document = builder.parse("src/book.xml");
+        Document doc = DOMDocumentFactory.getInstance().createDocument(); SAXReader reader = new SAXReader();
+        File file = new File("./src/vvv.xml");
+        Document document;
+        try {
+            document = reader.read(file);
+            Element root = document.getRootElement();
+            Element r = DocumentHelper.createElement(root.getName());
+            doc.add(r);
+            Element e = DocumentHelper.createElement(eleName1);
+            Element ele = DocumentHelper.createElement(eleName2);
+            List<Element> eleList = root.elements();
+            for(Element element:eleList){
+                if(element.getName().contains(eleName1)){
+                    e.add((Element)(element.clone()));
+                }else if(element.getName().contains(eleName2)){
+                    ele.add((Element)(element.clone()));
+                }else{
+                    r.add((Element)(element.clone()));
+                }
+            }
+            r.add(e);
+            r.add(ele);
+            OutputFormat format = OutputFormat.createPrettyPrint();
+            format.setEncoding("utf-8");
+            XMLWriter writer = new XMLWriter(
+                    new FileWriter(new File("./src/vvv.xml")), format);
+            writer.write(doc);
+            writer.close();
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        }catch (Exception e){
+            e.printStackTrace();  }
+    }
+
 
     /**
      *  替换最下层wp节点中wt标签里的值的方法
