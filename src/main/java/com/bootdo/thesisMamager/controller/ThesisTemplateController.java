@@ -3,6 +3,8 @@ package com.bootdo.thesisMamager.controller;
 import com.bootdo.common.config.BootdoConfig;
 import com.bootdo.common.domain.FileDO;
 import com.bootdo.common.utils.*;
+import com.bootdo.thesisMamager.controller.api.ParserList;
+import com.bootdo.thesisMamager.controller.api.ParserValue;
 import com.bootdo.thesisMamager.domain.ThesisCollegeDO;
 import com.bootdo.thesisMamager.domain.ThesisTemplateAttrDO;
 import com.bootdo.thesisMamager.domain.ThesisTemplateDO;
@@ -125,7 +127,7 @@ public class ThesisTemplateController {
             if (type.equals("Word.Bookmark.Start")) {
                 ThesisTemplateAttrDO thesisTemplateAttrDO=new ThesisTemplateAttrDO();
                 thesisTemplateAttrDO.setTemplateid(id);
-                String[] obj=node.valueOf("@w:name").toString().split(",");
+                String[] obj=node.valueOf("@w:name").toString().split("_");
                 thesisTemplateAttrDO.setAttrbuteccode(obj[0]);
                 thesisTemplateAttrDO.setAttributename(obj[1]);
                 thesisTemplateAttrDO.setAttributeid(IdGen.next());
@@ -134,10 +136,20 @@ public class ThesisTemplateController {
             }
         }
         String fileName = file.getOriginalFilename();
+        String tmpPath=bootdoConfig.getUploadPath()+"temp/"+id;
+        File file1 = new File(tmpPath);
+        if(!file1.exists()){
+            file1.mkdirs();
+        }
+        try {
+        //修改标签内容的方法
+        ParserValue.findRoot(document,tmpPath,fileName);
+        //给标签加list的方法
+        byte[] bytes = ParserList.parseList(tmpPath,fileName);
         fileName = id.toString()+".ftl";
         FileDO sysFile = new FileDO(FileType.fileType(fileName), "/files/" + fileName, new Date());
-        try {
-            FileUtil.uploadFile(file.getBytes(), bootdoConfig.getUploadPath()+"template/"+id+"/", fileName);
+        //保存生成好的ftl模板的方法
+        FileUtil.uploadFile(bytes, bootdoConfig.getUploadPath()+"template/"+id+"/", fileName);
             if(thesisTemplateService.save(thesisTemplate)>0){
                 return R.ok();
             }
