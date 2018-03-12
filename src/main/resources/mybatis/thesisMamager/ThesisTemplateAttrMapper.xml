@@ -20,7 +20,7 @@
                 order by ${sort} ${order}
             </when>
 			<otherwise>
-                order by attributeId desc
+                order by attributeId
 			</otherwise>
         </choose>
 		<if test="offset != null and limit != null">

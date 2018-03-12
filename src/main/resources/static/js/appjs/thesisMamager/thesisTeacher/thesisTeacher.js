@@ -46,11 +46,10 @@ function load() {
 						columns : [
 								{
 									checkbox : true
-								},
-																{
-									field : 'id', 
-									title : '导师ID' 
-								},
+								},							{
+                                field : 'name',
+                                title : '姓名'
+                            },
 																{
 									field : 'mobile', 
 									title : '手机号' 
@@ -64,13 +63,13 @@ function load() {
 									title : '院系'
 								},
 																{
-									field : 'teacherTitle', 
-									title : '姓名'
-								},
-																{
 									field : 'major', 
 									title : '专业' 
 								},
+                            									{
+                                	field : 'teacherTitle',
+                                	title : '职称'
+                            	},
                             {
                                 field : 'state',
                                 title : '使用状态',

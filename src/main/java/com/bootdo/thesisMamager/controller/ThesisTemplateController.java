@@ -3,6 +3,8 @@ package com.bootdo.thesisMamager.controller;
 import com.bootdo.common.config.BootdoConfig;
 import com.bootdo.common.domain.FileDO;
 import com.bootdo.common.utils.*;
+import com.bootdo.common.utils.xmlTools.ParserList;
+import com.bootdo.common.utils.xmlTools.ParserValue;
 import com.bootdo.thesisMamager.domain.ThesisCollegeDO;
 import com.bootdo.thesisMamager.domain.ThesisTemplateAttrDO;
 import com.bootdo.thesisMamager.domain.ThesisTemplateDO;
@@ -13,7 +15,6 @@ import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
-import org.dom4j.Element;
 import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.*;
 
 /**
@@ -125,7 +125,7 @@ public class ThesisTemplateController {
             if (type.equals("Word.Bookmark.Start")) {
                 ThesisTemplateAttrDO thesisTemplateAttrDO=new ThesisTemplateAttrDO();
                 thesisTemplateAttrDO.setTemplateid(id);
-                String[] obj=node.valueOf("@w:name").toString().split(",");
+                String[] obj=node.valueOf("@w:name").toString().split("_");
                 thesisTemplateAttrDO.setAttrbuteccode(obj[0]);
                 thesisTemplateAttrDO.setAttributename(obj[1]);
                 thesisTemplateAttrDO.setAttributeid(IdGen.next());
@@ -134,10 +134,24 @@ public class ThesisTemplateController {
             }
         }
         String fileName = file.getOriginalFilename();
-        fileName = id.toString()+".ftl";
-        FileDO sysFile = new FileDO(FileType.fileType(fileName), "/files/" + fileName, new Date());
+        String tmpPath=bootdoConfig.getUploadPath()+"temp/"+id;
+        File file1 = new File(tmpPath);
+        if(!file1.exists()){
+            file1.mkdirs();
+        }
         try {
-            FileUtil.uploadFile(file.getBytes(), bootdoConfig.getUploadPath()+"template/"+id+"/", fileName);
+            //修改标签内容的方法
+            ParserValue.findRoot(document,tmpPath,fileName);
+            //给标签加list的方法
+            byte[] bytes =ParserList.parseList(tmpPath,fileName);
+            //给文件List 加 as xxx的方法
+            Map m = new HashMap();
+            m.put("templateid",id);
+            byte[] bytes2 =ParserList.operationFile(tmpPath,fileName,thesisTemplateAttrService.list(m));
+            fileName = id.toString()+".ftl";
+            FileDO sysFile = new FileDO(FileType.fileType(fileName), "/files/" + fileName, new Date());
+            //保存生成好的ftl模板的方法
+            FileUtil.uploadFile(bytes2, bootdoConfig.getUploadPath()+"template/"+id+"/", fileName);
             if(thesisTemplateService.save(thesisTemplate)>0){
                 return R.ok();
             }
@@ -145,6 +159,7 @@ public class ThesisTemplateController {
 
 
         } catch (Exception e) {
+            e.printStackTrace();
             return R.error();
         }
 		/*Map<String, Object> dataMap = new HashMap<String, Object>();

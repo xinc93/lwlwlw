@@ -4,13 +4,14 @@
 <mapper namespace="com.bootdo.thesisMamager.dao.ThesisTeacherDao">
 
 	<select id="get" resultType="com.bootdo.thesisMamager.domain.ThesisTeacherDO">
-		select `id`,`mobile`,`school_id`,`dep_id`,`teacher_title`,`major`,`student_count`,`create_tm`,`lastlogin_tm`,`head_img`,`state` from thesis_teacher where id = #{value}
+		select `id`,`name`,`mobile`,`school_id`,`dep_id`,`teacher_title`,`major`,`student_count`,`create_tm`,`lastlogin_tm`,`head_img`,`state` from thesis_teacher where id = #{value}
 	</select>
 
 	<select id="list" resultType="com.bootdo.thesisMamager.domain.ThesisTeacherDO">
-		select `id`,`mobile`,`school_id`,`dep_id`,`teacher_title`,`major`,`student_count`,`create_tm`,`lastlogin_tm`,`head_img`,`state` from thesis_teacher
+		select `id`,`name`,`mobile`,`school_id`,`dep_id`,`teacher_title`,`major`,`student_count`,`create_tm`,`lastlogin_tm`,`head_img`,`state` from thesis_teacher
         <where>  
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+					<if test="name != null and name != ''"> and id = #{name} </if>
 		  		  <if test="mobile != null and mobile != ''"> and mobile = #{mobile} </if>
 		  		  <if test="schoolId != null and schoolId != ''"> and school_id = #{schoolId} </if>
 		  		  <if test="depId != null and depId != ''"> and dep_id = #{depId} </if>
@@ -59,8 +60,9 @@
 			`mobile`, 
 			`school_id`, 
 			`dep_id`, 
-			`teacher_title`, 
-			`major`, 
+			`teacher_title`,
+			`name`,
+			`major`,
 			`student_count`, 
 			`create_tm`, 
 			`lastlogin_tm`,
@@ -73,7 +75,8 @@
 			#{mobile}, 
 			#{schoolId}, 
 			#{depId}, 
-			#{teacherTitle}, 
+			#{teacherTitle},
+			#{name},
 			#{major}, 
 			#{studentCount}, 
 			#{createTm}, 
@@ -91,6 +94,7 @@
 			<if test="schoolId != null">`school_id` = #{schoolId}, </if>
 			<if test="depId != null">`dep_id` = #{depId}, </if>
 			<if test="teacherTitle != null">`teacher_title` = #{teacherTitle}, </if>
+			<if test="name != null">`name` = #{name}, </if>
 			<if test="major != null">`major` = #{major}, </if>
 			<if test="studentCount != null">`student_count` = #{studentCount}, </if>
 			<if test="createTm != null">`create_tm` = #{createTm}, </if>

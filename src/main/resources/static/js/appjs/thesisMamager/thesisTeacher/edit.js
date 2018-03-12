@@ -113,8 +113,11 @@ function validateRule() {
 		},
 		messages : {
             teacherTitle : {
-				required : icon + "请输入名字"
-			},
+                required : icon + "请选择职称"
+            },
+            name : {
+                required : icon + "请输入名字"
+            },
             mobile : {
                 required : icon + "手机号"
             },
