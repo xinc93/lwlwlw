@@ -26,6 +26,8 @@ public class ThesisStudentDO implements Serializable {
 	private Long id;
 	//学生姓名
 	private String name;
+
+	private String passWord;
 	//手机号
 	private String mobile;
 	//学历层次
@@ -59,7 +61,10 @@ public class ThesisStudentDO implements Serializable {
 	private String lastloginTm;
 	//头像
 	private String headImg;
+
 	private String state;
+	//教师是否同意  0同意 1否定
+	private String isJoin;
 	/**
 	 * 设置：学生ID
 	 */
@@ -294,5 +299,21 @@ public class ThesisStudentDO implements Serializable {
 
 	public void setState(String state) {
 		this.state = state;
+	}
+
+	public String getPassWord() {
+		return passWord;
+	}
+
+	public void setPassWord(String passWord) {
+		this.passWord = passWord;
+	}
+
+	public String getIsJoin() {
+		return isJoin;
+	}
+
+	public void setIsJoin(String isJoin) {
+		this.isJoin = isJoin;
 	}
 }

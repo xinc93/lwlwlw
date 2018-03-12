@@ -33,6 +33,11 @@ public class ThesisCollegeServiceImpl implements ThesisCollegeService {
 	}
 
 	@Override
+	public List<ThesisCollegeDO> queryall(Map<String, Object> map) {
+		return thesisCollegeDao.queryall(map);
+	}
+
+	@Override
 	public List<Long> getByPidList(Long id) {
 		return thesisCollegeDao.getByPidList(id);
 	}

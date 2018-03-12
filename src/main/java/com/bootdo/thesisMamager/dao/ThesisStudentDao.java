@@ -17,6 +17,8 @@ import org.apache.ibatis.annotations.Mapper;
 public interface ThesisStudentDao {
 
 	ThesisStudentDO get(Long id);
+
+	ThesisStudentDO queryone(Map map);
 	
 	List<ThesisStudentDO> list(Map<String,Object> map);
 	

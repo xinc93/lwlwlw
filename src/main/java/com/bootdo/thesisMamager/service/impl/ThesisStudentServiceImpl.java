@@ -21,7 +21,12 @@ public class ThesisStudentServiceImpl implements ThesisStudentService {
 	public ThesisStudentDO get(Long id){
 		return thesisStudentDao.get(id);
 	}
-	
+
+	@Override
+	public ThesisStudentDO queryone(Map map){
+		return thesisStudentDao.queryone(map);
+	}
+
 	@Override
 	public List<ThesisStudentDO> list(Map<String, Object> map){
 		return thesisStudentDao.list(map);

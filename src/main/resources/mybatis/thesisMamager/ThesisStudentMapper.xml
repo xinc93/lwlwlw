@@ -5,11 +5,11 @@
 
 	<select id="get" resultType="com.bootdo.thesisMamager.domain.ThesisStudentDO">
 		select `id`,`name`,`mobile`,`edu_class`,`learn_class`,`major`,`professional_direction`,`school_grade`,`school_no`,state,`school_id`,`dep_id`,`teacher_id`,`account_type`,
-		`account_tm`,`create_tm`,`lastlogin_tm`,`head_img` from thesis_student where id = #{id}
+		`account_tm`,`create_tm`,`lastlogin_tm`,`head_img`,`pass_word`,`is_join` from thesis_student where id = #{id}
 	</select>
 
 	<select id="list" resultType="com.bootdo.thesisMamager.domain.ThesisStudentDO">
-		select ts.`id`,ts.`name`,ts.`mobile`,ts.`edu_class`,ts.`learn_class`,ts.`major`,ts.`professional_direction`,ts.`school_grade`,ts.`school_no`,ts.`school_id`,ts.state,
+		select ts.`id`,ts.`name`,ts.`mobile`,ts.`edu_class`,ts.`learn_class`,ts.`major`,ts.`professional_direction`,ts.`school_grade`,ts.`school_no`,ts.`school_id`,ts.state,ts.`is_join`,
 
 		ts.`dep_id`,ts.`teacher_id`,ts.`account_type`,ts.`account_tm`,ts.`create_tm`,ts.`lastlogin_tm`,ts.`head_img`,tc.`name` AS schoolName,tt.teacher_title AS teacherName
 
@@ -18,7 +18,7 @@
 		LEFT JOIN thesis_college tc ON ts.school_id=tc.id
 
 		LEFT JOIN thesis_teacher tt ON tt.id=ts.teacher_id
-        <where>  
+        <where>
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
 		  		  <if test="name != null and name != ''"> and ts.name LIKE Concat('%',#{name},'%') </if>
 		  		  <if test="mobile != null and mobile != ''"> and mobile = #{mobile} </if>
@@ -36,7 +36,7 @@
 		  		  <if test="createTm != null and createTm != ''"> and create_tm = #{createTm} </if>
 		  		  <if test="lastloginTm != null and lastloginTm != ''"> and lastlogin_tm = #{lastloginTm} </if>
 		  		  <if test="headImg != null and headImg != ''"> and head_img = #{headImg} </if>
-			      <if test="state != null">`state` = #{state}</if>
+			      <if test="state != null">ts.`state` = #{state}</if>
 		 </where>
         <choose>
             <when test="sort != null and sort.trim() != ''">
@@ -50,12 +50,45 @@
 			limit #{offset}, #{limit}
 		</if>
 	</select>
-	
+
+	<select id="queryone" resultType="com.bootdo.thesisMamager.domain.ThesisStudentDO">
+		select ts.`id`,ts.`name`,ts.`mobile`,ts.`edu_class`,ts.`learn_class`,ts.`major`,ts.`professional_direction`,ts.`school_grade`,ts.`school_no`,ts.`school_id`,ts.state,ts.`is_join`,
+
+		ts.`dep_id`,ts.`teacher_id`,ts.`account_type`,ts.`account_tm`,ts.`create_tm`,ts.`lastlogin_tm`,ts.`head_img`,tc.`name` AS schoolName,tt.teacher_title AS teacherName
+
+		from thesis_student ts
+
+		LEFT JOIN thesis_college tc ON ts.school_id=tc.id
+
+		LEFT JOIN thesis_teacher tt ON tt.id=ts.teacher_id
+		<where>
+			<if test="id != null and id != ''"> and ts.id = #{id} </if>
+			<if test="name != null and name != ''"> and ts.name LIKE Concat('%',#{name},'%') </if>
+			<if test="mobile != null and mobile != ''"> and ts.mobile = #{mobile} </if>
+			<if test="eduClass != null and eduClass != ''"> and ts.edu_class = #{eduClass} </if>
+			<if test="learnClass != null and learnClass != ''"> and ts.learn_class = #{learnClass} </if>
+			<if test="major != null and major != ''"> and ts.major = #{major} </if>
+			<if test="professionalDirection != null and professionalDirection != ''"> and ts.professional_direction = #{professionalDirection} </if>
+			<if test="schoolGrade != null and schoolGrade != ''"> and ts.school_grade = #{schoolGrade} </if>
+			<if test="schoolNo != null and schoolNo != ''"> and ts.school_no = #{schoolNo} </if>
+			<if test="schoolId != null and schoolId != ''"> and ts.school_id = #{schoolId} </if>
+			<if test="depId != null and depId != ''"> and ts.dep_id = #{depId} </if>
+			<if test="teacherId != null and teacherId != ''"> and ts.teacher_id = #{teacherId} </if>
+			<if test="accountType != null and accountType != ''"> and ts.account_type = #{accountType} </if>
+			<if test="accountTm != null and accountTm != ''"> and ts.account_tm = #{accountTm} </if>
+			<if test="createTm != null and createTm != ''"> and ts.create_tm = #{createTm} </if>
+			<if test="lastloginTm != null and lastloginTm != ''"> and ts.lastlogin_tm = #{lastloginTm} </if>
+			<if test="headImg != null and headImg != ''"> and ts.head_img = #{headImg} </if>
+			<if test="state != null">ts.`state` = #{state}</if>
+		</where>
+	</select>
+
  	<select id="count" resultType="int">
 		select count(*) from thesis_student
-		 <where>  
+			<where>
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
 		  		  <if test="name != null and name != ''"> and name = #{name} </if>
+			      <if test="passWord != null and passWord != ''"> and pass_word = #{passWord} </if>
 		  		  <if test="mobile != null and mobile != ''"> and mobile = #{mobile} </if>
 		  		  <if test="eduClass != null and eduClass != ''"> and edu_class = #{eduClass} </if>
 		  		  <if test="learnClass != null and learnClass != ''"> and learn_class = #{learnClass} </if>
@@ -79,7 +112,8 @@
 		insert into thesis_student
 		(
 			`id`, 
-			`name`, 
+			`name`,
+			`pass_word`,
 			`mobile`, 
 			`edu_class`, 
 			`learn_class`, 
@@ -95,12 +129,14 @@
 			`create_tm`, 
 			`lastlogin_tm`, 
 			`head_img`,
-			`state`
+			`state`,
+			`is_join`
 		)
 		values
 		(
-			#{id}, 
-			#{name}, 
+			#{id},
+			#{name},
+			#{passWord},
 			#{mobile}, 
 			#{eduClass}, 
 			#{learnClass}, 
@@ -113,10 +149,11 @@
 			#{teacherId}, 
 			#{accountType}, 
 			#{accountTm}, 
-			#{createTm}, 
+			now(),
 			#{lastloginTm}, 
 			#{headImg},
-			#{state}
+			#{state},
+			#{isJoin}
 		)
 	</insert>
 	 
@@ -124,6 +161,7 @@
 		update thesis_student 
 		<set>
 			<if test="name != null">`name` = #{name}, </if>
+			<if test="name != null">`pass_word` = #{pass_word}, </if>
 			<if test="mobile != null">`mobile` = #{mobile}, </if>
 			<if test="eduClass != null">`edu_class` = #{eduClass}, </if>
 			<if test="learnClass != null">`learn_class` = #{learnClass}, </if>
@@ -139,7 +177,8 @@
 			<if test="createTm != null">`create_tm` = #{createTm}, </if>
 			<if test="lastloginTm != null">`lastlogin_tm` = #{lastloginTm}, </if>
 			<if test="headImg != null">`head_img` = #{headImg},</if>
-			<if test="state != null">`state` = #{state}</if>
+			<if test="state != null">`state` = #{state},</if>
+			<if test="state != null">`is_join` = #{isJoin}</if>
 		</set>
 		where id = #{id}
 	</update>

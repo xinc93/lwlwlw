@@ -20,6 +20,8 @@ public interface ThesisCollegeService {
 	
 	List<ThesisCollegeDO> list(Map<String, Object> map);
 
+	List<ThesisCollegeDO> queryall(Map<String, Object> map);
+
 	List<Long> getByPidList(Long id);
 	
 	int count(Map<String, Object> map);

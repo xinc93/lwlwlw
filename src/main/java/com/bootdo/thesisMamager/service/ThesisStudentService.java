@@ -15,6 +15,8 @@ import java.util.Map;
 public interface ThesisStudentService {
 	
 	ThesisStudentDO get(Long id);
+
+	ThesisStudentDO queryone(Map map);
 	
 	List<ThesisStudentDO> list(Map<String, Object> map);
 	

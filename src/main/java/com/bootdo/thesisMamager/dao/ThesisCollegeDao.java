@@ -20,6 +20,8 @@ public interface ThesisCollegeDao {
 	ThesisCollegeDO get(Long id);
 	
 	List<ThesisCollegeDO> list(Map<String, Object> map);
+
+	List<ThesisCollegeDO> queryall(Map<String, Object> map);
 	
 	int count(Map<String, Object> map);
 	
