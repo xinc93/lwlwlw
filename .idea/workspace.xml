@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="06166bf8-68eb-4f4a-a22e-5fdc957a5fb7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateController.java" afterPath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/service/ThesisTemplateAttrService.java" afterPath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/service/ThesisTemplateAttrService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/thesisMamager/ThesisTemplateAttrMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/thesisMamager/ThesisTemplateAttrMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/ParserList.java" afterPath="$PROJECT_DIR$/src/main/java/com/bootdo/common/utils/xmlTools/ParserList.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/ParserValue.java" afterPath="$PROJECT_DIR$/src/main/java/com/bootdo/common/utils/xmlTools/ParserValue.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" afterPath="$PROJECT_DIR$/target/classes/application-dev.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,68 +31,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ParserList.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/common/utils/xmlTools/ParserList.java">
+      <file leaf-file-name="StudentController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/StudentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="185" column="0" lean-forward="true" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
-              <folding>
-                <element signature="method#main#0;class#ParserList#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThesisTemplateController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="154" column="49" lean-forward="true" selection-start-line="154" selection-start-column="49" selection-end-line="154" selection-end-column="49" />
+            <state relative-caret-position="379">
+              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParserValue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/common/utils/xmlTools/ParserValue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;method#findRoot#0;class#ParserValue#0" expanded="false" />
-                <element signature="e#1174#1184#0" expanded="false" />
-                <element signature="e#1316#1320#0" expanded="false" />
-                <element signature="e#1592#3453#0" expanded="false" />
-                <element signature="docComment;method#findParent#0;class#ParserValue#0" expanded="false" />
-                <element signature="docComment;method#setList#0;class#ParserValue#0" expanded="false" />
-                <element signature="method#setList#0;class#ParserValue#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application-dev.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="application-dev.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="67" lean-forward="false" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+            <state relative-caret-position="297">
+              <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThesisTemplateAttrMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/thesisMamager/ThesisTemplateAttrMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-              <folding>
-                <marker date="1520822366737" expanded="true" signature="308:428" ph="select `attr... thesis_template_attr" />
-                <marker date="1520822366737" expanded="true" signature="2025:2240" ph="insert into thesis_template_attr... " />
-                <marker date="1520822366737" expanded="true" signature="2348:2653" ph="update thesi... " />
-                <marker date="1520822366737" expanded="true" signature="2691:2752" ph="delete from " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -211,9 +161,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/ParserList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bootdo/common/utils/xmlTools/ParserValue.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/bootdo/common/utils/xmlTools/ParserList.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/thesisMamager/ThesisTemplateAttrMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
       </list>
     </option>
   </component>
@@ -579,7 +529,7 @@
       <workItem from="1519865628365" duration="32492000" />
       <workItem from="1520211920692" duration="73864000" />
       <workItem from="1520470137445" duration="31675000" />
-      <workItem from="1520815362450" duration="6075000" />
+      <workItem from="1520815362450" duration="7155000" />
     </task>
     <task id="LOCAL-00001" summary="提交提交">
       <created>1514960322761</created>
@@ -735,11 +685,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520588163301</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="DOC xml模板导入功能">
+      <created>1520822594418</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1520822594418</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="302403000" />
+    <option name="totallyTimeSpent" value="303483000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -834,7 +791,8 @@
     <MESSAGE value="学校学院" />
     <MESSAGE value="模板导入测试" />
     <MESSAGE value="模板导入功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="模板导入功能" />
+    <MESSAGE value="DOC xml模板导入功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="DOC xml模板导入功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -925,14 +883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/StudentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="74" column="61" lean-forward="false" selection-start-line="74" selection-start-column="61" selection-end-line="74" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -1339,14 +1289,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="67" lean-forward="false" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/thesisMamager/ThesisTemplateAttrMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -1362,11 +1304,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/common/utils/xmlTools/ParserList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="185" column="0" lean-forward="true" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
+        <state relative-caret-position="356">
+          <caret line="184" column="13" lean-forward="true" selection-start-line="184" selection-start-column="13" selection-end-line="184" selection-end-column="13" />
           <folding>
             <element signature="method#main#0;class#ParserList#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/StudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
