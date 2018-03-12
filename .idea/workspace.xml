@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06166bf8-68eb-4f4a-a22e-5fdc957a5fb7" name="Default" comment="模板导入功能">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_autoconfigure_1_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_starter_1_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_4_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__freemarker_freemarker_2_3_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_26_incubating.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_min_1_1_4c.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bbb.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fff.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vvv.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vvv.xml" />
+    <list default="true" id="06166bf8-68eb-4f4a-a22e-5fdc957a5fb7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateController.java" afterPath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/ParserList.java" afterPath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/ParserList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/ParserValue.java" afterPath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/ParserValue.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/service/ThesisTemplateAttrService.java" afterPath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/service/ThesisTemplateAttrService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/thesisMamager/ThesisTemplateAttrMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/thesisMamager/ThesisTemplateAttrMapper.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/ParserList.java" afterPath="$PROJECT_DIR$/src/main/java/com/bootdo/common/utils/xmlTools/ParserList.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/ParserValue.java" afterPath="$PROJECT_DIR$/src/main/java/com/bootdo/common/utils/xmlTools/ParserValue.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,53 +35,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="fff.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/fff.xml">
+      <file leaf-file-name="ParserList.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/common/utils/xmlTools/ParserList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="1356" column="78" lean-forward="true" selection-start-line="1356" selection-start-column="78" selection-end-line="1356" selection-end-column="78" />
+            <state relative-caret-position="383">
+              <caret line="185" column="0" lean-forward="true" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
               <folding>
-                <element signature="n#o:DocumentProperties#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#o:CustomDocumentProperties#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:fonts#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:styles#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:shapeDefaults#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:docPr#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#2;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#4;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#5;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#6;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#7;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:pPr#0;n#w:p#7;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#8;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#9;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#10;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#11;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#13;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#14;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#15;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#16;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#17;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#18;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#19;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#20;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#21;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#22;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#24;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#25;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#26;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#27;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#wx:sub-section#2;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#wx:sub-section#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#wx:sub-section#4;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#wx:sub-section#5;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:sectPr#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <element signature="method#main#0;class#ParserList#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -101,34 +50,24 @@
       <file leaf-file-name="ThesisTemplateController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="761">
-              <caret line="176" column="48" lean-forward="true" selection-start-line="176" selection-start-column="48" selection-end-line="176" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileDO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/common/domain/FileDO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="446">
+              <caret line="154" column="49" lean-forward="true" selection-start-line="154" selection-start-column="49" selection-end-line="154" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ParserValue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/ParserValue.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/common/utils/xmlTools/ParserValue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+            <state relative-caret-position="189">
+              <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#findRoot#0;class#ParserValue#0" expanded="false" />
-                <element signature="e#1181#1191#0" expanded="false" />
-                <element signature="e#1323#1327#0" expanded="false" />
-                <element signature="e#1599#3460#0" expanded="false" />
+                <element signature="e#1174#1184#0" expanded="false" />
+                <element signature="e#1316#1320#0" expanded="false" />
+                <element signature="e#1592#3453#0" expanded="false" />
                 <element signature="docComment;method#findParent#0;class#ParserValue#0" expanded="false" />
                 <element signature="docComment;method#setList#0;class#ParserValue#0" expanded="false" />
                 <element signature="method#setList#0;class#ParserValue#0" expanded="false" />
@@ -137,76 +76,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParserList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/ParserList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1887">
-              <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="application-dev.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="1" column="36" lean-forward="true" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+            <state relative-caret-position="243">
+              <caret line="9" column="67" lean-forward="false" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bbb.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bbb.xml">
+      <file leaf-file-name="ThesisTemplateAttrMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/thesisMamager/ThesisTemplateAttrMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="6252" column="21" lean-forward="true" selection-start-line="6252" selection-start-column="21" selection-end-line="6252" selection-end-column="21" />
+            <state relative-caret-position="351">
+              <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
               <folding>
-                <element signature="n#o:DocumentProperties#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#o:CustomDocumentProperties#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:fonts#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:styles#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:shapeDefaults#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:docPr#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#2;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#4;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#5;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#6;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#7;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:pPr#0;n#w:p#7;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#8;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#9;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#10;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#11;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#12;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#13;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#14;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#15;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#16;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#17;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#18;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#19;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#20;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#21;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#22;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#23;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#24;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#25;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#26;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:p#27;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#wx:sub-section#2;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#wx:sub-section#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#wx:sub-section#4;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#wx:sub-section#5;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-                <element signature="n#w:sectPr#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+                <marker date="1520822366737" expanded="true" signature="308:428" ph="select `attr... thesis_template_attr" />
+                <marker date="1520822366737" expanded="true" signature="2025:2240" ph="insert into thesis_template_attr... " />
+                <marker date="1520822366737" expanded="true" signature="2348:2653" ph="update thesi... " />
+                <marker date="1520822366737" expanded="true" signature="2691:2752" ph="delete from " />
               </folding>
             </state>
           </provider>
@@ -224,7 +113,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>org.w3c.dom.</find>
       <find>/contentlib/1/3/29/12.txt</find>
       <find>w:spacing</find>
       <find>w:jc</find>
@@ -254,6 +142,7 @@
       <find>w:name</find>
       <find>sysFile</find>
       <find>uploadPath</find>
+      <find>tmpfile</find>
     </findStrings>
     <dirStrings>
       <dir>H:\lwxt\bootdo</dir>
@@ -274,10 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/templates/thesisMamager/thesisTeacher/thesisTeacher.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bootdo/Swagger2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bootdo/BootdoApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bootdo/SpringbootSwagger2Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bootdo/system/config/ShiroConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/StudentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/TeacherController.java" />
@@ -321,10 +206,14 @@
         <option value="$PROJECT_DIR$/src/main/resources/generator.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/src/bbb.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/ParserValue.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/ParserList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/service/ThesisTemplateAttrService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/ParserList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bootdo/common/utils/xmlTools/ParserValue.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bootdo/common/utils/xmlTools/ParserList.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/thesisMamager/ThesisTemplateAttrMapper.xml" />
       </list>
     </option>
   </component>
@@ -365,8 +254,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -399,6 +288,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="bootdo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lwlwlw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lwlwlw" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bootdo" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lwlwlw" type="b2602c69:ProjectViewProjectNode" />
@@ -441,7 +339,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -455,7 +353,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
-    <property name="SearchEverywhereHistoryKey" value="test&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/java/com/bootdo/thesisMamager/controller/api/Test.java&#10;ThesisStudent&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/thesisMamager/ThesisStudentMapper.xml&#10;thesisTeacher&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/thesisMamager/ThesisTeacherMapper.xml&#10;hesisTeache&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/thesisMamager/ThesisTeacherMapper.xml&#10;ThesisTeacher&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/thesisMamager/ThesisTeacherMapper.xml&#10;dept&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/system/sysDept/sysDept.js&#10;thesisCollege&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/thesisMamager/thesisCollege/thesisCollege.js&#10;thesisStudent.js&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/thesisMamager/thesisStudent/thesisStudent.js&#10;thesisCollege.js&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/thesisMamager/thesisCollege/thesisCollege.js&#10;sysDept.js&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/system/sysDept/sysDept.js&#10;Dept&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/system/DeptMapper.xml&#10;User&#9;FILE&#9;file://H:/lwxt/lwlw/src/main/resources/mybatis/system/UserMapper.xml" />
+    <property name="SearchEverywhereHistoryKey" value="ThesisTemplateAttr&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/thesisMamager/ThesisTemplateAttrMapper.xml&#10;test&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/java/com/bootdo/thesisMamager/controller/api/Test.java&#10;ThesisStudent&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/thesisMamager/ThesisStudentMapper.xml&#10;thesisTeacher&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/thesisMamager/ThesisTeacherMapper.xml&#10;hesisTeache&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/thesisMamager/ThesisTeacherMapper.xml&#10;ThesisTeacher&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/thesisMamager/ThesisTeacherMapper.xml&#10;dept&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/system/sysDept/sysDept.js&#10;thesisCollege&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/thesisMamager/thesisCollege/thesisCollege.js&#10;thesisStudent.js&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/thesisMamager/thesisStudent/thesisStudent.js&#10;thesisCollege.js&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/thesisMamager/thesisCollege/thesisCollege.js&#10;sysDept.js&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/static/js/appjs/system/sysDept/sysDept.js&#10;Dept&#9;FILE&#9;file://H:/lwxt/lwlwlw/src/main/resources/mybatis/system/DeptMapper.xml&#10;User&#9;FILE&#9;file://H:/lwxt/lwlw/src/main/resources/mybatis/system/UserMapper.xml" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -495,11 +393,11 @@
     <configuration name="ParserList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.bootdo.thesisMamager.controller.api.*" />
+          <option name="PATTERN" value="com.bootdo.common.utils.xmlTools.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.bootdo.thesisMamager.controller.api.ParserList" />
+      <option name="MAIN_CLASS_NAME" value="com.bootdo.common.utils.xmlTools.ParserList" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -514,11 +412,11 @@
     <configuration name="ParserValue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.bootdo.thesisMamager.controller.api.*" />
+          <option name="PATTERN" value="com.bootdo.common.utils.xmlTools.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.bootdo.thesisMamager.controller.api.ParserValue" />
+      <option name="MAIN_CLASS_NAME" value="com.bootdo.common.utils.xmlTools.ParserValue" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -533,7 +431,7 @@
     <configuration name="Test2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.bootdo.thesisMamager.controller.api.*" />
+          <option name="PATTERN" value="com.bootdo.common.utils.xmlTools.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -680,7 +578,8 @@
       <workItem from="1519779424555" duration="8655000" />
       <workItem from="1519865628365" duration="32492000" />
       <workItem from="1520211920692" duration="73864000" />
-      <workItem from="1520470137445" duration="31594000" />
+      <workItem from="1520470137445" duration="31675000" />
+      <workItem from="1520815362450" duration="6075000" />
     </task>
     <task id="LOCAL-00001" summary="提交提交">
       <created>1514960322761</created>
@@ -829,40 +728,46 @@
       <option name="project" value="LOCAL" />
       <updated>1520490909189</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="模板导入功能">
+      <created>1520588163301</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1520588163301</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="296247000" />
+    <option name="totallyTimeSpent" value="302403000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44761905" sideWeight="0.18229167" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35343915" sideWeight="0.8177083" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32698414" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44761905" sideWeight="0.18229167" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32804233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21458334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32804233" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35343915" sideWeight="0.8177083" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -870,6 +775,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32804233" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -946,12 +852,6 @@
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateController.java</url>
-          <line>224</line>
-          <properties />
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/apache/xmlgraphics/batik-dom/1.7/batik-dom-1.7.jar!/org/apache/batik/dom/AbstractParentNode.class</url>
           <line>60</line>
           <properties />
@@ -975,14 +875,8 @@
           <properties />
           <option name="timeStamp" value="218" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/ParserList.java</url>
-          <line>142</line>
-          <properties />
-          <option name="timeStamp" value="284" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="287" />
+      <option name="time" value="289" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
@@ -995,12 +889,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/AmlAnnotation.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/Wp.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WpPr.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WrPr.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/Wr.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WSectPr.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WordDocument.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/WxSubSection.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/docMod/Body.java" />
@@ -1096,7 +984,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="113" column="20" lean-forward="false" selection-start-line="113" selection-start-column="20" selection-end-line="113" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1152,7 +1039,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="371" column="61" lean-forward="false" selection-start-line="371" selection-start-column="61" selection-end-line="371" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1200,7 +1086,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1224,7 +1109,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="176" column="36" lean-forward="false" selection-start-line="176" selection-start-column="36" selection-end-line="176" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1240,14 +1124,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bbb.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="6252" column="21" lean-forward="true" selection-start-line="6252" selection-start-column="21" selection-end-line="6252" selection-end-column="21" />
+        <state relative-caret-position="1188">
+          <caret line="6252" column="21" lean-forward="false" selection-start-line="6252" selection-start-column="21" selection-end-line="6252" selection-end-column="21" />
           <folding>
             <element signature="n#o:DocumentProperties#0;n#w:wordDocument#0;n#!!top" expanded="false" />
             <element signature="n#o:CustomDocumentProperties#0;n#w:wordDocument#0;n#!!top" expanded="false" />
@@ -1307,10 +1190,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding>
-            <element signature="e#310#311#0" expanded="false" />
-            <element signature="e#334#335#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1322,69 +1201,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="36" lean-forward="true" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/common/utils/FileUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="13" column="73" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/common/domain/FileDO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
+        <state relative-caret-position="297">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/ParserValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#findRoot#0;class#ParserValue#0" expanded="false" />
-            <element signature="e#1181#1191#0" expanded="false" />
-            <element signature="e#1323#1327#0" expanded="false" />
-            <element signature="e#1599#3460#0" expanded="false" />
-            <element signature="docComment;method#findParent#0;class#ParserValue#0" expanded="false" />
-            <element signature="docComment;method#setList#0;class#ParserValue#0" expanded="false" />
-            <element signature="method#setList#0;class#ParserValue#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/api/ParserList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1887">
-          <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="761">
-          <caret line="176" column="48" lean-forward="true" selection-start-line="176" selection-start-column="48" selection-end-line="176" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fff.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="1356" column="78" lean-forward="true" selection-start-line="1356" selection-start-column="78" selection-end-line="1356" selection-end-column="78" />
+        <state relative-caret-position="540">
+          <caret line="5720" column="15" lean-forward="true" selection-start-line="5720" selection-start-column="15" selection-end-line="5720" selection-end-column="15" />
           <folding>
             <element signature="n#o:DocumentProperties#0;n#w:wordDocument#0;n#!!top" expanded="false" />
             <element signature="n#o:CustomDocumentProperties#0;n#w:wordDocument#0;n#!!top" expanded="false" />
@@ -1416,17 +1251,121 @@
             <element signature="n#w:p#20;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
             <element signature="n#w:p#21;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
             <element signature="n#w:p#22;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+            <element signature="n#w:p#23;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
             <element signature="n#w:p#24;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
             <element signature="n#w:p#25;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
             <element signature="n#w:p#26;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
             <element signature="n#w:p#27;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
             <element signature="n#wx:sub-section#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
-            <element signature="n#wx:sub-section#1;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
             <element signature="n#wx:sub-section#2;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
             <element signature="n#wx:sub-section#3;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
             <element signature="n#wx:sub-section#4;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
             <element signature="n#wx:sub-section#5;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
             <element signature="n#w:sectPr#0;n#w:body#0;n#w:wordDocument#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/dao/ThesisTemplateAttrDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/service/impl/ThesisTemplateAttrServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding>
+            <element signature="e#615#616#0" expanded="false" />
+            <element signature="e#667#668#0" expanded="false" />
+            <element signature="e#746#747#0" expanded="false" />
+            <element signature="e#791#792#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="543" column="6" lean-forward="false" selection-start-line="543" selection-start-column="6" selection-end-line="543" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/domain/ThesisTemplateAttrDO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="71" column="18" lean-forward="false" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+          <folding>
+            <element signature="e#1151#1152#0" expanded="false" />
+            <element signature="e#1178#1179#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/service/ThesisTemplateAttrService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/common/utils/xmlTools/ParserValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#findRoot#0;class#ParserValue#0" expanded="false" />
+            <element signature="e#1174#1184#0" expanded="false" />
+            <element signature="e#1316#1320#0" expanded="false" />
+            <element signature="e#1592#3453#0" expanded="false" />
+            <element signature="docComment;method#findParent#0;class#ParserValue#0" expanded="false" />
+            <element signature="docComment;method#setList#0;class#ParserValue#0" expanded="false" />
+            <element signature="method#setList#0;class#ParserValue#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/thesisMamager/controller/ThesisTemplateController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="154" column="49" lean-forward="true" selection-start-line="154" selection-start-column="49" selection-end-line="154" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="67" lean-forward="false" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/thesisMamager/ThesisTemplateAttrMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+          <folding>
+            <marker date="1520822366737" expanded="true" signature="308:428" ph="select `attr... thesis_template_attr" />
+            <marker date="1520822366737" expanded="true" signature="2025:2240" ph="insert into thesis_template_attr... " />
+            <marker date="1520822366737" expanded="true" signature="2348:2653" ph="update thesi... " />
+            <marker date="1520822366737" expanded="true" signature="2691:2752" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bootdo/common/utils/xmlTools/ParserList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="185" column="0" lean-forward="true" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
+          <folding>
+            <element signature="method#main#0;class#ParserList#0" expanded="false" />
           </folding>
         </state>
       </provider>

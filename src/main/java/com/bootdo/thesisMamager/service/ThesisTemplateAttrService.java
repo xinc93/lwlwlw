@@ -15,9 +15,9 @@ import java.util.Map;
 public interface ThesisTemplateAttrService {
 	
 	ThesisTemplateAttrDO get(Long attributeid);
-	
 	List<ThesisTemplateAttrDO> list(Map<String, Object> map);
-	
+
+
 	int count(Map<String, Object> map);
 	
 	int save(ThesisTemplateAttrDO thesisTemplateAttr);

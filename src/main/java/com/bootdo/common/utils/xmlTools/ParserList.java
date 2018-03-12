@@ -1,6 +1,8 @@
-package com.bootdo.thesisMamager.controller.api;
+package com.bootdo.common.utils.xmlTools;
 
 
+import com.bootdo.thesisMamager.dao.ThesisTemplateAttrDao;
+import com.bootdo.thesisMamager.domain.ThesisTemplateAttrDO;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
@@ -14,12 +16,14 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author
  */
 public class ParserList {
 
+    static int k = 0;
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException, TransformerException {
         /*DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
@@ -58,8 +62,8 @@ public class ParserList {
         //设置输出结果
         DOMSource domSource = new DOMSource(null);
 
-         //生成xml文件
-         File file = new File("./src/bbb.xml");
+        //生成xml文件
+        File file = new File("./src/bbb.xml");
 
         //判断是否存在,如果不存在,则创建
 
@@ -142,6 +146,61 @@ public class ParserList {
         }
         return File2byte(filePath+"/"+fileName);
     }
+
+
+    public static byte[] operationFile(String filePath, String fileName, List<ThesisTemplateAttrDO> attrList) {
+        File f = new File(filePath+"/"+fileName);
+        String filename = f.getName();
+        // tmpfile为缓存文件，代码运行完毕后此文件将重命名为源文件名字。
+        File tmpfile = new File(f.getParentFile().getAbsolutePath()
+                + "\\" + filename + ".tmp");
+        try {
+            InputStream is = new FileInputStream(f);
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(is));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(tmpfile));
+
+            boolean flag = false;
+            String str = null;
+            while (true) {
+                str = reader.readLine();
+
+                if (str == null)
+                    break;
+
+                if (str.contains("<list>")) {
+                    ThesisTemplateAttrDO thesisTemplateAttr = (ThesisTemplateAttrDO)attrList.get(k);
+                    str = str.replace("<list>","<#list "+thesisTemplateAttr.getAttributename()+" as "+thesisTemplateAttr.getAttrbuteccode()+"_"+thesisTemplateAttr.getAttributename()+">"+ "\n");
+                    writer.write(str);
+                    k=k+1;
+                    flag = true;
+                }else if (str.contains("</list>")) {
+                    str = str.replace("</list>","</#list>");
+                    writer.write(str);
+
+                    flag = true;
+                }  else{
+                    writer.write(str + "\n");
+                }
+            }
+
+            is.close();
+
+            writer.flush();
+            writer.close();
+
+            if (flag) {
+                f.delete();
+                tmpfile.renameTo(new File(f.getAbsolutePath()));
+            } else
+                tmpfile.delete();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return File2byte(tmpfile.getAbsolutePath());
+    }
+
+
     public static byte[] File2byte(String filePath)
     {
         byte[] buffer = null;

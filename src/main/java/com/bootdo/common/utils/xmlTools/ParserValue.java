@@ -1,4 +1,4 @@
-package com.bootdo.thesisMamager.controller.api;
+package com.bootdo.common.utils.xmlTools;
 
 import org.dom4j.*;
 import org.dom4j.dom.DOMDocumentFactory;
@@ -94,7 +94,7 @@ public class ParserValue {
         });
 
         OutputFormat format = OutputFormat.createPrettyPrint();
-      //  FileOutputStream out = new FileOutputStream(filePath );
+        //  FileOutputStream out = new FileOutputStream(filePath );
         format.setEncoding("utf-8");
         //format.setEncoding("gb2312");*//**//**//* xml的编码 *//*
         XMLWriter writer = null;
