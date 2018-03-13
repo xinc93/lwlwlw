@@ -170,7 +170,7 @@ public class ParserList {
 
                 if (str.contains("<list>")) {
                     ThesisTemplateAttrDO thesisTemplateAttr = (ThesisTemplateAttrDO)attrList.get(k);
-                    str = str.replace("<list>","<#list "+thesisTemplateAttr.getAttrbuteccode()+" as "+thesisTemplateAttr.getAttrbuteccode()+"_"+thesisTemplateAttr.getAttributename()+">"+ "\n");
+                    str = str.replace("<list>","<#list "+thesisTemplateAttr.getAttrbuteccode()+" as "+thesisTemplateAttr.getAttrType()+"_"+thesisTemplateAttr.getAttrbuteccode()+">"+ "\n");
                     writer.write(str);
                     k=k+1;
                     flag = true;
