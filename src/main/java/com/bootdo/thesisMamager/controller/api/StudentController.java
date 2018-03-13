@@ -15,19 +15,11 @@ import com.github.pagehelper.PageHelper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.UnsupportedEncodingException;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -57,6 +49,13 @@ public class StudentController {
 	@Value("${bootdo.uploadPath}")
 	private String uploadPath;
 
+
+	@ApiOperation(value = "学生注册", notes = "学生注册", position = 1)
+	@RequestMapping(value = "/tologin", method = {RequestMethod.POST,RequestMethod.GET})
+	public String register(){
+
+		return "webfront/login";
+	}
 
 	@ResponseBody
 	@ApiOperation(value = "学生注册", notes = "学生注册", position = 1)
