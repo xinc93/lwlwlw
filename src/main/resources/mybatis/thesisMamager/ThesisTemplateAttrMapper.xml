@@ -4,17 +4,19 @@
 <mapper namespace="com.bootdo.thesisMamager.dao.ThesisTemplateAttrDao">
 
 	<select id="get" resultType="com.bootdo.thesisMamager.domain.ThesisTemplateAttrDO">
-		select `attributeId`,`attributeName`,`templateId`,`attrbutecCode` from thesis_template_attr where attributeId = #{value}
+		select `attributeId`,`attributeName`,`templateId`,`attrbutecCode`,`attrType` from thesis_template_attr where attributeId = #{value}
 	</select>
 
 	<select id="list" resultType="com.bootdo.thesisMamager.domain.ThesisTemplateAttrDO">
-		select `attributeId`,`attributeName`,`templateId`,`attrbutecCode` from thesis_template_attr
+		select `attributeId`,`attributeName`,`templateId`,`attrbutecCode`,attrType from thesis_template_attr
         <where>  
 		  		  <if test="attributeid != null and attributeid != ''"> and attributeId = #{attributeid} </if>
 		  		  <if test="attributename != null and attributename != ''"> and attributeName = #{attributename} </if>
 		  		  <if test="templateid != null and templateid != ''"> and templateId = #{templateid} </if>
 		  		  <if test="attrbuteccode != null and attrbuteccode != ''"> and attrbutecCode = #{attrbuteccode} </if>
-		  		</where>
+			      <if test="attrType != null and attrType != ''"> and attrType = #{attrType} </if>
+
+		</where>
         <choose>
             <when test="sort != null and sort.trim() != ''">
                 order by ${sort} ${order}
@@ -44,14 +46,17 @@
 			`attributeId`, 
 			`attributeName`, 
 			`templateId`, 
-			`attrbutecCode`
+			`attrbutecCode`,
+			attrType
 		)
 		values
 		(
 			#{attributeid}, 
 			#{attributename}, 
 			#{templateid}, 
-			#{attrbuteccode}
+			#{attrbuteccode},
+			#{attrType}
+
 		)
 	</insert>
 	 
