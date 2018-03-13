@@ -1,6 +1,6 @@
 .bodystyle{background: url(../img/bg.png);}
 .navheight{min-height:50rem}
-.tab-content{background: #fff;width: 25rem;height: 21.875rem}
+.tab-content{background: #fff;width: 25rem;height: 26.875rem}
 .nav-tabs{border: 0;height: 3.125rem;width: 25rem;background:#6399C5}
 .nav-tabs .nav-link{border-top-left-radius: 0;
 border-top-right-radius: 0;}
@@ -93,6 +93,7 @@ font-size: 0.9375rem;
 }
 .quicklogin{
     text-align: center;
+    margin-top: 1rem;
 }
 .quicklogin svg{font-size: 2.8rem;margin-right: 1.8rem}
 .quicklogin svg:last-child{margin-right: 0}
