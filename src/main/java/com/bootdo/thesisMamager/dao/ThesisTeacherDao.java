@@ -29,4 +29,6 @@ public interface ThesisTeacherDao {
 	int remove(Long id);
 	
 	int batchRemove(Long[] ids);
+
+    ThesisTeacherDO getLogin(String mobile, String passWord);
 }

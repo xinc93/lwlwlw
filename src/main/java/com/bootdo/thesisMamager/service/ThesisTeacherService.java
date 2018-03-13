@@ -28,4 +28,5 @@ public interface ThesisTeacherService {
 	
 	int batchRemove(Long[] ids);
 
+	ThesisTeacherDO getLogin(String mobile, String passWord);
 }
