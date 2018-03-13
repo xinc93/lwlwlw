@@ -20,6 +20,8 @@ public class ThesisTeacherDO implements Serializable {
 	private Long id;
 	//手机号
 	private String mobile;
+	//手机号
+	private String passWord;
 	//学校ID
 	private Long schoolId;
 	//院系ID
@@ -28,6 +30,9 @@ public class ThesisTeacherDO implements Serializable {
 	private String teacherTitle;
 	//专业
 	private String major;
+	//专业
+	private String cardId;
+
 	//学生数量
 	private Integer studentCount;
 	//创建时间
@@ -60,6 +65,14 @@ public class ThesisTeacherDO implements Serializable {
 	private String schoolName;
 	private String depName;
 
+	public String getPassWord() {
+		return passWord;
+	}
+
+	public void setPassWord(String passWord) {
+		this.passWord = passWord;
+	}
+
 	public String getSchoolName() {
 		return schoolName;
 	}
@@ -88,6 +101,15 @@ public class ThesisTeacherDO implements Serializable {
 	public Long getId() {
 		return id;
 	}
+
+	public String getCardId() {
+		return cardId;
+	}
+
+	public void setCardId(String cardId) {
+		this.cardId = cardId;
+	}
+
 	/**
 	 * 设置：手机号
 	 */

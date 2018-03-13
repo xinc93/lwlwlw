@@ -4,11 +4,14 @@
 <mapper namespace="com.bootdo.thesisMamager.dao.ThesisTeacherDao">
 
 	<select id="get" resultType="com.bootdo.thesisMamager.domain.ThesisTeacherDO">
-		select `id`,`name`,`mobile`,`school_id`,`dep_id`,`teacher_title`,`major`,`student_count`,`create_tm`,`lastlogin_tm`,`head_img`,`state` from thesis_teacher where id = #{value}
+		select * from thesis_teacher where id = #{value}
+	</select>
+	<select id="get" resultType="com.bootdo.thesisMamager.domain.ThesisTeacherDO">
+		select * from thesis_teacher where pass_word = #{passWord} and mobile = #{mobile}
 	</select>
 
 	<select id="list" resultType="com.bootdo.thesisMamager.domain.ThesisTeacherDO">
-		select `id`,`name`,`mobile`,`school_id`,`dep_id`,`teacher_title`,`major`,`student_count`,`create_tm`,`lastlogin_tm`,`head_img`,`state` from thesis_teacher
+		select * from thesis_teacher
         <where>  
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
 					<if test="name != null and name != ''"> and id = #{name} </if>
@@ -67,6 +70,7 @@
 			`create_tm`, 
 			`lastlogin_tm`,
 			`head_img`,
+			`card_id`,
 			`state`
 		)
 		values
@@ -82,8 +86,8 @@
 			#{createTm}, 
 			#{lastloginTm}, 
 			#{headImg},
+			#{cardId},
 			#{state}
-
 		)
 	</insert>
 	 
@@ -91,6 +95,7 @@
 		update thesis_teacher 
 		<set>
 			<if test="mobile != null">`mobile` = #{mobile}, </if>
+			<if test="passWord != null">`pass_word` = #{passWord}, </if>
 			<if test="schoolId != null">`school_id` = #{schoolId}, </if>
 			<if test="depId != null">`dep_id` = #{depId}, </if>
 			<if test="teacherTitle != null">`teacher_title` = #{teacherTitle}, </if>
@@ -100,6 +105,7 @@
 			<if test="createTm != null">`create_tm` = #{createTm}, </if>
 			<if test="lastloginTm != null">`lastlogin_tm` = #{lastloginTm}, </if>
 			<if test="headImg != null">`head_img` = #{headImg},</if>
+			<if test="cardId != null">`card_id` = #{cardId},</if>
 			<if test="state != null">`state` = #{state}</if>
 		</set>
 		where id = #{id}

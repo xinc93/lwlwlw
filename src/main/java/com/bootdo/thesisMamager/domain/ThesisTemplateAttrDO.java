@@ -24,6 +24,16 @@ public class ThesisTemplateAttrDO implements Serializable {
 	//预留字段
 	private String attrbuteccode;
 
+	private String attrType;
+
+	public String getAttrType() {
+		return attrType;
+	}
+
+	public void setAttrType(String attrType) {
+		this.attrType = attrType;
+	}
+
 	/**
 	 * 设置：
 	 */

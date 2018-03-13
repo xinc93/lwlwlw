@@ -126,8 +126,10 @@ public class ThesisTemplateController {
                 ThesisTemplateAttrDO thesisTemplateAttrDO=new ThesisTemplateAttrDO();
                 thesisTemplateAttrDO.setTemplateid(id);
                 String[] obj=node.valueOf("@w:name").toString().split("_");
-                thesisTemplateAttrDO.setAttrbuteccode(obj[0]);
-                thesisTemplateAttrDO.setAttributename(obj[1]);
+                thesisTemplateAttrDO.setAttrType(obj[0]);
+                thesisTemplateAttrDO.setAttrbuteccode(obj[1]);
+                thesisTemplateAttrDO.setAttributename(obj[2]);
+
                 thesisTemplateAttrDO.setAttributeid(IdGen.next());
                 System.out.println(node.valueOf("@w:name"));
                 thesisTemplateAttrService.save(thesisTemplateAttrDO);

@@ -51,5 +51,10 @@ public class ThesisTeacherServiceImpl implements ThesisTeacherService {
 	public int batchRemove(Long[] ids){
 		return thesisTeacherDao.batchRemove(ids);
 	}
-	
+
+	@Override
+	public ThesisTeacherDO getLogin(String mobile, String passWord) {
+		return thesisTeacherDao.getLogin(mobile,passWord);
+	}
+
 }
