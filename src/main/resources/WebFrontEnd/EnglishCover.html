@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>撰写正文</title>
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" >
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="http://at.alicdn.com/t/font_566244_e3cu5nh94qbprpb9.js"></script>
+  <style type="text/css">
+    .icon {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+  </style>
+
+<!-- 配置文件 -->
+<script type="text/javascript" src="./umeditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="./umeditor/ueditor.all.js"></script>
+<script type="text/javascript" src="./umeditor/ueditor.parse.js"></script>
+<!-- 语言包文件 -->
+<script type="text/javascript" src="./umeditor/lang/zh-cn/zh-cn.js"></script>
+<!--公式插件-->
+<script type="text/javascript" charset="utf-8" src="./umeditor/kityformula-plugin/addKityFormulaDialog.js"></script>
+<script type="text/javascript" charset="utf-8" src="./umeditor/kityformula-plugin/getKfContent.js"></script>
+<script type="text/javascript" charset="utf-8" src="./umeditor/kityformula-plugin/defaultFilterFix.js"></script>
+
+
+</head>
+
+<body>
+  <header class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+      <svg class="d-block" width="36" height="36" viewBox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false">
+        <title>Bootstrap</title>
+        <path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"></path><path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"></path></svg>
+  </a>
+    <div class="navbar-nav-scroll">
+
+    </div>
+    <div class="navbar-nav flex-row ml-md-auto d-none d-md-flex headertitle">
+      <div class="headertitle">硕士论文答辩系统</div>
+    </div>
+    <div class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 wenhou" href="Javascript:;" >晚上好，张同学</div>
+    <div class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 wenhou" href="Javascript:;">
+      <svg class="icon" aria-hidden="true">
+    <use xlink:href="#icon-news"></use>
+</svg></div>
+    <div class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 wenhou" href="Javascript:;">
+      <svg class="icon" aria-hidden="true">
+    <use xlink:href="#icon-icon"></use>
+</svg></div>
+
+  </header>
+  <header class="navbar navbar-expand-md navbar-white fixed-top bg-white justify-content-md-center" style="top:3.875rem">
+
+
+
+
+    <div class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 quickbutton" href="Javascript:;">
+      <svg class="icon" aria-hidden="true">
+    <use xlink:href="#icon-gjzw"></use>
+</svg>国家知网</div>
+    <div class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 quickbutton" href="Javascript:;">
+      <svg class="icon" aria-hidden="true">
+    <use xlink:href="#icon-zxfy"></use>
+</svg>在线翻译</div>
+
+<div class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 quickbutton" href="Javascript:;">
+  <svg class="icon" aria-hidden="true">
+<use xlink:href="#icon-pdf"></use>
+</svg>PDF导出/word</div>
+<div class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 quickbutton" href="Javascript:;">
+  <svg class="icon" aria-hidden="true">
+<use xlink:href="#icon-ccfw"></use>
+</svg>查重服务</div>
+
+
+
+  </header>
+  <div class="container">
+    <div class="row positionContent">
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar leftbar">
+    <div class="sidebar-sticky">
+      <ul class="nav nav-tabs " role="tablist">
+        <li role="presentation" class="nav-item" ><a class="nav-link  " href="#catalogue" aria-controls="catalogue" role="tab" data-toggle="tab">目录</a></li>
+        <li role="presentation " class="nav-item"><a class="nav-link active" href="#textbody" aria-controls="textbody" role="tab" data-toggle="tab">正文</a></li>
+      </ul>
+      <div class="tab-content overflowyauto">
+        <div role="tabpanel" class="tab-pane " id="catalogue">
+      <ul class="catalogue">
+        <li class="active">
+          <div class="num">1</div>
+          <div class="catlistname">中文封面</div>
+          <div class="catlisten">Chinese Cover</div>
+          <div class="down"><svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-web_xiangxiazhankai"></use>
+    </svg></div>
+        </li>
+        <li  class="active">
+          <div class="num">2</div>
+          <div class="catlistname">英文封面</div>
+          <div class="catlisten">English Cover</div>
+          <div class="down"><svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-web_xiangxiazhankai"></use>
+    </svg></div>
+        </li>
+        <li >
+          <div class="num">3</div>
+          <div class="catlistname">郑重声明</div>
+          <div class="catlisten">Statement</div>
+          <div class="down"><svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-web_xiangxiazhankai"></use>
+    </svg></div>
+        </li>
+        <li >
+          <div class="num">3</div>
+          <div class="catlistname">中文摘要</div>
+          <div class="catlisten">Chinese Abstract</div>
+          <div class="down"><svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-web_xiangxiazhankai"></use>
+    </svg></div>
+        </li>
+        <li  >
+          <div class="num">3</div>
+          <div class="catlistname">英文摘要</div>
+          <div class="catlisten">English Abstract</div>
+          <div class="down"><svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-web_xiangxiazhankai"></use>
+    </svg></div>
+        </li>
+        <li >
+          <div class="num">3</div>
+          <div class="catlistname">正文</div>
+          <div class="catlisten">Text</div>
+          <div class="down"><svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-web_xiangxiazhankai"></use>
+    </svg></div>
+        </li>
+        <li  >
+          <div class="num">3</div>
+          <div class="catlistname">参考文献</div>
+          <div class="catlisten">Bibliography</div>
+          <div class="down"><svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-web_xiangxiazhankai"></use>
+    </svg></div>
+        </li>
+        <li >
+          <div class="num">3</div>
+          <div class="catlistname">致谢</div>
+          <div class="catlisten">Thanks</div>
+          <div class="down"><svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-web_xiangxiazhankai"></use>
+    </svg></div>
+        </li>
+      </ul>
+  </div>
+  <div role="tabpanel" class="tab-pane active" id="textbody">
+  <div class="row justify-content-md-center">
+    <div class="col-md-11">
+
+      <div class="addnewzhangjie" onclick="addnewzhangjie();">
+        <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-tianjia1"></use>
+      </svg>新章节
+
+      </div>
+    </div>
+    <div class="col-md-12" >
+      <div class="dd" id="nestable">
+          <ol class="dd-list">
+              <li class="dd-item dd-nodrag" data-id="1">
+                  <div class="dd-handle">
+                    <span>第<strong>一</strong>章</span><edittitle id="edittile">论序</edittitle>
+                    <div class="hoverbutton">
+                      <span onclick="addchild(this)"><svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-shanchu"></use>
+        </svg></span>
+        <span onclick="addchild(this)"><svg class="icon" aria-hidden="true">
+    <use xlink:href="#icon-chuangjian"></use>
+  </svg></span>
+
+      </div>
+                  </div>
+
+              </li>
+              <li class="dd-item  dd-nodrag haschild" data-id="2">
+                  <div class="dd-handle"><span>第<strong>二</strong>章</span><edittitle>系统需求分析</edittitle>
+
+                    <div class="hoverbutton">
+                      <span onclick="addchild(this)"><svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-shanchu"></use>
+        </svg></span>
+        <span onclick="addchild(this)"><svg class="icon" aria-hidden="true">
+    <use xlink:href="#icon-chuangjian"></use>
+  </svg></span>
+
+      </div>
+                  </div>
+                  <ol class="dd-list  child">
+                      <li class="dd-item dd-nodrag zhangjieactive" data-id="3">
+                        <div class="dd-handle"><span><xiaozijie>2</xiaozijie>.<strong><erjishuzi>1</erjishuzi></strong></span><edittitle>课题研究现状</edittitle>
+
+                          <div class="hoverbutton">
+                            <span onclick="addchild(this)"><svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-shanchu"></use>
+              </svg></span>
+              <span onclick="addchild(this)"><svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-chuangjian"></use>
+        </svg></span>
+
+            </div>
+                        </div>
+
+                      </li>
+                      <li class="dd-item dd-nodrag" data-id="4">
+                        <div class="dd-handle"><span><xiaozijie>2</xiaozijie>.<strong><erjishuzi>2</erjishuzi></strong></span><edittitle>课题研究现状</edittitle>
+                          <div class="hoverbutton">
+                            <span onclick="addchild(this)"><svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-shanchu"></use>
+              </svg></span>
+              <span onclick="addchild(this)"><svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-chuangjian"></use>
+        </svg></span>
+
+            </div>
+
+
+
+                        </div>
+
+
+                      </li>
+                      <li class="dd-item dd-nodrag" data-id="5">
+                        <div class="dd-handle"><span><xiaozijie>2</xiaozijie>.<strong><erjishuzi>3</erjishuzi></strong></span><edittitle>系统数据库设计</edittitle>
+                          <div class="hoverbutton">
+                            <span onclick="addchild(this)"><svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-shanchu"></use>
+              </svg></span>
+              <span onclick="addchild(this)"><svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-chuangjian"></use>
+        </svg></span>
+
+            </div>
+
+
+                        </div>
+
+                      </li>
+                      <li class="dd-item dd-nodrag" data-id="6">
+                        <div class="dd-handle"><span><xiaozijie>2</xiaozijie>.<strong><erjishuzi>4</erjishuzi></strong></span><edittitle>系统概要设计</edittitle>
+                          <div class="hoverbutton">
+                            <span onclick="addchild(this)"><svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-shanchu"></use>
+              </svg></span>
+              <span onclick="addchild(this)"><svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-chuangjian"></use>
+        </svg></span>
+
+            </div>
+
+
+
+
+                        </div>
+
+                      </li>
+                      <li class="dd-item dd-nodrag" data-id="7">
+                        <div class="dd-handle"><span><xiaozijie>2</xiaozijie>.<strong><erjishuzi>5</erjishuzi></strong></span><edittitle>系统洁面设计</edittitle>
+
+
+                          <div class="hoverbutton">
+                            <span onclick="addchild(this)"><svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-shanchu"></use>
+              </svg></span>
+              <span onclick="addchild(this)"><svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-chuangjian"></use>
+        </svg></span>
+
+            </div>
+                        </div>
+
+                      </li>
+                  </ol>
+
+              </li>
+              <li class="dd-item dd-nodrag" data-id="8">
+                  <div class="dd-handle"><span>第<strong>三</strong>章</span><edittitle>系统数据库设计</edittitle>
+                    <div class="hoverbutton">
+                      <span onclick="addchild(this)"><svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-shanchu"></use>
+        </svg></span>
+        <span onclick="addchild(this)"><svg class="icon" aria-hidden="true">
+    <use xlink:href="#icon-chuangjian"></use>
+  </svg></span>
+
+      </div>
+
+
+                  </div>
+
+              </li>
+              <li class="dd-item dd-nodrag" data-id="9">
+                  <div class="dd-handle"><span>第<strong>四</strong>章</span><edittitle>系统洁面设计</edittitle>
+                    <div class="hoverbutton">
+                      <span onclick="addchild(this)"><svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-shanchu"></use>
+        </svg></span>
+        <span onclick="addchild(this)"><svg class="icon" aria-hidden="true">
+    <use xlink:href="#icon-chuangjian"></use>
+  </svg></span>
+
+      </div>
+
+                  </div>
+
+              </li>
+          </ol>
+      </div>
+
+    </div>
+
+
+  </div>
+  </div>
+      </div>
+            </div>
+    </nav>
+      <main role="main" class=" pt-3 px-4 bodycontent zhengwencontent">
+        <div class="bodytitle" style="padding-top:2rem">English Cover</div>
+        <div class="row">
+          <div class="input-group mb-3" >
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">Title</span>
+          </div>
+          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+        </div>
+        <div class="row">
+          <div class="input-group mb-3" >
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">Name</span>
+          </div>
+          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+        </div>
+        <div class="row">
+          <div class="input-group mb-3" >
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">Date</span>
+          </div>
+          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+        </div>
+
+
+        <div class="row justify-content-md-center" style="margin-bottom:1rem;margin-top:1rem"><button style="width:12rem " type="button" class="btn btn-primary">保存</button></div>
+        <div style="height:13rem"></div>
+
+
+
+
+
+
+<div style="height:13rem"></div>
+      </main>
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar rightbar">
+    <div class="sidebar-sticky">
+      <ul class="nav nav-tabs " role="tablist">
+        <li role="presentation" class="nav-item" ><a class="nav-link  active" href="#comment" aria-controls="catalogue" role="tab" data-toggle="tab">导师批注</a></li>
+        <li role="presentation " class="nav-item"><a class="nav-link" href="#cloudsave" aria-controls="textbody" role="tab" data-toggle="tab">云端记录</a></li>
+      </ul>
+      <div class="tab-content overflowyauto">
+        <div role="tabpanel" class="tab-pane active" id="comment">
+          <div class="row">
+            <div class="col-md-12"><div class="commenttile"><span>1.1</span>导师修改意见
+              <!-- -<strong>课题研究现状</strong> -->
+            </div></div>
+            <div class="col-md-12">
+              <ul class="comment">
+              <li class="commentconent commentactive" id="comment_1_1_1">
+                <div class="hostroy "><span>1</span>数据库设计(Database Design)是指对于一个给定的应用环境。</div>
+
+              </li>
+              <li class="commentconent" id="comment_1_1_2">
+                <div class="hostroy"><span>2</span>通过人工方式电视上的撒打算打算的打就看见看见了九块九算的撒的的撒的撒</div>
+
+              </li>
+              <li class="commentconent" id="comment_1_1_3">
+                <div class="hostroy"><span>3</span>通过人工方式电视上的撒打算打算的打就看见看见了九块九算的撒的的撒的撒</div>
+              </li>
+              <li class="commentconent" id="comment_1_1_4">
+                <div class="hostroy"><span>4</span>通过人工方式电视上的撒打算打算的打就看见看见了九块九算的撒的的撒的撒</div>
+
+              </li>
+              <li class="commentconent" id="comment_1_1_5">
+                <div class="hostroy"><span>5</span>通过人工方式电视上的撒打算打算的打就看见看见了九块九算的撒的的撒的撒</div>
+
+              </li>
+              <li class="commentconent" id="comment_1_1_6">
+                <div class="hostroy"><span>5</span>通过人工方式电视上的撒打算打算的打就看见看见了九块九算的撒的的撒的撒</div>
+
+              </li>
+            </ul>
+
+          </div>
+
+
+          </div>
+          <div class="row">
+            <div class="col-md-12"><div class="commenttile"><span>1.1</span>导师修改意见
+              <!-- -<strong>课题研究现状</strong> -->
+            </div></div>
+            <div class="col-md-12">
+              <ul class="comment">
+              <li class="commentconent commentactive" id="comment_1_1_1">
+                <div class="hostroy "><span>1</span>数据库设计(Database Design)是指对于一个给定的应用环境。</div>
+
+              </li>
+              <li class="commentconent" id="comment_1_1_2">
+                <div class="hostroy"><span>2</span>通过人工方式电视上的撒打算打算的打就看见看见了九块九算的撒的的撒的撒</div>
+
+              </li>
+              <li class="commentconent" id="comment_1_1_3">
+                <div class="hostroy"><span>3</span>通过人工方式电视上的撒打算打算的打就看见看见了九块九算的撒的的撒的撒</div>
+
+              </li>
+              <li class="commentconent" id="comment_1_1_4">
+                <div class="hostroy"><span>4</span>通过人工方式电视上的撒打算打算的打就看见看见了九块九算的撒的的撒的撒</div>
+
+              </li>
+              <li class="commentconent" id="comment_1_1_5">
+                <div class="hostroy"><span>5</span>通过人工方式电视上的撒打算打算的打就看见看见了九块九算的撒的的撒的撒</div>
+
+              </li>
+              <li class="commentconent" id="comment_1_1_6">
+                <div class="hostroy"><span>5</span>通过人工方式电视上的撒打算打算的打就看见看见了九块九算的撒的的撒的撒</div>
+
+              </li>
+            </ul>
+
+          </div>
+
+
+          </div>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="cloudsave">
+<div class="row">
+
+  <div class="col-md-12">
+    <ul class="cloudsave">
+      <li><span>2017-12-01  11:11</span>新增了一条参考文献保存;</li>
+        <li><span>2017-12-01  11:11</span>保存了正文章节5.1.2:论文的研究内容和组织;</li>
+    </ul>
+  </div>
+</div>
+  </div>
+      </div>
+            </div>
+    </nav>
+    </div>
+  </div>
+</body>
+
+<script src="js/jquery.editable.min.js"></script>
+
+<script src="js/jquery.nestable.js"></script>
+
+<script type="text/javascript">
+function unitnestable(elementname){
+
+
+  var updatelist = function(e)
+  {
+      console.log(window.JSON.stringify($('#nestable').nestable('serialize')));
+  };
+  $('#nestable').nestable({
+      group: 1,
+      maxDepth:2
+  })
+  .on('change', updatelist);
+}
+function addnewzhangjie(){
+  var linumer=$('#nestable').find('li').length+1;
+  var zhangjielilength =$("#nestable ol:first > li").length+1;
+  var zjnumber =chineseNum(zhangjielilength);
+  var addnewhtml ='<li class="dd-item dd-nodrag" data-id="'+linumer+'"><div class="dd-handle">'+
+        '<span>第<strong>'+zjnumber+'</strong>章</span><edittitle id="edittile">请输入章节标题</edittitle>'+
+        '<div class="hoverbutton"><span onclick="addchild(this)"><svg class="icon" aria-hidden="true">'+
+'<use xlink:href="#icon-shanchu"></use></svg></span><span onclick="addchild(this)"><svg class="icon" aria-hidden="true">'+
+'<use xlink:href="#icon-chuangjian"></use></svg></span></div></div></li>'
+$("#nestable ol:first").append(addnewhtml);
+
+// console.log(zhangjielilength);
+$('#nestable').nestable('serialize');
+hoverevent();
+unitedittable();
+unitnestable();
+console.log(window.JSON.stringify($('#nestable').nestable('serialize')));
+}
+function addchild(e){
+
+  var parentli =$(e).parent().parent().parent();
+  var truechilid=$(e).parent().parent().parent().hasClass('haschild');
+  var linumer=$('#nestable').find('li').length+1;
+  var fuqintruechild=$(e).parent().parent().parent().parent().hasClass('child');
+  var xiaojielilength ='';
+  var dajienumer =$(e).parent().parent().children('span').children('strong').text();
+  var shuzidajie='';
+  var xiaozijie='';
+  if(fuqintruechild==false){
+     xiaozijie='';
+     xiaojielilength =$(e).parent().parent().parent().children('ol').children('li').length+1;
+     shuzidajie=aNumber(dajienumer);
+  }
+  else{
+    xiaojielilength=$(e).parent().parent().children('span').children('strong').children('erjishuzi').html();
+
+    shuzidajie=$(e).parent().parent().children('span').children('xiaozijie').text();
+  var numerxiao=parentli.children('ol').children('li').length+1;
+     xiaozijie='.'+numerxiao;
+  }
+  var addnewhtml ='<li class="dd-item dd-nodrag" data-id="'+linumer+'"><div class="dd-handle">'+
+        '<span><xiaozijie>'+shuzidajie+'</xiaozijie>.'+'<strong><erjishuzi>'+xiaojielilength+'</erjishuzi>'+xiaozijie+'</strong></span><edittitle>系统洁面设计</edittitle>'+
+        '<div class="hoverbutton"><span onclick="addchild(this)"><svg class="icon" aria-hidden="true">'+
+'<use xlink:href="#icon-shanchu"></use></svg></span><span onclick="addchild(this)"><svg class="icon" aria-hidden="true">'+
+'<use xlink:href="#icon-chuangjian"></use></svg></span></div></div></li>';
+var childtrue=$(e).parent().parent().parent().parent().hasClass('childchild');
+  if(truechilid==true){
+console.log('12221')
+
+
+    $(e).parent().parent().parent().children('ol').append(addnewhtml);
+    // console.log(xiaojielilength);
+
+  }
+  else{
+
+      var olhtml='';
+      if(fuqintruechild==false ){
+          if(childtrue==true){
+//console.log('1')
+            alert('最多只能有2层子章节')
+          }
+          else{
+              olhtml='<ol class="dd-list child"></ol>';
+            parentli.append(olhtml);
+            parentli.addClass('haschild');
+            parentli.removeAttr("style");
+            $(e).parent().parent().parent().children('ol').append(addnewhtml);
+
+          }
+
+      }
+      else{
+        //console.log('3')
+           olhtml='<ol class="dd-list childchild"></ol>';
+        parentli.append(olhtml);
+        parentli.addClass('haschild');
+        parentli.removeAttr("style");
+        $(e).parent().parent().parent().children('ol').append(addnewhtml);
+
+      }
+
+  }
+  hoverevent();
+  unitedittable();
+  $('#nestable button').remove();
+  $('#nestable').nestable('init')
+
+}
+//数字转中文
+function chineseNum(str){
+  str = str+'';
+   var len = str.length-1;
+   var idxs = ['','十','百','千','万','十','百','千','亿','十','百','千','万','十','百','千','亿'];
+   var num = ['零','一','二','三','四','五','六','七','八','九'];
+   return str.replace(/([1-9]|0+)/g,function( $, $1, idx, full) {
+    var pos = 0;
+    if( $1[0] != '0' ){
+     pos = len-idx;
+     if( idx == 0 && $1[0] == 1 && idxs[len-idx] == '十'){
+      return idxs[len-idx];
+     }
+     return num[$1[0]] + idxs[len-idx];
+    } else {
+     var left = len - idx;
+     var right = len - idx + $1.length;
+     if( Math.floor(right/4) - Math.floor(left/4) > 0 ){
+      pos = left - left%4;
+     }
+     if( pos ){
+      return idxs[pos] + num[$1[0]];
+     } else if( idx + $1.length >= len ){
+      return '';
+     }else {
+      return num[$1[0]]
+     }
+    }
+   });
+
+}
+
+/**
+ * 中文转数字
+ * @param num
+ * @returns
+ */
+function aNumber(num) {
+	var numArray = new Array();
+	var unit = "亿万元$";
+	for ( var i = 0; i < unit.length; i++) {
+		var re = eval("/" + (numArray[i - 1] ? unit.charAt(i - 1) : "") + "(.*)" + unit.charAt(i) + "/");
+		if (num.match(re)) {
+			numArray[i] = num.match(re)[1].replace(/^十/, "一十");
+			numArray[i] = numArray[i].replace(/[零一二三四五六七八九]/g, function($1) {
+				return "零一二三四五六七八九".indexOf($1);
+			});
+			numArray[i] = numArray[i].replace(/[分角十百千]/g, function($1) {
+				return "*" + Math.pow(10, "分角 十百千 ".indexOf($1) - 2) + "+"
+			}).replace(/^\*|\+$/g, "").replace(/整/, "0");
+			numArray[i] = "(" + numArray[i] + ")*" + Math.ceil(Math.pow(10, (2 - i) * 4));
+		} else
+			numArray[i] = 0;
+	}
+	return eval(numArray.join("+"));
+}
+
+
+function unitedittable(){
+  $('edittitle').editable('destroy');
+  $('edittitle').editable({
+         event:'click',
+         type:'text',
+         emptyMessage:'请输入章节标题',
+         callback : function( data ) {
+        // Callback that will be called once the editor is blurred
+
+      //
+      // console.log(data.content);
+    }
+      })
+}
+function hoverevent(){
+  $('.dd-handle').unbind('mouseover').unbind('mouseout');
+  $('.dd-handle').on('mouseover mouseout',function(){
+    if(event.type == "mouseover"){
+    //console.log('11');
+      $(this).children(".hoverbutton").css("display","block");
+      $(".hoverbutton span svg").css("color","#212121");
+      var truefalse=$(this).parent().hasClass('haschild');
+
+      if(truefalse==true){
+        $(this).parent().children(".dd-handle").css("background","#F3F3F3");
+
+
+      }else{
+
+        $(this).parent().css("background","#F3F3F3");
+
+      }
+}else if(event.type == "mouseout"){
+  var truefalse=$(this).parent().hasClass('haschild');
+
+  if(truefalse==true){
+    $(this).parent().children(".dd-handle").removeAttr("style");
+
+  }else{
+
+  $(this).parent().removeAttr("style");
+
+  }
+
+ $(this).children(".hoverbutton").css("display","none");
+}
+
+
+      });
+}
+function hasContent(){
+  var textcontet=UE.getEditor('container').hasContents();
+
+  if(textcontet==false){
+  $('#save').removeClass('btn-primary');
+  $('#save').addClass('btn-secondary');
+  $('#save').attr("disabled",true);
+
+  }
+  else {
+
+    $('#save').removeClass('btn-secondary');
+    $('#save').addClass('btn-primary');
+    $('#save').attr("disabled",false);
+
+  }
+}
+$(document).ready(function()
+{
+
+  var sidebarheight =$('.sidebar-sticky').outerHeight(true);
+  var navtabsheight =$('.sidebar-sticky .nav-tabs').outerHeight(true);
+  $('.tab-content').height(sidebarheight-navtabsheight);
+
+
+
+
+unitedittable();
+unitnestable();
+
+hoverevent()
+
+$(".commentconent").on("click",function(){
+  var node = new UE.uNode({
+       type:'element',
+       tagName:'span',
+       attrs:{style:'font-size:14px;'}
+   });
+   console.log(node.toHtml());
+  alert("段落被点击了。");
+});
+});
+</script>
+</html>

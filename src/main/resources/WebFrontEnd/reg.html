@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>注册</title>
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/studentreg.css">
+    <script src="https://at.alicdn.com/t/font_442991_sdh9go7kjll3di.js"></script>
+    <style type="text/css">
+    .icon {
+       width: 1em; height: 1em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+    }
+</style>
+</head>
+<body class="bodystyle">
+  <div class="container">
+
+  <div class="row justify-content-md-center align-items-center navheight">
+
+    <div class="col-7">
+      <div class="title">
+        严论论文系统 &nbsp;&nbsp; Thesis writing system    <span>欢迎使用严论论文系统答辩系统</span>
+      </div>
+   <div class="formcontent">
+     <div class="formtitle">
+       学生信息登记
+     </div>
+      <form>
+  <div class="form-group row">
+    <label for="staticEmail" class="col-sm-3 col-form-label">姓名</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="inputPassword" placeholder="请输入您的真实姓名">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-3 col-form-label">导师（答辩老师）</label>
+    <div class="col-sm-9"  >
+      <div class="row" style="    margin-right: 0;">
+      <div class="col-sm-4 paddingRight0">
+        <select class="custom-select">
+    <option selected>请选择学校</option>
+    <option value="1">武汉大学</option>
+  </select>
+      </div>
+      <div class="col-sm-4 paddingRight0">
+        <select class="custom-select">
+        <option selected>请选择院系</option>
+        <option value="1">国际软件学院</option>
+        </select>
+      </div>
+      <div class="col-sm-4  paddingRight0">
+        <select class="custom-select">
+        <option selected>请选择导师</option>
+        <option value="1">张三丰</option>
+        </select>
+      </div>
+</div>
+
+
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-3 col-form-label">学习层次</label>
+    <div class="col-sm-9">
+      <select class="custom-select" style="width: 100%;">
+      <option selected>请选择学习层次</option>
+      <option value="1">国际软件学院</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-3 col-form-label">学习形式</label>
+    <div class="col-sm-9">
+      <select class="custom-select" style="width: 100%;">
+      <option selected>请选择学习形式</option>
+      <option value="1">国际软件学院</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-3 col-form-label">专业</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="inputZhuanye" placeholder="请输入您的专业">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-3 col-form-label">专业方向</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="inputPassword" placeholder="请输入您的专业方向">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-3 col-form-label">学籍号</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="inputPassword" placeholder="请输入您的学籍号">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-3 col-form-label">年级</label>
+    <div class="col-sm-9">
+      <input type="number" class="form-control" id="inputPassword" placeholder="请输入您的年级号">
+    </div>
+  </div>
+  <div class="formtitle">
+    绑定手机号
+  </div>
+  <div class="form-group row">
+
+    <div class="col-sm-6 paddingRight0">
+      <input type="number" class="form-control" id="inputPhone" placeholder="请输入您的手机号码">
+      <label for="inputPhone" class="col-sm-4 col-form-label inputPhone" >发送验证码</label>
+    </div>
+    <div class="col-sm-6 paddingLeft0">
+      <input type="number" class="form-control" id="inputPhoneCode" placeholder="请输入手机验证码">
+    </div>
+  </div>
+  <div class="form-group row">
+
+    <div class="col-sm-6 ">
+      <input type="number" class="form-control" id="inputPasswordSet" placeholder="请设定登陆密码">
+
+    </div>
+    <div class="col-sm-6 paddingLeft0">
+      <input type="number" class="form-control" id="inputPasswordSetA" placeholder="请再次确认密码">
+    </div>
+  </div>
+</form>
+</div>
+
+    </div>
+
+
+  </div>
+</div>
+
+
+
+</body>
+</html>

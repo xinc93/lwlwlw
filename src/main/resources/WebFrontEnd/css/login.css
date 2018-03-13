@@ -1,0 +1,98 @@
+.bodystyle{background: url(../img/bg.png);}
+.navheight{min-height:50rem}
+.tab-content{background: #fff;width: 25rem;height: 21.875rem}
+.nav-tabs{border: 0;height: 3.125rem;width: 25rem;background:#6399C5}
+.nav-tabs .nav-link{border-top-left-radius: 0;
+border-top-right-radius: 0;}
+.nav-link{color: #fff;text-align: center;padding: 0 1rem;display: block;height: 100%;width: 100%;line-height:3.125rem}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{border-color: #fff}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border-color: #e9ecef00;
+}
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.nav-tabs .nav-item {
+    margin-bottom: 0px;
+    width: 50%;
+}
+.title{
+  color: #fff;padding:30px 0;
+  text-align: center;
+  font-size:24px;
+  width: 25rem;
+  letter-spacing:0.02rem
+
+
+}
+.title span{font-size:16px;display: block;}
+.tab-content{padding: 1rem 1.5625rem}
+.form-control{border: 1px #D1D1D1 solid;    padding: .438rem .75rem;
+}
+.form-control:disabled, .form-control[readonly] {
+    background-color: #F3F3F3;
+    opacity: 1;
+    border: 1px #F3F3F3 solid
+}
+.form-control::-webkit-input-placeholder {
+
+　　color: #BABABA;font-size:0.8125rem;
+
+　　}
+
+.form-control:-moz-placeholder{
+
+　　color:#BABABA;font-size:0.8125rem;
+
+　　}
+
+.form-control::-moz-placeholder{
+
+　　color:#BABABA;font-size:0.8125rem;
+
+　　}
+
+.form-control:-ms-input-placeholder{
+
+　　color:#BABABA;font-size:0.8125rem;
+
+　　}
+.btn-secondary{
+color:#BABABA;
+font-size: 0.9375rem;
+  background-color: #F3F3F3;
+    border-color: #F3F3F3;
+}
+.btn-secondary:hover{
+  color:#BABABA;
+  font-size: 0.9375rem;
+    background-color: #F3F3F3;
+      border-color: #F3F3F3;
+      cursor:pointer;
+
+}
+.btn-secondary.focus, .btn-secondary:focus{
+      box-shadow: none;
+}
+.btn-secondary.disabled, .btn-secondary:disabled{
+  background-color: #F3F3F3;
+    border-color: #F3F3F3;
+}
+.btn{margin-bottom: 1rem}
+.form-check label{
+  font-size: 0.8125rem;
+  color: #212121
+}
+.form-check label.iconbutton, .iconbutton a{color: #447ED9}
+.quicklogin h5{
+  color:#212121;
+  font-size:0.8125rem;
+  padding: 1.05rem 0;
+
+}
+.quicklogin{
+    text-align: center;
+}
+.quicklogin svg{font-size: 2.8rem;margin-right: 1.8rem}
+.quicklogin svg:last-child{margin-right: 0}
