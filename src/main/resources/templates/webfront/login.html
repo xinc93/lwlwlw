@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
@@ -6,21 +5,30 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>登录</title>
   <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="/yl/css/login.css">
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/yl/css/login.css">
-    <script src="https://at.alicdn.com/t/font_442991_sdh9go7kjll3di.js"></script>
-    <style type="text/css">
-    .icon {
-       width: 1em; height: 1em;
-       vertical-align: -0.15em;
-       fill: currentColor;
-       overflow: hidden;
-    }
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script><!---->
+<!--<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src="https://at.alicdn.com/t/font_442991_sdh9go7kjll3di.js"></script>
+<script src="/js/jquery-ui-1.10.4.min.js"></script>
+<script src="/js/plugins/validate/jquery.validate.min.js"></script>
+<script src="/js/plugins/layer/layer.js"></script>
+
+<style type="text/css">
+.icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}
+.error{
+    color:red;
+}
 </style>
 </head>
 <body class="bodystyle">
@@ -32,89 +40,119 @@
       <div class="title">
         严论论文系统 &nbsp;&nbsp; Thesis writing system    <span>欢迎使用严论论文系统答辩系统</span>
       </div>
-  <!-- Nav tabs -->
+        <!-- Nav tabs -->
       <ul class="nav nav-tabs " role="tablist">
-        <li role="presentation" class="nav-item" ><a class="nav-link  active" href="#student" aria-controls="student" role="tab" data-toggle="tab">111我是学生</a></li>
-        <li role="presentation " class="nav-item"><a class="nav-link" href="#teacher" aria-controls="teacher" role="tab" data-toggle="tab">我是导师</a></li>
+        <li role="presentation" class="nav-item" onclick="choose('0')"><a class="nav-link  active" href="#student" aria-controls="student" role="tab" data-toggle="tab">我是学生</a></li>
+        <li role="presentation " class="nav-item" onclick="choose('1')"><a class="nav-link" href="#teacher" aria-controls="teacher" role="tab" data-toggle="tab">我是导师</a></li>
       </ul>
 
       <!-- Tab panes -->
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="student">
-          <form>
-  <div class="form-group">
-    <input type="number" class="form-control" id="mobile"  placeholder="请输入手机号码">
-  </div>
-  <div class="form-group">
-    <input type="password" class="form-control" id="password" placeholder="请输入密码">
-  </div>
-  <button type="button" class="btn btn-secondary btn-lg btn-block">登陆</button>
-  <div class="form-check">
-    <label class="form-check-label">
-      <input type="checkbox" class="form-check-input">
-      下次自动登陆
-    </label>
-    <label class="form-check-label float-right iconbutton">
-      <a href="">忘记密码</a> | <a href="">注册</a>
-    </label>
-  </div>
+          <form id="FormID">
+                  <div class="form-group">
+                    <input type="number" class="form-control" id="mobile" name="mobile" placeholder="请输入手机号码">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="passWord" name="passWord" placeholder="请输入密码">
+                  </div>
+                  <input type="submit" class="btn btn-secondary btn-lg btn-block" value="登陆"></input>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input">
+                      下次自动登陆
+                    </label>
+                    <label class="form-check-label float-right iconbutton">
+                      <a href="">忘记密码</a> | <a href="">注册</a>
+                    </label>
+                  </div>
+        </form>
 
-</form>
-<div class="quicklogin">
-<h5>第三方账号登陆</h5>
-<svg class="icon" aria-hidden="true">
-    <use xlink:href="#icon-weixin"></use>
-</svg>
-<svg class="icon" aria-hidden="true">
-    <use xlink:href="#icon-QQ"></use>
-</svg>
-<svg class="icon" aria-hidden="true">
-    <use xlink:href="#icon-xinlang"></use>
-</svg>
-</div>
-</div>
-<div role="tabpanel" class="tab-pane" id="teacher">
-  <form>
-<div class="form-group">
-<input type="number" class="form-control" id="mobile"  placeholder="请输入手机号码">
-</div>
-<div class="form-group">
-<input type="password" class="form-control" id="password" placeholder="请输入密码">
-</div>
-<button type="button" class="btn btn-secondary btn-lg btn-block">登陆</button>
-<div class="form-check">
-<label class="form-check-label">
-<input type="checkbox" class="form-check-input">
-下次自动登陆
-</label>
-<label class="form-check-label float-right iconbutton">
-<a href="">忘记密码</a> | <a href="">注册</a>
-</label>
-</div>
 
-</form>
-<div class="quicklogin">
-<h5>第三方账号登陆</h5>
-<svg class="icon" aria-hidden="true">
-<use xlink:href="#icon-weixin"></use>
-</svg>
-<svg class="icon" aria-hidden="true">
-<use xlink:href="#icon-QQ"></use>
-</svg>
-<svg class="icon" aria-hidden="true">
-<use xlink:href="#icon-xinlang"></use>
-</svg>
-</div>
-</div>
-
+                <div class="quicklogin">
+                    <h5>第三方账号登陆</h5>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weixin"></use>
+                    </svg>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-QQ"></use>
+                    </svg>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-xinlang"></use>
+                    </svg>
+                </div>
+       </div>
       </div>
     </div>
-
-
   </div>
 </div>
+<script>
+    var status="0";
+    $().ready(function() {
+        validateRule();
+    });
+
+    $.validator.setDefaults({
+        submitHandler : function() {
+            if(status=="0"){
+                login();
+            }else{
+                //login();
+            }
+
+        }
+    });
+
+    function login(){
+        var data=$('#FormID').serializeArray();
+        $.ajax({
+            url:'/thesisfront/Student/login',
+            data:data,
+            type:"POST",
+            async:false,//true为异步，false为同步
+            success:function(result){
+                //请求成功时
+                debugger;
+                layer.msg('hello');
+            },
+            error:function(){
+                //请求失败时
+            }
+        })
+    }
+
+    function choose(obj){
+        if(obj=="0"){
+            status="0";
+        }else{
+            status="1";
+        }
+    }
+
+    function validateRule() {
+        $("#FormID").validate({
+            rules:{
+                mobile:{
+                    required:true,
+                    rangelength:[6,12]
+                },
+                passWord:{
+                    required:true,
+                }
+            },
+            messages:{
+                mobile:{
+                    required:"必填",
+                    rangelength:"手机号格式不正确"
+                },
+                passWord:{
+                    required: "必填",
+                }
+            }
+        });
+    }
 
 
-
+</script>
 </body>
 </html>
