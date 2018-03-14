@@ -35,7 +35,7 @@ import java.util.Map;
  
 @Controller
 @Api(value="Teacher",tags={"Teacher"})
-@RequestMapping("/thesisfront/Student")
+@RequestMapping("/thesisfront/Teacher")
 public class TeacherController {
 
 	@Autowired

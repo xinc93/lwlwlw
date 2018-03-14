@@ -6,7 +6,7 @@
 	<select id="get" resultType="com.bootdo.thesisMamager.domain.ThesisTeacherDO">
 		select * from thesis_teacher where id = #{value}
 	</select>
-	<select id="get" resultType="com.bootdo.thesisMamager.domain.ThesisTeacherDO">
+	<select id="getTeacherLogin" resultType="com.bootdo.thesisMamager.domain.ThesisTeacherDO">
 		select * from thesis_teacher where pass_word = #{passWord} and mobile = #{mobile}
 	</select>
 
